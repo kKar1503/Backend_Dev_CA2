@@ -159,7 +159,7 @@
 
 /* // justify nav
 %justify {
- text-align: justify; 
+ text-align: justify;
  font-size: 1px;
  line-height: 0px;
  > * {
@@ -169,7 +169,7 @@
   font-size: $font-size-base;
   line-height: $line-height-base;
  }
- &:after { 
+ &:after {
   content: '';
   width: 100%;
   display: inline-block;
@@ -3196,7 +3196,7 @@ a:hover {
 
 #mt-footer .f-widget-about .address-list.align-right .fa-map-marker,
 #mt-footer .f-widget-about .address-list.align-right .fa-phone,
-#mt-footer .f-widget-about .address-list.align-right .fa-envelope-o,
+#mt-footer .f-widget-about .address-list.align-right .fa-github,
 #mt-footer .f-widget-about .address-list.align-right address {
 	float: right;
 }
@@ -3209,8 +3209,8 @@ a:hover {
 	margin: 1px 0 0 9px;
 }
 
-#mt-footer .f-widget-about .address-list.align-right .fa-envelope-o {
-	margin: 3px 0 0 7px;
+#mt-footer .f-widget-about .address-list.align-right .fa-github {
+	margin: 3px 0 0 9px;
 }
 
 #mt-footer .f-widget-about .address-list li {
@@ -3239,7 +3239,7 @@ a:hover {
 
 #mt-footer .f-widget-about .address-list .fa-map-marker,
 #mt-footer .f-widget-about .address-list .fa-phone,
-#mt-footer .f-widget-about .address-list .fa-envelope-o {
+#mt-footer .f-widget-about .address-list .fa-github {
 	float: left;
 }
 
@@ -3251,7 +3251,7 @@ a:hover {
 	margin: 1px 9px 0 0;
 }
 
-#mt-footer .f-widget-about .address-list .fa-envelope-o {
+#mt-footer .f-widget-about .address-list .fa-github {
 	margin: 3px 7px 0 0;
 }
 

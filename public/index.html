@@ -208,10 +208,10 @@
                     <span class="mt-side-subtitle">SIGN IN</span>
                     <p>Welcome back! Sign in to Your Account</p>
                     </header>
-                    <form action="#">
+                    <form id='login-form'>
                     <fieldset>
-                        <input type="text" placeholder="Username or email address" class="input">
-                        <input type="password" placeholder="Password" class="input">
+                        <input id = 'username' type="text" placeholder="Username or email address" class="input">
+                        <input id = 'password' type="password" placeholder="Password" class="input">
                         <div class="box">
                         <span class="left"><input class="checkbox" type="checkbox" id="check1"><label for="check1">Remember Me</label></span>
                         </div>
@@ -818,5 +818,47 @@
 	<script src="js/plugins.js"></script>
 	<!-- include jQuery -->
 	<script src="js/jquery.main.js"></script>
+
+	<!-- import byself -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const baseUrl = "http://localhost:3000"; // the base url is for db side, so after 
+                                                 // gather the input value from front, send request 
+                                                 // with the input value to db and get res
+        $("#login-form").submit((event) => {     // # is id, . is class
+//  The submit event occurs when a form is submitted.
+//  This event can only be used on <form> elements.
+    
+            console.log("submiting")
+            // prevent page reload
+            event.preventDefault();
+            console.log("loginformsubmit");
+            const username = $("#username").val();
+            const password = $("#password").val();
+            const requestBody = {
+                username: username,
+                password: password
+            };
+
+            // Axios is a promise-based HTTP Client, which send req to db and get res, then represent the res successful or not on html
+            axios.post(`${baseUrl}/login`, requestBody)
+                .then((response) => {
+                    const token = response.data.accessToken; // this one come from the db controller.js
+                    localStorage.setItem("token", token);
+                    window.location.href = "/";
+                })
+                .catch((error) => {
+                    console.log('error' + error.message);
+                    if (error.response.status === 401) {
+                        alert("Wrong login info");
+                    } else {
+                        alert("Something unexpected went wrong.");
+                    }
+					window.location.assign("http://localhost:3001/404.html");
+                });
+        });
+    </script>
 </body>
 </html>

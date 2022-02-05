@@ -98,20 +98,21 @@ function showProductList() {
 		)
 		.then((res) => {
 			let products = res.data;
-			products.forEach((product) => {
+			products.forEach((product, index) => {
+				// this is use db port
 				let productHTML = `
 						<!-- product post start here -->
 						<div class="product-post">
 							<!-- img holder start here -->
-							<div class="img-holder">
-								<img src="product/${product.image_file_name}" alt="image description">
+							<div id='specProduct' class="img-holder"> 
+								<img src="http://localhost:3000/product/image/${product.productid}" alt="image description">
 							</div><!-- img holder end here -->
 							<!-- txt holder start here -->
 							<div class="txt-holder">
 								<!-- align left start here -->
 								<div class="align-left">
 									<strong class="title"><a href="product-detail.html">${product.name}</a></strong>
-									<span class="price"><i class="fa fa-eur"></i> ${product.price}</span>
+									<span class="price"><i class="fa fa-dollar"></i> ${product.price}</span>
 									<p>${product.description}</p>
 								</div><!-- align left end here -->
 								<!-- align right start here -->
@@ -139,9 +140,25 @@ function showProductList() {
 		.catch((err) => console.error(err)); // res.data just get the data
 }
 
+function directToDetails() {
+	var data = '{"clickedProID":"' + index + '"}';
+	localStorage.setItem('clickedData', data);
+
+	axios
+		.get(
+			// the backend api we want to hit
+			`http://localhost:3000//product/${index}`
+		)
+		.then((res) => showProductCate(res)) // res.data just get the data
+		.catch((err) => console.error(err));
+}
+
 // call func to get all the categories
 showProductCate();
 showBrandFilter();
 showProductList();
-// // Event listeners
-// document.getElementById('categories').innerHTML(getCates());
+
+// Event listeners
+document
+	.getElementById('specProduct')
+	.addEventListener('click', directToDetails(index));

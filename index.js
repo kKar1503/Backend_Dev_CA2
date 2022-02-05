@@ -11,8 +11,8 @@ app.get('/product', (req, res) => {
 	res.sendFile('/public/product-list-view.html', { root: __dirname });
 });
 
-// Find all the products
-app.get('/product/:productid', (req, res) => {
+// Specific product detail
+app.get('/product/detail', (req, res) => {
 	res.sendFile('/public/product-detail.html', { root: __dirname });
 });
 

@@ -47,7 +47,7 @@ function showProductCate() {
 							</li>
 							`;
 
-						$('#categories').append(productCateHTML);
+						$j('#categories').append(productCateHTML);
 					})
 					.catch((err) => console.error(err));
 			});
@@ -82,7 +82,7 @@ function showBrandFilter() {
 						</li>
 							`;
 						// console.log(filterBrandHTML);
-						$('#brandFilter').append(filterBrandHTML);
+						$j('#brandFilter').append(filterBrandHTML);
 					})
 					.catch((err) => console.error(err));
 			});
@@ -98,13 +98,13 @@ function showProductList() {
 		)
 		.then((res) => {
 			let products = res.data;
-			products.forEach((product, index) => {
+			products.forEach((product) => {
 				// this is use db port
 				let productHTML = `
 						<!-- product post start here -->
 						<div class="product-post">
 							<!-- img holder start here -->
-							<div id='specProduct' class="img-holder">
+							<div href="#" id='specProduct-${product.productid}' class="img-holder">
 								<img src="http://localhost:3000/product/image/${product.productid}" alt="image description">
 							</div><!-- img holder end here -->
 							<!-- txt holder start here -->
@@ -134,23 +134,10 @@ function showProductList() {
 						</div><!-- product post end here -->
 							`;
 
-				$('#productList').append(productHTML);
+				$j('#productList').append(productHTML);
 			});
 		})
 		.catch((err) => console.error(err)); // res.data just get the data
-}
-
-function directToDetails() {
-	var data = '{"clickedProID":"' + index + '"}';
-	localStorage.setItem('clickedData', data);
-
-	axios
-		.get(
-			// the backend api we want to hit
-			`http://localhost:3000//product/${index}`
-		)
-		.then((res) => showProductCate(res)) // res.data just get the data
-		.catch((err) => console.error(err));
 }
 
 // call func to get all the categories
@@ -164,13 +151,32 @@ showProductList();
 // const category = params.get('category');
 // console.log(category);
 
-// Event listeners
-document.getElementById('specProduct').addEventListener('click', function () {
-	localStorage.setItem('selectedID', parseInt(this.attr('id').substring(9)));
+// // Event listeners
+// document.getElementById('specProduct').addEventListener('click', function () {
+// 	localStorage.setItem('selectedID', parseInt(this.attr('id').substring(9)));
 
-	window.location.href = '/product-detail.html';
-});
+// 	window.location.href = '/product-detail.html';
+// });
 
 // $j(document).on('click', '#specProduct', function () {
 // 	localStorage.setItem('selectedID', parseInt($j(this).attr('id')));
+// });
+
+$j(document).on('click', '.img-holder', function () {
+	localStorage.setItem(
+		'productID',
+		parseInt($j(this).attr('id').substring(11))
+	);
+	paramObj = new Object();
+	paramObj.productid = parseInt($j(this).attr('id').substring(12));
+	// paramObj.brand =
+	window.location.href = `/product/detail?${$.param(paramObj)}`;
+});
+
+// $j(document).on('click', '.category', function () {
+// 	localStorage.setItem('productCategory', parseInt($j(this).attr('id').substring(9)));
+// 	paramObj = new Object();
+// 	paramObj.category = parseInt($j(this).attr('id').substring(9));
+// 	// paramObj.brand =
+// 	window.location.href = `/product?${$.param(paramObj)}`;
 // });

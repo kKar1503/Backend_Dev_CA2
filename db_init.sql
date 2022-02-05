@@ -28,6 +28,7 @@ CREATE TABLE `category` (
   `categoryid` int NOT NULL AUTO_INCREMENT,
   `category` varchar(45) NOT NULL,
   `description` varchar(255) NOT NULL,
+  `image_file_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`categoryid`),
   UNIQUE KEY `category_UNIQUE` (`category`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

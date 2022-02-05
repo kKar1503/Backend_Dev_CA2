@@ -132,7 +132,7 @@
 .mt-about-sec:after,
 .mt-seller-sec:after,
 #sidebar:after {
-	content: "";
+	content: '';
 	display: block;
 	clear: both;
 }
@@ -153,8 +153,8 @@
 .btn-type2,
 .btn-type3,
 .btn-type4 {
-	-webkit-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 /* // justify nav
@@ -188,8 +188,8 @@
 }
 
 .w1 {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 a:focus,
@@ -281,7 +281,7 @@ a:hover {
 	color: #2e2e2e;
 	letter-spacing: 1px;
 	margin: 10px 0 0 39px;
-	font: 700 12px/19px "Oxygen", sans-serif;
+	font: 700 12px/19px 'Oxygen', sans-serif;
 }
 
 #mt-header.style4 .tel .fa {
@@ -339,7 +339,7 @@ a:hover {
 	color: #2e2e2e;
 	letter-spacing: 1px;
 	margin: 42px 0 0 19px;
-	font: 700 12px/19px "Oxygen", sans-serif;
+	font: 700 12px/19px 'Oxygen', sans-serif;
 }
 
 #mt-header.style6 {
@@ -589,7 +589,7 @@ a:hover {
 	color: #8f8d8c;
 	background: transparent;
 	padding: 23px 28px 5px 33px;
-	border-bottom: 1px solid rgba(238, 238, 238, .22);
+	border-bottom: 1px solid rgba(238, 238, 238, 0.22);
 }
 
 #mt-header.style10 .mt-top-bar a {
@@ -603,7 +603,7 @@ a:hover {
 #mt-header.style10 .mt-bottom-bar {
 	background: transparent;
 	padding: 33px 16px 36px 30px;
-	border-bottom: 1px solid rgba(238, 238, 238, .22);
+	border-bottom: 1px solid rgba(238, 238, 238, 0.22);
 }
 
 #mt-header.style10 .mt-top-lang {
@@ -720,7 +720,7 @@ a:hover {
 	color: #8f8d8c;
 	background: transparent;
 	padding: 23px 28px 5px 33px;
-	border-bottom: 1px solid rgba(238, 238, 238, .22);
+	border-bottom: 1px solid rgba(238, 238, 238, 0.22);
 }
 
 #mt-header.style12 .mt-top-bar a {
@@ -734,7 +734,7 @@ a:hover {
 #mt-header.style12 .mt-bottom-bar {
 	background: transparent;
 	padding: 35px 35px 36px 30px;
-	border-bottom: 1px solid rgba(238, 238, 238, .22);
+	border-bottom: 1px solid rgba(238, 238, 238, 0.22);
 }
 
 #mt-header.style12 .mt-top-lang {
@@ -751,7 +751,7 @@ a:hover {
 	color: #fff;
 	margin: 6px 0 0 5px;
 	letter-spacing: 1px;
-	font: 700 14px/20px "Oxygen", sans-serif;
+	font: 700 14px/20px 'Oxygen', sans-serif;
 }
 
 #mt-header.style12 .tel .fa {
@@ -841,7 +841,7 @@ a:hover {
 	color: #2e2e2e;
 	letter-spacing: 1px;
 	margin: 10px 0 0 23px;
-	font: 700 12px/19px "Oxygen", sans-serif;
+	font: 700 12px/19px 'Oxygen', sans-serif;
 }
 
 #mt-header.style13 .tel .fa {
@@ -874,7 +874,7 @@ a:hover {
 	bottom: 0;
 	left: -14px;
 	z-index: -1;
-	content: "";
+	content: '';
 	right: -9999px;
 	background: #fff;
 	position: absolute;
@@ -994,7 +994,7 @@ a:hover {
 #mt-header.style17 .mt-top-bar .tel {
 	color: #a1a1a1;
 	margin: 0 46px 0 0;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #mt-header.style17 .mt-top-bar .tel:hover {
@@ -1233,7 +1233,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	position: fixed;
-	box-shadow: 0 0 20px 10px rgba(0, 0, 0, .1);
+	box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 
 #mt-header.sticky.style19 .mt-bottom-bar {
@@ -1269,7 +1269,7 @@ a:hover {
 .mt-top-bar .tel {
 	float: left;
 	letter-spacing: 1px;
-	font: 700 12px/19px "Oxygen", sans-serif;
+	font: 700 12px/19px 'Oxygen', sans-serif;
 }
 
 .mt-top-bar .tel .fa {
@@ -1292,7 +1292,7 @@ a:hover {
 .mt-top-bar .account {
 	float: right;
 	letter-spacing: 1px;
-	font: 11px/20px "Oxygen", sans-serif;
+	font: 11px/20px 'Oxygen', sans-serif;
 }
 
 .mt-top-bar .account a {
@@ -1300,46 +1300,46 @@ a:hover {
 }
 
 .mt-top-bar .mt-top-lang {
-  float: right;
-  position: relative;
-  z-index: 3;
-  padding: 0 0 1px 16px;
-  margin: 3px 0 8px 16px;
-  border-left: 1px solid #808080;
-  font: 11px/14px "Oxygen", sans-serif;
+	float: right;
+	position: relative;
+	z-index: 3;
+	padding: 0 0 1px 16px;
+	margin: 3px 0 8px 16px;
+	border-left: 1px solid #808080;
+	font: 11px/14px 'Oxygen', sans-serif;
 }
 
 .mt-top-bar .mt-top-lang:hover .drop {
-  display: block;
+	display: block;
 }
 
 .mt-top-bar .mt-top-lang .lang-opener {
-  letter-spacing: 1px;
+	letter-spacing: 1px;
 }
 
 .mt-top-bar .mt-top-lang .lang-opener .fa {
-  font-size: 13px;
-  margin: 0 0 0 2px;
+	font-size: 13px;
+	margin: 0 0 0 2px;
 }
 
 .mt-top-bar .mt-top-lang .drop {
-  top: 100%;
-  right: 0;
-  width: 84px;
-  display: none;
-  position: absolute;
+	top: 100%;
+	right: 0;
+	width: 84px;
+	display: none;
+	position: absolute;
 }
 
 .mt-top-bar .mt-top-lang ul {
-  overflow: hidden;
-  margin: 0;
-  text-align: left;
-  padding: 10px 10px 10px 18px;
-  background: #3d3d3d;
+	overflow: hidden;
+	margin: 0;
+	text-align: left;
+	padding: 10px 10px 10px 18px;
+	background: #3d3d3d;
 }
 
 .mt-top-bar .mt-top-lang ul li {
-  display: block;
+	display: block;
 }
 
 .mt-top-bar .mt-top-list {
@@ -1348,7 +1348,7 @@ a:hover {
 	float: right;
 	list-style: none;
 	letter-spacing: 1px;
-	font: 700 11px/20px "Oxygen", sans-serif;
+	font: 700 11px/20px 'Oxygen', sans-serif;
 }
 
 .mt-top-bar .mt-top-list li {
@@ -1376,7 +1376,7 @@ a:hover {
 	float: right;
 	list-style: none;
 	letter-spacing: 1px;
-	font: 700 11px/18px "Source Sans Pro", sans-serif;
+	font: 700 11px/18px 'Source Sans Pro', sans-serif;
 }
 
 .mt-top-bar .mt-top-list2 li {
@@ -1405,8 +1405,8 @@ a:hover {
 .mt-bottom-bar {
 	background: #fff;
 	padding: 42px 31px 42px 48px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-bottom-bar .mt-holder {
@@ -1478,7 +1478,7 @@ a:hover {
 	top: 83%;
 	left: 50%;
 	height: 0;
-	content: " ";
+	content: ' ';
 	margin-left: -13px;
 	position: absolute;
 	pointer-events: none;
@@ -1541,7 +1541,7 @@ a:hover {
 	position: absolute;
 	border-radius: 50%;
 	border: 2px solid #fff;
-	font: 11px/15px "Montserrat", sans-serif;
+	font: 11px/15px 'Montserrat', sans-serif;
 }
 
 .mt-bottom-bar .bar-opener {
@@ -1594,7 +1594,7 @@ a:hover {
 	position: relative;
 	letter-spacing: 1px;
 	padding: 2px 0 0 42px;
-	font: 11px/15px "Montserrat", sans-serif;
+	font: 11px/15px 'Montserrat', sans-serif;
 }
 
 .mt-bottom-bar .mt-sh-cart .icon-handbag {
@@ -1623,7 +1623,7 @@ a:hover {
 	text-align: center;
 	background: #414544;
 	letter-spacing: 1px;
-	font: 700 11px/25px "Oxygen", sans-serif;
+	font: 700 11px/25px 'Oxygen', sans-serif;
 }
 
 .mt-bottom-bar .mt-sh-cart2 span {
@@ -1641,7 +1641,7 @@ a:hover {
 	float: right;
 	list-style: none;
 	letter-spacing: 1px;
-	font: 700 11px/18px "Oxygen", sans-serif;
+	font: 700 11px/18px 'Oxygen', sans-serif;
 }
 
 .mt-bottom-bar .mt-top-list li {
@@ -1710,7 +1710,7 @@ a:hover {
 	outline: none;
 	color: #919191;
 	background: transparent;
-	font: 12px/20px "Source Sans Pro", sans-serif;
+	font: 12px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-bottom-bar .mt-search-box .fa {
@@ -1735,7 +1735,7 @@ a:hover {
 	float: right;
 	margin: 12px 0 0;
 	text-transform: uppercase;
-	font: 14px/20px "Montserrat", sans-serif;
+	font: 14px/20px 'Montserrat', sans-serif;
 }
 
 #nav > ul {
@@ -1778,7 +1778,7 @@ a:hover {
 	left: 50%;
 	height: 0;
 	opacity: 0;
-	content: " ";
+	content: ' ';
 	visibility: hidden;
 	margin-left: -13px;
 	position: absolute;
@@ -1874,7 +1874,7 @@ a:hover {
 	padding: 0 0 4px;
 	position: relative;
 	pointer-events: none;
-	font: 16px/20px "Montserrat", sans-serif;
+	font: 16px/20px 'Montserrat', sans-serif;
 }
 
 #nav .mt-dropmenu .title a {
@@ -1890,7 +1890,7 @@ a:hover {
 	bottom: 0;
 	height: 2px;
 	width: 68px;
-	content: "";
+	content: '';
 	position: absolute;
 	background: #5a5a5a;
 }
@@ -1905,7 +1905,7 @@ a:hover {
 	overflow: hidden;
 	list-style: none;
 	text-transform: lowercase;
-	font: 300 14px/20px "Source Sans Pro", sans-serif;
+	font: 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 #nav .mt-dropmenu ul li {
@@ -1975,7 +1975,7 @@ a:hover {
 	padding: 28px 0 0;
 	visibility: hidden;
 	position: absolute;
-	font: 300 12px/35px "Source Sans Pro", sans-serif;
+	font: 300 12px/35px 'Source Sans Pro', sans-serif;
 }
 
 #nav .s-drop ul {
@@ -1995,9 +1995,9 @@ a:hover {
 	right: 10px;
 	color: #2e2e2e;
 	font-size: 11px;
-	content: "\f105";
+	content: '\f105';
 	position: absolute;
-	font-family: "FontAwesome";
+	font-family: 'FontAwesome';
 }
 
 #nav .s-drop ul > li:hover .s-drop {
@@ -2057,7 +2057,7 @@ a:hover {
 	z-index: 1;
 	position: fixed;
 	visibility: hidden;
-	background: rgba(0, 0, 0, .5);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 /*------------------------------------------------------------------
@@ -2073,7 +2073,7 @@ a:hover {
 	z-index: 5;
 	position: fixed;
 	visibility: hidden;
-	background: rgba(0, 0, 0, .5);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .mt-side-over.active {
@@ -2097,8 +2097,8 @@ a:hover {
 	transform: translateX(385px);
 	-ms-transform: translateX(385px);
 	-webkit-transform: translateX(385px);
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-side-menu .side-close {
@@ -2141,7 +2141,7 @@ a:hover {
 	background: #f0f0f0;
 	text-transform: uppercase;
 	padding: 30px 50px 24px 34px;
-	font: 18px/20px "Montserrat", sans-serif;
+	font: 18px/20px 'Montserrat', sans-serif;
 }
 
 .side-col-active .mt-side-menu .mt-mdropover {
@@ -2173,7 +2173,7 @@ a:hover {
 	color: #7d7d7d;
 	overflow: hidden;
 	padding: 43px 32px 37px 34px;
-	font: 300 14px/20px "Source Sans Pro", sans-serif;
+	font: 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget.borderbottom {
@@ -2184,7 +2184,7 @@ a:hover {
 	display: block;
 	margin: 0 0 10px;
 	text-transform: uppercase;
-	font: 18px/20px "Montserrat", sans-serif;
+	font: 18px/20px 'Montserrat', sans-serif;
 }
 
 .mt-side-widget p {
@@ -2249,13 +2249,13 @@ a:hover {
 	color: #9a9a9a;
 	position: relative;
 	padding: 0 0 0 18px;
-	font: 11px/18px "Oxygen", sans-serif;
+	font: 11px/18px 'Oxygen', sans-serif;
 }
 
 .mt-side-widget form .left label:after {
 	left: 0;
 	top: 3px;
-	content: "";
+	content: '';
 	width: 10px;
 	height: 10px;
 	position: absolute;
@@ -2269,9 +2269,9 @@ a:hover {
 	display: none;
 	font-size: 8px;
 	color: #ff6060;
-	content: "\f00c";
+	content: '\f00c';
 	position: absolute;
-	font-family: "FontAwesome";
+	font-family: 'FontAwesome';
 }
 
 .mt-side-widget form .left .checkbox:checked + label:before {
@@ -2281,7 +2281,7 @@ a:hover {
 .mt-side-widget form .help {
 	float: right;
 	color: #9a9a9a;
-	font: 12px/18px "Oxygen", sans-serif;
+	font: 12px/18px 'Oxygen', sans-serif;
 }
 
 .mt-side-widget form .help:hover {
@@ -2299,7 +2299,7 @@ a:hover {
 	padding: 9px 22px;
 	background: #f0f0f0;
 	border-radius: 30px;
-	font: 300 14px/20px "Source Sans Pro", sans-serif;
+	font: 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .fa-search {
@@ -2310,8 +2310,8 @@ a:hover {
 	font-size: 12px;
 	background: none;
 	position: absolute;
-	-webkit-transition: all .3s linear;
-	transition: all .3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 .mt-side-widget .fa-search:hover {
@@ -2330,8 +2330,8 @@ a:hover {
 	color: #ff6060;
 	font-size: 14px;
 	position: absolute;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-side-widget .cart-row .close:hover {
@@ -2357,13 +2357,13 @@ a:hover {
 .mt-side-widget .mt-h-title {
 	display: block;
 	color: #757575;
-	font: 600 14px/20px "Source Sans Pro", sans-serif;
+	font: 600 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .mt-h-title a {
 	color: #757575;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-side-widget .mt-h-title a:hover {
@@ -2373,13 +2373,13 @@ a:hover {
 
 .mt-side-widget .price {
 	color: #010101;
-	font: 600 15px/20px "Source Sans Pro", sans-serif;
+	font: 600 15px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .price a {
 	color: #757575;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-side-widget .price a:hover {
@@ -2393,7 +2393,7 @@ a:hover {
 	margin: 0 0 20px;
 	padding: 16px 21px 0 10px;
 	border-top: 1px solid #eee;
-	font: 600 14px/26px "Source Sans Pro", sans-serif;
+	font: 600 14px/26px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .mt-total {
@@ -2403,7 +2403,7 @@ a:hover {
 .mt-side-widget .mt-total-txt {
 	float: right;
 	color: #010101;
-	font: 600 15px/20px "Source Sans Pro", sans-serif;
+	font: 600 15px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .cart-btn-row {
@@ -2418,7 +2418,7 @@ a:hover {
 
 .mt-side-widget .btn-type3 {
 	padding: 5px 22px;
-	font: 14px/20px "Montserrat", sans-serif;
+	font: 14px/20px 'Montserrat', sans-serif;
 }
 
 .or-divider {
@@ -2427,7 +2427,7 @@ a:hover {
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	font: 700 14px/20px "Montserrat", sans-serif;
+	font: 700 14px/20px 'Montserrat', sans-serif;
 }
 
 .or-divider .txt {
@@ -2446,7 +2446,7 @@ a:hover {
 	top: 50%;
 	z-index: -1;
 	height: 1px;
-	content: "";
+	content: '';
 	left: -9999px;
 	right: -9999px;
 	position: absolute;
@@ -2456,15 +2456,15 @@ a:hover {
 .mt-side-nav {
 	overflow: hidden;
 	text-transform: uppercase;
-	font: 18px/20px "Montserrat", sans-serif;
+	font: 18px/20px 'Montserrat', sans-serif;
 }
 
 .mt-side-nav .drop {
 	max-height: 0;
 	font-size: 15px;
 	overflow: hidden;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-side-nav .drop ul {
@@ -2491,8 +2491,8 @@ a:hover {
 
 .mt-side-nav a {
 	color: #7d7d7d;
-	-webkit-transition: all .3s linear;
-	transition: all .3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 .mt-side-nav a:hover {
@@ -2503,7 +2503,7 @@ a:hover {
 .mt-side-nav.small {
 	text-transform: lowercase;
 	text-transform: capitalize;
-	font: 16px/20px "Montserrat", sans-serif;
+	font: 16px/20px 'Montserrat', sans-serif;
 }
 
 .mt-search-popup {
@@ -2517,8 +2517,8 @@ a:hover {
 	visibility: hidden;
 	text-align: center;
 	background: #f8f8f8;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-search-popup .mt-holder {
@@ -2546,8 +2546,8 @@ a:hover {
 	color: #9d9d9d;
 	font-size: 23px;
 	position: absolute;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-search-popup .icon-microphone:hover {
@@ -2564,8 +2564,8 @@ a:hover {
 	font-size: 23px;
 	position: absolute;
 	background: transparent;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-search-popup .icon-magnifier:hover {
@@ -2582,7 +2582,7 @@ a:hover {
 	color: #9d9d9d;
 	background: none;
 	padding: 15px 73px 15px 23px;
-	font: 300 25px/30px "Source Sans Pro", sans-serif;
+	font: 300 25px/30px 'Source Sans Pro', sans-serif;
 }
 
 .mt-search-popup input ::-webkit-input-placeholder {
@@ -2653,7 +2653,7 @@ a:hover {
 	border-radius: 18px;
 	vertical-align: top;
 	display: inline-block;
-	font: 300 14px/20px "Source Sans Pro", sans-serif;
+	font: 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .btn-type1:hover {
@@ -2670,7 +2670,7 @@ a:hover {
 	background: transparent;
 	border: 1px solid #000;
 	text-transform: uppercase;
-	font: 14px/20px "Montserrat", sans-serif;
+	font: 14px/20px 'Montserrat', sans-serif;
 }
 
 .btn-type2:focus,
@@ -2690,7 +2690,7 @@ a:hover {
 	display: inline-block;
 	border: 1px solid #000;
 	text-transform: uppercase;
-	font: 300 14px/20px "Source Sans Pro", sans-serif;
+	font: 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .btn-type3:focus,
@@ -2710,7 +2710,7 @@ a:hover {
 	background: transparent;
 	border: 1px solid #d1d1d1;
 	text-transform: uppercase;
-	font: 700 12px/20px "Source Sans Pro", sans-serif;
+	font: 700 12px/20px 'Source Sans Pro', sans-serif;
 }
 
 .btn-type4:focus,
@@ -2725,7 +2725,7 @@ a:hover {
 -------------------------------------------------------------------*/
 
 #mt-footer.montserrat {
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 #mt-footer.montserrat .f-widget-heading {
@@ -2841,7 +2841,7 @@ a:hover {
 #mt-footer.style6 .footer-area p {
 	color: #8f8f8f;
 	letter-spacing: 1px;
-	font: 11px/20px "Source Sans Pro", sans-serif;
+	font: 11px/20px 'Source Sans Pro', sans-serif;
 }
 
 #mt-footer.style6 .bank-card-2.align-center {
@@ -2946,8 +2946,8 @@ a:hover {
 }
 
 #mt-footer .light .f-widget-about .address-list a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .light .f-widget-about .address-list a:hover {
@@ -2955,8 +2955,8 @@ a:hover {
 }
 
 #mt-footer .light .nav-widget-1 .f-widget-nav a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .light .nav-widget-1 .f-widget-nav a:hover {
@@ -3008,8 +3008,8 @@ a:hover {
 }
 
 #mt-footer .f-holder .f-about .address-list a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #fff;
 }
 
@@ -3029,7 +3029,7 @@ a:hover {
 
 #mt-footer .footer-holder .bg-dark:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: auto;
 	top: 0;
@@ -3037,7 +3037,7 @@ a:hover {
 	right: -75px;
 	border-style: solid;
 	border-width: 0 0 331px 75px;
-	border-color: transparent transparent rgba(255, 255, 255, .8);
+	border-color: transparent transparent rgba(255, 255, 255, 0.8);
 	z-index: 1;
 }
 
@@ -3049,8 +3049,8 @@ a:hover {
 }
 
 #mt-footer .footer-holder.black .nav-widget-1 .f-widget-nav li a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .footer-holder.black .nav-widget-1 .f-widget-nav li a:hover {
@@ -3058,8 +3058,8 @@ a:hover {
 }
 
 #mt-footer .footer-holder.black .social-icon a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .footer-holder.black .social-icon a:hover {
@@ -3109,8 +3109,8 @@ a:hover {
 }
 
 #mt-footer .footer-area .copyright a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #868686;
 }
 
@@ -3119,8 +3119,8 @@ a:hover {
 }
 
 #mt-footer .footer-area .copy-right p a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #868686;
 }
 
@@ -3135,8 +3135,8 @@ a:hover {
 #mt-footer .footer-area p a {
 	font-weight: 700;
 	color: #000;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 #mt-footer .footer-area p a:hover {
@@ -3223,8 +3223,8 @@ a:hover {
 }
 
 #mt-footer .f-widget-about .address-list li a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .f-widget-about .address-list li a:hover {
@@ -3276,8 +3276,8 @@ a:hover {
 }
 
 #mt-footer .nav-widget-1 .f-widget-nav li a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .nav-widget-1 .f-widget-nav li a:hover {
@@ -3343,8 +3343,8 @@ a:hover {
 	background: #696969;
 	color: #fff;
 	border-radius: 0 25px 25px 0;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .f-widget-newsletter .newsletter-form.form2 button:hover {
@@ -3362,7 +3362,7 @@ a:hover {
 	outline: none;
 	font-weight: 200;
 	padding: 7px 10px 7px 22px;
-	font: 700 11px/16px "Montserrat", sans-serif;
+	font: 700 11px/16px 'Montserrat', sans-serif;
 }
 
 #mt-footer .f-widget-newsletter .newsletter-form button {
@@ -3370,7 +3370,7 @@ a:hover {
 	background: none;
 	border: none;
 	outline: none;
-	font: 700 11px/16px "Montserrat", sans-serif;
+	font: 700 11px/16px 'Montserrat', sans-serif;
 	width: 6%;
 	padding: 6px 0 0 0;
 }
@@ -3409,8 +3409,8 @@ a:hover {
 
 #mt-footer .f-widget-news .news-articles .txt-box a {
 	font-weight: bold;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .f-widget-news .news-articles .txt-box a:hover {
@@ -3427,8 +3427,8 @@ a:hover {
 	display: block;
 	border-radius: 25px;
 	border: 1px solid #c1c1c1;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .f-widget-tabs .tabs li a:hover {
@@ -3442,8 +3442,8 @@ a:hover {
 }
 
 #mt-footer .f-widget-nav2 a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .f-widget-nav2 a:hover {
@@ -3451,8 +3451,8 @@ a:hover {
 }
 
 #mt-footer .social-network a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 #mt-footer .social-network a:hover {
@@ -3514,8 +3514,8 @@ a:hover {
 	height: 42px;
 	letter-spacing: 1px;
 	padding: 2px 0 0 0;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .f-promo-box .subcrib-form button:hover {
@@ -3540,7 +3540,7 @@ a:hover {
 
 .f-promo-box .f-widget-item.border:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: -36px;
 	top: 0;
@@ -3556,7 +3556,7 @@ a:hover {
 	font-size: 12px;
 	line-height: 20px;
 	overflow: hidden;
-	font-family: "Oxygen", sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	letter-spacing: 1px;
 	color: #353535;
 }
@@ -3569,7 +3569,7 @@ a:hover {
 	margin: 0 0 1px;
 	color: #353535;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .f-promo-box .f-widget-item .txt {
@@ -3580,7 +3580,7 @@ a:hover {
 	font-weight: 700;
 	padding: 11px 0 0;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .f-promo-box .f-widget-item .widget-icon {
@@ -3645,7 +3645,7 @@ a:hover {
 	text-transform: uppercase;
 	font-size: 65px;
 	line-height: 68px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .mt-main-slider h2 {
@@ -3654,7 +3654,7 @@ a:hover {
 	font-weight: 700;
 	font-size: 51px;
 	line-height: 54px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .mt-main-slider .text {
@@ -3692,9 +3692,9 @@ a:hover {
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 18px;
-	font-family: "Montserrat", sans-serif;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -3705,11 +3705,11 @@ a:hover {
 	left: 100%;
 	height: 1px;
 	width: 30px;
-	content: "";
+	content: '';
 	position: absolute;
 	background: #818182;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-main-slider .shop:before {
@@ -3739,8 +3739,8 @@ a:hover {
 	width: 16px;
 	height: 16px;
 	border: 2px solid #d2d2d2;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-main-slider .slick-dots li:hover,
@@ -3792,19 +3792,19 @@ a:hover {
 .mt-mainslider2 .caption.add h2 {
 	letter-spacing: 9px;
 	margin: 0 -10px 8px 0;
-	font: 200 58px/60px "Source Sans Pro", sans-serif;
+	font: 200 58px/60px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 .caption.add2 h1 {
 	font-size: 58px;
 	line-height: 60px;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 .caption.add2 h2 {
 	letter-spacing: -1px;
 	margin: 4px 0 28px -2px;
-	font: 200 58px/60px "Source Sans Pro", sans-serif;
+	font: 200 58px/60px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 .c1 {
@@ -3839,7 +3839,7 @@ a:hover {
 .mt-mainslider2 .price {
 	color: #535353;
 	display: block;
-	font: 28px/30px "Montserrat", sans-serif;
+	font: 28px/30px 'Montserrat', sans-serif;
 }
 
 .mt-mainslider2 .price sub {
@@ -3857,7 +3857,7 @@ a:hover {
 	margin: 0 0 12px;
 	letter-spacing: 4px;
 	text-transform: uppercase;
-	font: 600 14px/16px "Source Sans Pro", sans-serif;
+	font: 600 14px/16px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 .sub-title {
@@ -3866,25 +3866,25 @@ a:hover {
 	margin: 0 0 10px;
 	letter-spacing: 4px;
 	text-transform: uppercase;
-	font: 600 14px/16px "Source Sans Pro", sans-serif;
+	font: 600 14px/16px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 h1 {
 	color: #3b3b3b;
 	margin: 0 0 -10px;
-	font: 700 65px/70px "Montserrat", sans-serif;
+	font: 700 65px/70px 'Montserrat', sans-serif;
 }
 
 .mt-mainslider2 h2 {
 	margin: 0;
 	color: #7a7a7a;
-	font: 700 51px/60px "Montserrat", sans-serif;
+	font: 700 51px/60px 'Montserrat', sans-serif;
 }
 
 .mt-mainslider2 p {
 	margin: 0;
 	color: #818182;
-	font: italic 300 16px/20px "Source Sans Pro", sans-serif;
+	font: italic 300 16px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider2 .slick-dots {
@@ -3925,7 +3925,7 @@ a:hover {
 	overflow: hidden;
 	max-width: 1460px;
 	margin: 0 auto -4px;
-	font: 14px/20px "Source Sans Pro", sans-serif;
+	font: 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider3 .img {
@@ -3962,7 +3962,7 @@ a:hover {
 
 .mt-mainslider3 .txt-wrap.right h1 {
 	margin: -10px 2px -9px 0;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .mt-mainslider3 .txt-wrap.right h2 {
@@ -3987,27 +3987,27 @@ a:hover {
 	margin: 0 0 10px;
 	letter-spacing: 4px;
 	text-transform: uppercase;
-	font: 600 14px/16px "Source Sans Pro", sans-serif;
+	font: 600 14px/16px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider3 h1 {
 	color: #535353;
 	margin: 0 0 5px -5px;
 	letter-spacing: -1.6px;
-	font: 700 58px/60px "Source Sans Pro", sans-serif;
+	font: 700 58px/60px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider3 h2 {
 	color: #535353;
 	margin: 0 0 29px -5px;
 	letter-spacing: -1px;
-	font: 200 58px/60px "Source Sans Pro", sans-serif;
+	font: 200 58px/60px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider3 .price {
 	color: #535353;
 	display: block;
-	font: 28px/30px "Montserrat", sans-serif;
+	font: 28px/30px 'Montserrat', sans-serif;
 }
 
 .mt-mainslider3 .price sub {
@@ -4075,7 +4075,7 @@ a:hover {
 .mt-mainslider4 .price {
 	display: block;
 	color: #535353;
-	font: 27px/30px "Montserrat", sans-serif;
+	font: 27px/30px 'Montserrat', sans-serif;
 }
 
 .mt-mainslider4 .price sub {
@@ -4104,14 +4104,14 @@ a:hover {
 	margin: 0 0 5px -4px;
 	letter-spacing: -1.5px;
 	text-transform: uppercase;
-	font: 700 58px/59px "Source Sans Pro", sans-serif;
+	font: 700 58px/59px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider4 .txt h2 {
 	margin: 0 0 31px -3px;
 	letter-spacing: -1.3px;
 	text-transform: uppercase;
-	font: 100 58px/59px "Source Sans Pro", sans-serif;
+	font: 100 58px/59px 'Source Sans Pro', sans-serif;
 }
 
 .mt-mainslider4 .txt p {
@@ -4276,7 +4276,7 @@ a:hover {
 	height: 1px;
 	background: #fff;
 	width: 100%;
-	content: "";
+	content: '';
 }
 
 .slider-1 .slider .title span:after {
@@ -4322,8 +4322,8 @@ a:hover {
 	vertical-align: middle;
 	position: relative;
 	padding: 0 15px;
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 .slider-1 .slider .btn .shop:after,
@@ -4332,7 +4332,7 @@ a:hover {
 	left: 100%;
 	top: 7px;
 	height: 1px;
-	content: "";
+	content: '';
 	background: #fff;
 	width: 100%;
 }
@@ -4374,7 +4374,7 @@ a:hover {
 -------------------------------------------------------------------*/
 
 .slider-3 .slider.center .slick-slide {
-	opacity: .5;
+	opacity: 0.5;
 }
 
 .slider-3 .slider.center .slick-slide.slick-active {
@@ -4382,10 +4382,10 @@ a:hover {
 }
 
 .slider-3 .holder {
-	opacity: .7;
+	opacity: 0.7;
 	position: relative;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .slider-3 .holder.slick-current {
@@ -4414,7 +4414,7 @@ a:hover {
 	top: 0;
 	bottom: 0;
 	text-align: center;
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, 0.4);
 }
 
 .slider-3 .c1 {
@@ -4429,8 +4429,8 @@ a:hover {
 	padding: 107px 20px 20px;
 	display: table-cell;
 	vertical-align: middle;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .slider-3 h1 {
@@ -4448,7 +4448,7 @@ a:hover {
 	margin: 0 0 36px;
 	font-weight: 600;
 	letter-spacing: 2.2px;
-	font: 600 48px/50px "Source Sans Pro", sans-serif;
+	font: 600 48px/50px 'Source Sans Pro', sans-serif;
 }
 
 .slider-3 .shop {
@@ -4458,11 +4458,11 @@ a:hover {
 	border: 2px solid #fff;
 	padding: 11px 26px 10px;
 	text-transform: uppercase;
-	font: 16px/20px "Montserrat", sans-serif;
+	font: 16px/20px 'Montserrat', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .slider-3 .shop:hover {
@@ -4745,11 +4745,11 @@ a:hover {
 	margin: 40px 0 0;
 	line-height: 16px;
 	text-decoration: none;
-	letter-spacing: -.8px;
+	letter-spacing: -0.8px;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -4757,8 +4757,8 @@ a:hover {
 .banner-frame .btn-shop span,
 .banner-frame .btn-shop .fa {
 	color: #878787;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -4803,7 +4803,7 @@ a:hover {
 	background: #eed24c;
 	font-size: 37px;
 	line-height: 40px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .banner-frame .discount span {
@@ -4818,7 +4818,7 @@ a:hover {
 	letter-spacing: -1.5px;
 	font-size: 17px;
 	line-height: 23px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .banner-frame .shop {
@@ -4827,9 +4827,9 @@ a:hover {
 	color: #878787;
 	position: absolute;
 	text-decoration: none;
-	font-family: "Montserrat", sans-serif;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -4853,7 +4853,7 @@ a:hover {
 
 .banner-frame h3 {
 	margin: 0 0 10px;
-	font: 700 21px/28px "Montserrat", sans-serif;
+	font: 700 21px/28px 'Montserrat', sans-serif;
 }
 
 .banner-frame.nospace {
@@ -4972,7 +4972,7 @@ a:hover {
 .banner-3 .shop {
 	right: 36px;
 	bottom: 32px;
-	letter-spacing: -.6px;
+	letter-spacing: -0.6px;
 }
 
 /*------------------------------------------------------------------
@@ -5027,12 +5027,12 @@ a:hover {
 
 .banner-5 .texts h3 {
 	margin: 0 0 8px;
-	font: 300 55px/60px "Source Sans Pro", sans-serif;
+	font: 300 55px/60px 'Source Sans Pro', sans-serif;
 }
 
 .banner-5 .texts h3 strong {
 	display: block;
-	font: 700 57px/62px "Montserrat", sans-serif;
+	font: 700 57px/62px 'Montserrat', sans-serif;
 }
 
 .banner-5 .texts p {
@@ -5041,7 +5041,7 @@ a:hover {
 
 .banner-5 .texts .price-add {
 	display: block;
-	font: 30px/35px "Montserrat", sans-serif;
+	font: 30px/35px 'Montserrat', sans-serif;
 }
 
 /*------------------------------------------------------------------
@@ -5103,7 +5103,7 @@ a:hover {
 	position: relative;
 	font-size: 16px;
 	line-height: 18px;
-	color: rgba(255, 255, 255, .57);
+	color: rgba(255, 255, 255, 0.57);
 }
 
 .banner-6 .offer .price-less:after {
@@ -5112,8 +5112,8 @@ a:hover {
 	right: 0;
 	top: 10px;
 	height: 1px;
-	content: "";
-	background: rgba(255, 255, 255, .57);
+	content: '';
+	background: rgba(255, 255, 255, 0.57);
 }
 
 .banner-6 .offer .prices {
@@ -5163,8 +5163,8 @@ a:hover {
 	text-decoration: none;
 	padding: 2px 9px 1px;
 	letter-spacing: 1px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .banner-7 .shop-now:hover {
@@ -5211,7 +5211,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	top: 10px;
-	content: "";
+	content: '';
 	height: 1px;
 	background: #9f9f9f;
 }
@@ -5274,7 +5274,7 @@ a:hover {
 	padding: 4px 0 0;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	font: 700 24px/26px "Montserrat", sans-serif;
+	font: 700 24px/26px 'Montserrat', sans-serif;
 }
 
 .banner-9 .btn-shop,
@@ -5367,7 +5367,7 @@ a:hover {
 }
 
 .banner-13 h2 strong {
-	font: 700 24px/25px "Montserrat", sans-serif;
+	font: 700 24px/25px 'Montserrat', sans-serif;
 }
 
 .banner-13 .btn-shop {
@@ -5438,7 +5438,7 @@ a:hover {
 	color: #5f3b34;
 	margin: 0 0 11px;
 	letter-spacing: 1.6px;
-	font: 700 18px/28px "Montserrat", sans-serif;
+	font: 700 18px/28px 'Montserrat', sans-serif;
 }
 
 .banner-18 .price-off {
@@ -5446,7 +5446,7 @@ a:hover {
 	padding: 0 3px;
 	position: relative;
 	margin: 20px 0 1px;
-	font: 18px/20px "Montserrat", sans-serif;
+	font: 18px/20px 'Montserrat', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -5455,7 +5455,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	top: 10px;
-	content: "";
+	content: '';
 	height: 1px;
 	position: absolute;
 	background: #9f9f9f;
@@ -5464,7 +5464,7 @@ a:hover {
 .banner-18 .price {
 	padding: 0;
 	color: #603b34;
-	font: 23px/26px "Montserrat", sans-serif;
+	font: 23px/26px 'Montserrat', sans-serif;
 }
 
 .banner-18 .btn-shop {
@@ -5497,7 +5497,7 @@ a:hover {
 
 .banner-19 {
 	width: 792px;
-	font: 14px/21px "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	font: 14px/21px 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 }
 
 .banner-19 .holder {
@@ -5514,12 +5514,12 @@ a:hover {
 	padding: 0 4px 11px;
 	letter-spacing: 4.1px;
 	text-transform: uppercase;
-	font: 600 14px/16px "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	font: 600 14px/16px 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 }
 
 .banner-19 h3 {
 	margin: 0 0 8px;
-	font: 100 58px/60px "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	font: 100 58px/60px 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 }
 
 .banner-19 h3 strong {
@@ -5537,11 +5537,11 @@ a:hover {
 	background: #535353;
 	border-radius: 20px;
 	text-decoration: none;
-	letter-spacing: -.4px;
+	letter-spacing: -0.4px;
 	text-transform: uppercase;
-	font: 13px/16px "Montserrat", sans-serif;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font: 13px/16px 'Montserrat', sans-serif;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .banner-19 .now:hover {
@@ -5588,7 +5588,7 @@ a:hover {
 	right: 0;
 	top: 10px;
 	height: 1px;
-	content: "";
+	content: '';
 	background: #fff;
 }
 
@@ -5605,12 +5605,12 @@ a:hover {
 	padding: 8px 27px;
 	border-radius: 20px;
 	text-decoration: none;
-	letter-spacing: .7px;
+	letter-spacing: 0.7px;
 	border: 2px solid #2c3d65;
 	font-size: 13px;
 	line-height: 16px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -5641,14 +5641,14 @@ a:hover {
 	font-weight: 600;
 	letter-spacing: 4px;
 	text-transform: uppercase;
-	font: 600 14px/16px "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	font: 600 14px/16px 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 }
 
 .banner-21 h2 {
 	margin: 0 0 30px;
 	text-transform: none;
-	letter-spacing: -1.0px;
-	font: 100 37px/40px "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	letter-spacing: -1px;
+	font: 100 37px/40px 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 }
 
 .banner-21 h2 strong {
@@ -5665,8 +5665,8 @@ a:hover {
 	border: 2px solid #535353;
 	font-size: 13px;
 	line-height: 16px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -5696,10 +5696,10 @@ a:hover {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	content: "";
-	background: rgba(231, 198, 126, .68);
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	content: '';
+	background: rgba(231, 198, 126, 0.68);
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -5782,7 +5782,7 @@ a:hover {
 	padding: 3px 6px;
 	margin-bottom: 1px;
 	background: #b2cc29;
-	font: 700 14px/16px "Montserrat", sans-serif;
+	font: 700 14px/16px 'Montserrat', sans-serif;
 }
 
 .mt-product1 .caption .new {
@@ -5790,14 +5790,14 @@ a:hover {
 	padding: 3px 6px;
 	background: #000;
 	text-transform: uppercase;
-	font: 700 13px/16px "Montserrat", sans-serif;
+	font: 700 13px/16px 'Montserrat', sans-serif;
 }
 
 .mt-product1 .caption .best-price {
 	color: #fff;
 	padding: 3px 6px;
 	background: #fed062;
-	font: 700 14px/16px "Montserrat", sans-serif;
+	font: 700 14px/16px 'Montserrat', sans-serif;
 }
 
 .mt-product1 .txt {
@@ -5809,13 +5809,13 @@ a:hover {
 	margin: 0 0 5px;
 	color: #757575;
 	text-transform: capitalize;
-	font: 600 14px/20px "Source Sans Pro", sans-serif;
+	font: 600 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product1 .title a {
 	color: #757575;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-product1 .title a:hover {
@@ -5825,7 +5825,7 @@ a:hover {
 .mt-product1 .price {
 	display: block;
 	color: #010101;
-	font: 600 17px/20px "Source Sans Pro", sans-serif;
+	font: 600 17px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product1 .price .fa {
@@ -5836,7 +5836,7 @@ a:hover {
 .mt-product1 del {
 	display: block;
 	color: #b3b3b3;
-	font: 600 17px/20px "Source Sans Pro", sans-serif;
+	font: 600 17px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product1 del .fa {
@@ -5858,8 +5858,8 @@ a:hover {
 	position: absolute;
 	text-align: center;
 	border: 1px solid #eee;
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 .mt-product1 .links .icomoon {
@@ -5872,7 +5872,7 @@ a:hover {
 }
 
 .mt-product1 .links.add {
-	box-shadow: 0 0 9px rgba(172, 172, 172, .35);
+	box-shadow: 0 0 9px rgba(172, 172, 172, 0.35);
 	padding: 10px 0;
 	width: 79%;
 	bottom: 30px;
@@ -5907,8 +5907,8 @@ a:hover {
 	display: block;
 	padding: 12px 9px;
 	text-decoration: none;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-product1 .links a .icon-handbag,
@@ -5986,7 +5986,7 @@ a:hover {
 }
 
 .mt-product2:hover img {
-	opacity: .7;
+	opacity: 0.7;
 }
 
 .mt-product2:hover.style-2:after {
@@ -5995,8 +5995,8 @@ a:hover {
 }
 
 .mt-product2 img {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-product2 .box {
@@ -6011,8 +6011,8 @@ a:hover {
 	right: 0;
 	top: 50%;
 	margin: -24px 0 0;
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -6027,7 +6027,7 @@ a:hover {
 	-webkit-transition: all 0.2s ease 0.3s;
 }
 
-.mt-product2 .links li:nth-child(even){
+.mt-product2 .links li:nth-child(even) {
 	transform: translateY(40px);
 	-webkit-transform: translateY(40px);
 }
@@ -6056,7 +6056,7 @@ a:hover {
 .mt-product2 .title {
 	display: block;
 	color: #747474;
-	font: 600 14px/20px "Source Sans Pro", sans-serif;
+	font: 600 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product2 .price {
@@ -6072,7 +6072,7 @@ a:hover {
 }
 
 .mt-product2 .price span {
-	font: 600 17px/20px "Source Sans Pro", sans-serif;
+	font: 600 17px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product2 .caption {
@@ -6088,7 +6088,7 @@ a:hover {
 	padding: 5px 8px;
 	margin-bottom: 1px;
 	background: #b2cc29;
-	font: 700 17px/20px "Montserrat", sans-serif;
+	font: 700 17px/20px 'Montserrat', sans-serif;
 }
 
 .mt-product2 .caption .new {
@@ -6096,14 +6096,14 @@ a:hover {
 	padding: 5px 8px;
 	background: #000;
 	text-transform: uppercase;
-	font: 700 17px/20px "Montserrat", sans-serif;
+	font: 700 17px/20px 'Montserrat', sans-serif;
 }
 
 .mt-product2 .caption .best-price {
 	color: #fff;
 	padding: 5px 8px;
 	background: #fed062;
-	font: 700 17px/20px "Montserrat", sans-serif;
+	font: 700 17px/20px 'Montserrat', sans-serif;
 }
 
 .mt-product2 .mt-stars {
@@ -6135,7 +6135,7 @@ a:hover {
 .mt-product2 del {
 	display: block;
 	color: #b3b3b3;
-	font: 600 17px/20px "Source Sans Pro", sans-serif;
+	font: 600 17px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-product2 del .fa {
@@ -6153,10 +6153,10 @@ a:hover {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	content: "";
-	background: rgba(205, 255, 127, .73);
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	content: '';
+	background: rgba(205, 255, 127, 0.73);
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -6196,7 +6196,7 @@ a:hover {
 
 .mt-product2.large .txt .title {
 	margin: 0 0 9px;
-	font-size: 18px;
+	font-size: 25px;
 	line-height: 20px;
 }
 
@@ -6221,7 +6221,7 @@ a:hover {
 }
 
 .product-3:hover .links {
-	box-shadow: 0 0 9px rgba(172, 172, 172, .35);
+	box-shadow: 0 0 9px rgba(172, 172, 172, 0.35);
 }
 
 .product-3.hover2:hover .links {
@@ -6249,13 +6249,13 @@ a:hover {
 	color: #535353;
 	margin: 0 0 12px;
 	text-transform: uppercase;
-	font: 18px/20px "Montserrat", sans-serif;
+	font: 18px/20px 'Montserrat', sans-serif;
 }
 
 .product-3 .price {
 	color: #a6a6a6;
 	display: block;
-	font: 700 20px/20px "Montserrat", sans-serif;
+	font: 700 20px/20px 'Montserrat', sans-serif;
 }
 
 .product-3 .price .fa {
@@ -6309,7 +6309,7 @@ a:hover {
 	left: 2px;
 	right: 2px;
 	bottom: 2px;
-	content: "";
+	content: '';
 	position: absolute;
 	border-radius: 100%;
 }
@@ -6372,8 +6372,8 @@ a:hover {
 	max-width: 165px;
 	background: #fff;
 	margin: 0 auto 20px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .product-3 .links li {
@@ -6388,7 +6388,7 @@ a:hover {
 	bottom: 0;
 	width: 1px;
 	left: -10px;
-	content: "";
+	content: '';
 	position: absolute;
 	background: #ccc6c6;
 }
@@ -6454,13 +6454,13 @@ a:hover {
 	display: block;
 	color: #959596;
 	margin: 0 0 5px;
-	font: 14px/16px "Montserrat", sans-serif;
+	font: 14px/16px 'Montserrat', sans-serif;
 }
 
 .mt-product4 .text .frame strong a {
 	color: #959596;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-product4 .text .frame strong a:hover {
@@ -6468,18 +6468,18 @@ a:hover {
 }
 
 .mt-product4 .text .off {
-	opacity: .6;
+	opacity: 0.6;
 	color: #252528;
 	margin: 0 13px 0 0;
 	position: relative;
-	font: 14px/18px "Montserrat", sans-serif;
+	font: 14px/18px 'Montserrat', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
 }
 
 .mt-product4 .text .price {
 	color: #252528;
-	font: 18px/18px "Montserrat", sans-serif;
+	font: 18px/18px 'Montserrat', sans-serif;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -6619,7 +6619,7 @@ a:hover {
 	right: 0;
 	top: 56px;
 	width: 75px;
-	content: "";
+	content: '';
 	height: 37px;
 	position: absolute;
 	border-radius: 19px;
@@ -6632,7 +6632,7 @@ a:hover {
 	overflow: hidden;
 	list-style: none;
 	text-transform: uppercase;
-	font: 700 18px/20px "Montserrat", sans-serif;
+	font: 700 18px/20px 'Montserrat', sans-serif;
 }
 
 .mt-producttabs .producttabs li {
@@ -6649,8 +6649,8 @@ a:hover {
 
 .mt-producttabs .producttabs a {
 	color: #838182;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-producttabs .producttabs a.active,
@@ -6670,8 +6670,8 @@ a:hover {
 	color: #bebebe;
 	background: #fff;
 	border-radius: 50%;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-producttabs .slick-prev:focus,
@@ -6695,11 +6695,11 @@ a:hover {
 	right: 11px;
 	color: #bebebe;
 	font-size: 18px;
-	content: "\f105";
+	content: '\f105';
 	position: absolute;
-	font-family: "FontAwesome";
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'FontAwesome';
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-producttabs .slick-prev {
@@ -6711,19 +6711,19 @@ a:hover {
 	opacity: 1;
 	right: 13px;
 	color: #bebebe;
-	content: "\f104";
+	content: '\f104';
 	font-size: 18px;
 	position: absolute;
-	font-family: "FontAwesome";
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'FontAwesome';
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-producttabs .heading {
 	color: #3a3a3a;
 	margin: 0 0 7px;
 	text-transform: uppercase;
-	font: 700 26px/30px "Montserrat", sans-serif;
+	font: 700 26px/30px 'Montserrat', sans-serif;
 }
 
 .mt-producttabs .mt-productrow {
@@ -6836,11 +6836,11 @@ a:hover {
 	bottom: 0;
 	left: 50%;
 	height: 2px;
-	content: "";
+	content: '';
 	position: absolute;
 	background: #3a3a3a;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-producttabs.style5 {
@@ -6926,8 +6926,8 @@ a:hover {
 	background: none;
 	border-radius: 50%;
 	border: 2px solid #bfbfbf;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-bestseller .slick-prev:focus,
@@ -6951,11 +6951,11 @@ a:hover {
 	right: 16px;
 	color: #bfbfbf;
 	font-size: 26px;
-	content: "\f105";
+	content: '\f105';
 	position: absolute;
-	font-family: "FontAwesome";
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'FontAwesome';
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-bestseller .slick-prev {
@@ -6968,12 +6968,12 @@ a:hover {
 	opacity: 1;
 	right: 17px;
 	color: #bfbfbf;
-	content: "\f104";
+	content: '\f104';
 	font-size: 26px;
 	position: absolute;
-	font-family: "FontAwesome";
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	font-family: 'FontAwesome';
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 /*------------------------------------------------------------------
@@ -6987,7 +6987,7 @@ a:hover {
 .mt-smallproducts .heading {
 	color: #3a3a3a;
 	margin: 0 0 21px;
-	font: 700 20px/25px "Montserrat", sans-serif;
+	font: 700 20px/25px 'Montserrat', sans-serif;
 }
 
 /*------------------------------------------------------------------
@@ -7108,7 +7108,7 @@ a:hover {
 	font-weight: 400;
 	overflow: hidden;
 	padding: 53px 0 0;
-	font: 16px/20px "Montserrat", sans-serif;
+	font: 16px/20px 'Montserrat', sans-serif;
 }
 
 .mt-product-detial .comment-list li {
@@ -7125,8 +7125,8 @@ a:hover {
 }
 
 .mt-product-detial .comment-list a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #b6b6b6;
 }
 
@@ -7174,18 +7174,18 @@ a:hover {
 	color: #dedede;
 	font-size: 20px;
 	line-height: 22px;
-	font-family: "FontAwesome";
+	font-family: 'FontAwesome';
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 4px;
 	top: 50%;
 	bottom: auto;
 	right: auto;
-	content: "\f053";
+	content: '\f053';
 }
 
 .mt-product-detial .pagg-slider .slick-next {
@@ -7194,7 +7194,7 @@ a:hover {
 }
 
 .mt-product-detial .pagg-slider .slick-next:before {
-	content: "\f054";
+	content: '\f054';
 }
 
 .mt-product-detial .detial-holder {
@@ -7232,8 +7232,8 @@ a:hover {
 }
 
 .mt-product-detial .breadcrumbs a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #a9a9a9;
 }
 
@@ -7268,7 +7268,7 @@ a:hover {
 	font-size: 14px;
 	line-height: 16px;
 	float: left;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	padding: 0 6px 0 0;
 	color: #b6b6b6;
@@ -7277,7 +7277,7 @@ a:hover {
 .mt-product-detial .list {
 	font-size: 13px;
 	line-height: 16px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	padding: 2px 0 34px;
 	overflow: hidden;
@@ -7325,7 +7325,7 @@ a:hover {
 	display: block;
 	font-size: 30px;
 	line-height: 32px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	letter-spacing: -1px;
 	color: #000;
@@ -7353,7 +7353,7 @@ a:hover {
 	line-height: 16px;
 	float: left;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	margin: 0 32px 0 0;
 	padding: 11px 0 0;
@@ -7364,7 +7364,7 @@ a:hover {
 .mt-product-detial .product-form input {
 	font-size: 18px;
 	line-height: 20px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	padding: 0 0 0 20px;
 	border-radius: 25px;
@@ -7384,13 +7384,13 @@ a:hover {
 	display: block;
 	font-size: 14px;
 	line-height: 20px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	border: none;
 	outline: none;
 	border-radius: 25px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	background: #ff8283;
 	color: #fff;
 }
@@ -7417,7 +7417,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	content: " ";
+	content: ' ';
 	bottom: -9999px;
 	background: #fff;
 	position: absolute;
@@ -7461,7 +7461,7 @@ a:hover {
 	font-size: 18px;
 	line-height: 20px;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	margin: 0 0 25px;
 	color: #000;
@@ -7520,7 +7520,7 @@ a:hover {
 	resize: none;
 }
 
-.mt-detail-sec .bill-detail input[type="checkbox"] {
+.mt-detail-sec .bill-detail input[type='checkbox'] {
 	margin: 0 5px 0 0;
 	padding: 0;
 }
@@ -7543,7 +7543,7 @@ a:hover {
 }
 
 .mt-detail-sec .bill-detail .update-btn {
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	line-height: 20px;
 	font-weight: 700;
@@ -7554,8 +7554,8 @@ a:hover {
 	width: 214px;
 	display: block;
 	padding: 14px 10px 12px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	background: #f6f6f6;
 	color: #c6c6c6;
 	border-color: #dcdcdc;
@@ -7727,8 +7727,8 @@ a:hover {
 }
 
 .mt-detail-sec .block-holder a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #000;
 }
 
@@ -7736,7 +7736,7 @@ a:hover {
 	color: #868686;
 }
 
-.mt-detail-sec .block-holder input[type="checkbox"] {
+.mt-detail-sec .block-holder input[type='checkbox'] {
 	float: right;
 }
 
@@ -7752,8 +7752,8 @@ a:hover {
 	font-weight: 700;
 	letter-spacing: 2px;
 	word-spacing: 1px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #fff;
 	background: #88bd6e;
 }
@@ -7833,8 +7833,8 @@ a:hover {
 	float: right;
 	margin: 81px 0 0;
 	color: #ff6060;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-product-table .fa-close:hover {
@@ -7870,7 +7870,7 @@ a:hover {
 	line-height: 20px;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	border: none;
 	outline: none;
 	border-radius: 0;
@@ -7879,8 +7879,8 @@ a:hover {
 	padding: 16px 10px 13px 7px;
 	width: 111px;
 	float: left;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	background: #cba233;
 	color: #fff;
 }
@@ -7902,7 +7902,7 @@ a:hover {
 	color: #aaa;
 	overflow: hidden;
 	padding: 74px 0 85px;
-	font: 300 16px/21px "Source Sans Pro", sans-serif;
+	font: 300 16px/21px 'Source Sans Pro', sans-serif;
 }
 
 .product-detail-tab .mt-tabs {
@@ -7910,7 +7910,7 @@ a:hover {
 	margin: 0 0 50px;
 	list-style: none;
 	border-bottom: 1px solid #c8c8c8;
-	font: 700 16px/20px "Montserrat", sans-serif;
+	font: 700 16px/20px 'Montserrat', sans-serif;
 }
 
 .product-detail-tab .mt-tabs li {
@@ -7950,7 +7950,7 @@ a:hover {
 	overflow: hidden;
 	padding: 0 0 26px;
 	border-bottom: 1px solid #f0f0f0;
-	font: 300 16px/21px "Source Sans Pro", sans-serif;
+	font: 300 16px/21px 'Source Sans Pro', sans-serif;
 }
 
 .product-comment .mt-hold {
@@ -7983,18 +7983,18 @@ a:hover {
 	margin: 0 24px 0 0;
 	display: inline-block;
 	vertical-align: middle;
-	font: 700 16px/20px "Source Sans Pro", sans-serif;
+	font: 700 16px/20px 'Source Sans Pro', sans-serif;
 }
 
 .product-comment time {
 	display: inline-block;
 	vertical-align: middle;
-	font: italic 300 14px/20px "Source Sans Pro", sans-serif;
+	font: italic 300 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .product-comment p {
 	margin: 0;
-	letter-spacing: .6px;
+	letter-spacing: 0.6px;
 }
 
 .product-comment .mt-row {
@@ -8012,14 +8012,14 @@ a:hover {
 .product-comment h2 {
 	color: #949494;
 	margin: 0 0 41px;
-	font: 600 16px/20px "Source Sans Pro", sans-serif;
+	font: 600 16px/20px 'Source Sans Pro', sans-serif;
 }
 
 .product-comment label {
 	float: left;
 	color: #aaa;
 	width: 80px;
-	font: 700 16px/20px "Source Sans Pro", sans-serif;
+	font: 700 16px/20px 'Source Sans Pro', sans-serif;
 }
 
 .product-comment .form-control {
@@ -8081,7 +8081,7 @@ a:hover {
 .related-products h2 {
 	color: #3a3a3a;
 	margin: 0 0 13px;
-	font: 700 26px/30px "Montserrat", sans-serif;
+	font: 700 26px/30px 'Montserrat', sans-serif;
 }
 
 .related-products img {
@@ -8128,8 +8128,8 @@ a:hover {
 }
 
 .mt-shoplist-header .btn-box > ul > li a {
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 .mt-shoplist-header .btn-box > ul > li a:hover {
@@ -8154,7 +8154,7 @@ a:hover {
 	padding: 12px 20px;
 	border-radius: 20px;
 	border: 1px solid #d8d8d8;
-	font: 14px/1 "Source Sans Pro", sans-serif;
+	font: 14px/1 'Source Sans Pro', sans-serif;
 }
 
 .mt-shoplist-header .btn-box .drop-link:hover {
@@ -8186,8 +8186,8 @@ a:hover {
 	visibility: hidden;
 	position: absolute;
 	border: 1px solid #d8d8d8;
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 .mt-shoplist-header .btn-box .drop a {
@@ -8252,7 +8252,7 @@ a:hover {
 
 .mt-pagination {
 	padding: 42px 0 100px;
-	font: 700 16px/20px "Montserrat", sans-serif;
+	font: 700 16px/20px 'Montserrat', sans-serif;
 }
 
 .mt-pagination ul {
@@ -8270,8 +8270,8 @@ a:hover {
 	display: block;
 	padding: 5px 10px;
 	background: #f6f6f6;
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 .mt-pagination ul a:hover {
@@ -8336,8 +8336,8 @@ a:hover {
 
 .product-post .title a {
 	color: #757575;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .product-post .title a:hover {
@@ -8361,7 +8361,7 @@ a:hover {
 .product-post .rating-list {
 	font-size: 14px;
 	line-height: 16px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	color: #b6b6b6;
 	overflow: hidden;
@@ -8373,7 +8373,7 @@ a:hover {
 	margin: 0 -2px 0 1px;
 	display: inline-block;
 	vertical-align: middle;
-	letter-spacing: -.5px;
+	letter-spacing: -0.5px;
 }
 
 .product-post .rating-list li.active a {
@@ -8394,7 +8394,7 @@ a:hover {
 	line-height: 16px;
 	color: #b6b6b6;
 	background: #f4f4f4;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	width: 173px;
 	border-radius: 25px;
@@ -8405,8 +8405,8 @@ a:hover {
 	text-transform: uppercase;
 	text-align: center;
 	display: block;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .product-post .btn-cart:hover {
@@ -8417,7 +8417,7 @@ a:hover {
 .product-post .nav {
 	font-size: 11px;
 	line-height: 13px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	color: #b6b6b6;
 	display: block;
@@ -8436,8 +8436,8 @@ a:hover {
 
 .product-post .nav a {
 	color: #b6b6b6;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .product-post .nav a:hover {
@@ -8473,9 +8473,9 @@ a:hover {
 }
 
 #product-masonry #product-filter li:before {
-	content: "/";
+	content: '/';
 	display: inline-block;
-	font-size: .8em;
+	font-size: 0.8em;
 	font-weight: 900;
 	margin: -4px 0 0;
 	padding: 0 20px;
@@ -8493,8 +8493,8 @@ a:hover {
 }
 
 #product-masonry #product-filter a {
-	-webkit-transition: all ease .5s;
-	transition: all ease .5s;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
 }
 
 #product-masonry #product-filter a:hover {
@@ -8514,7 +8514,7 @@ a:hover {
 	right: 0;
 	bottom: 0;
 	width: 1px;
-	content: "";
+	content: '';
 	background: #fff;
 	position: absolute;
 }
@@ -8584,7 +8584,7 @@ a:hover {
 .slick-track:before,
 .slick-track:after {
 	display: table;
-	content: "";
+	content: '';
 }
 
 .slick-track:after {
@@ -8602,7 +8602,7 @@ a:hover {
 	min-height: 1px;
 }
 
-[dir="rtl"] .slick-slide {
+[dir='rtl'] .slick-slide {
 	float: right;
 }
 
@@ -8639,13 +8639,14 @@ a:hover {
 /* Slider */
 
 .slick-loading .slick-list {
-	background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+	background: #fff url('../images/ajax-loader.gif') center center no-repeat;
 }
 
 @font-face {
 	font-family: slick;
-	src: url("../fonts/slick.eot");
-	src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svgslick") format("svg");
+	src: url('../fonts/slick.eot');
+	src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'),
+		url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svgslick') format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -8653,11 +8654,12 @@ a:hover {
 /* Icons */
 
 @font-face {
-	font-family: "slick";
+	font-family: 'slick';
 	font-weight: normal;
 	font-style: normal;
-	src: url("../fonts/slick.eot");
-	src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg");
+	src: url('../fonts/slick.eot');
+	src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'),
+		url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
 }
 
 /* Arrows */
@@ -8701,15 +8703,15 @@ a:hover {
 
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-	opacity: .25;
+	opacity: 0.25;
 }
 
 .slick-prev:before,
 .slick-next:before {
-	font-family: "slick";
+	font-family: 'slick';
 	font-size: 65px;
 	line-height: 1;
-	opacity: .2;
+	opacity: 0.2;
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -8719,34 +8721,34 @@ a:hover {
 	left: 25px;
 }
 
-[dir="rtl"] .slick-prev {
+[dir='rtl'] .slick-prev {
 	right: 25px;
 	left: auto;
 }
 
 .slick-prev:before {
-	content: "←";
+	content: '←';
 }
 
-[dir="rtl"] .slick-prev:before {
-	content: "→";
+[dir='rtl'] .slick-prev:before {
+	content: '→';
 }
 
 .slick-next {
 	right: 25px;
 }
 
-[dir="rtl"] .slick-next {
+[dir='rtl'] .slick-next {
 	right: auto;
 	left: 25px;
 }
 
 .slick-next:before {
-	content: "→";
+	content: '→';
 }
 
-[dir="rtl"] .slick-next:before {
-	content: "←";
+[dir='rtl'] .slick-next:before {
+	content: '←';
 }
 
 /* Dots */
@@ -8801,7 +8803,7 @@ a:hover {
 }
 
 .slick-dots li button:before {
-	font-family: "slick";
+	font-family: 'slick';
 	font-size: 6px;
 	line-height: 20px;
 	position: absolute;
@@ -8809,16 +8811,16 @@ a:hover {
 	left: 0;
 	width: 20px;
 	height: 20px;
-	content: "•";
+	content: '•';
 	text-align: center;
-	opacity: .25;
+	opacity: 0.25;
 	color: black;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .slick-dots li.slick-active button:before {
-	opacity: .75;
+	opacity: 0.75;
 	color: black;
 }
 
@@ -8861,7 +8863,7 @@ a:hover {
 }
 
 .fancybox-opened .fancybox-skin {
-	box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .fancybox-outer,
@@ -8879,7 +8881,7 @@ a:hover {
 
 .fancybox-error {
 	color: #444;
-	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 15px;
 	white-space: nowrap;
@@ -8901,7 +8903,7 @@ a:hover {
 .fancybox-close,
 .fancybox-prev span,
 .fancybox-next span {
-	background-image: url("../images/fancybox/fancybox_sprite.png");
+	background-image: url('../images/fancybox/fancybox_sprite.png');
 }
 
 #fancybox-loading {
@@ -8911,7 +8913,7 @@ a:hover {
 	margin-top: -22px;
 	margin-left: -22px;
 	background-position: 0 -108px;
-	opacity: .8;
+	opacity: 0.8;
 	cursor: pointer;
 	z-index: 8060;
 }
@@ -8919,7 +8921,7 @@ a:hover {
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url("../images/fancybox/fancybox_loading.gif") center center no-repeat;
+	background: url('../images/fancybox/fancybox_loading.gif') center center no-repeat;
 }
 
 .fancybox-close {
@@ -8939,7 +8941,7 @@ a:hover {
 	height: 100%;
 	cursor: pointer;
 	text-decoration: none;
-	background: transparent url("../images/fancybox/blank.gif"); /* helps IE */
+	background: transparent url('../images/fancybox/blank.gif'); /* helps IE */
 	-webkit-tap-highlight-color: transparent;
 	z-index: 8040;
 }
@@ -9009,7 +9011,7 @@ a:hover {
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: url("../images/fancybox/fancybox_overlay.png");
+	background: url('../images/fancybox/fancybox_overlay.png');
 }
 
 .fancybox-overlay-fixed {
@@ -9027,7 +9029,7 @@ a:hover {
 
 .fancybox-title {
 	visibility: hidden;
-	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: normal 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
@@ -9051,7 +9053,7 @@ a:hover {
 	margin-right: -100%;
 	padding: 2px 20px;
 	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, 0.8);
 	border-radius: 15px;
 	text-shadow: 0 1px 2px #222;
 	color: #fff;
@@ -9077,7 +9079,7 @@ a:hover {
 	color: #fff;
 	padding: 10px;
 	background: #000;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, 0.8);
 }
 
 /*------------------------------------------------------------------
@@ -9185,7 +9187,7 @@ a:hover {
 
 .mt-blog-detail .header:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: -9999px;
 	top: 0;
@@ -9219,8 +9221,8 @@ a:hover {
 }
 
 .mt-blog-detail .header .breadcrumbs ul a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #000;
 }
 
@@ -9239,8 +9241,8 @@ a:hover {
 }
 
 .mt-blog-detail .header .category a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-blog-detail .header .category a:hover {
@@ -9264,8 +9266,8 @@ a:hover {
 
 .mt-blog-detail .header .align-right a {
 	color: #000;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .mt-blog-detail .header .align-right a:hover {
@@ -9295,7 +9297,7 @@ a:hover {
 	line-height: 30px;
 	text-transform: uppercase;
 	color: #939393;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	margin: 0 50px 0 0;
 	display: inline-block;
@@ -9315,7 +9317,7 @@ a:hover {
 
 .mt-blog-detail .txt-wrap:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: -50px;
 	top: 0;
@@ -9332,7 +9334,7 @@ a:hover {
 
 .mt-blog-detail .sidebar:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 24px;
 	top: 70px;
@@ -9407,7 +9409,7 @@ a:hover {
 
 .blog-post.style2 .blog-nav li:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: -16px;
 	top: 0;
@@ -9496,7 +9498,7 @@ a:hover {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: bold;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .blog-post .comment-nav li {
@@ -9513,8 +9515,8 @@ a:hover {
 }
 
 .blog-post .comment-nav a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #fff;
 }
 
@@ -9526,15 +9528,15 @@ a:hover {
 	font-size: 30px;
 	line-height: 33px;
 	font-weight: bold;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 17px;
 	text-transform: uppercase;
 	color: #494949;
 }
 
 .blog-post h2 a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 }
 
@@ -9560,8 +9562,8 @@ a:hover {
 
 .blog-post .blog-nav a {
 	color: #494949;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .blog-post .blog-nav a:hover {
@@ -9582,8 +9584,8 @@ a:hover {
 	word-spacing: -3px;
 	margin: 0 0 0 4px;
 	letter-spacing: 1px;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 }
 
@@ -9637,8 +9639,8 @@ a:hover {
 .blog-post .img-block .img a {
 	display: block;
 	position: relative;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .blog-post .img-block .img a .fa {
@@ -9652,8 +9654,8 @@ a:hover {
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #fff;
 }
 
@@ -9679,8 +9681,8 @@ a:hover {
 	padding: 5px 16px 5px 11px;
 	text-transform: uppercase;
 	float: left;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 	border-color: #494949;
 }
@@ -9704,8 +9706,8 @@ a:hover {
 	padding: 5px 13px 5px 18px;
 	text-transform: uppercase;
 	float: right;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 	border-color: #494949;
 }
@@ -9724,7 +9726,7 @@ a:hover {
 	font-size: 23px;
 	line-height: 25px;
 	font-weight: 700;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 	padding: 60px 0 10px 7px;
 	text-transform: uppercase;
@@ -9750,8 +9752,8 @@ a:hover {
 }
 
 .btn-holder .pagination a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #bababa;
 }
 
@@ -9775,7 +9777,7 @@ a:hover {
 .widget h3 {
 	font-size: 18px;
 	line-height: 20px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 	margin: 0 0 23px;
@@ -9786,7 +9788,7 @@ a:hover {
 
 .widget h3:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: auto;
 	top: auto;
@@ -9812,8 +9814,8 @@ a:hover {
 }
 
 .widget.category-widget .widget-nav a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 }
 
@@ -9889,8 +9891,8 @@ a:hover {
 }
 
 .widget.tag-widget .tags a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
 .widget.tag-widget .tags a:hover {
@@ -9943,8 +9945,8 @@ a:hover {
 }
 
 .mt-author-box h3 a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #000;
 }
 
@@ -9966,8 +9968,8 @@ a:hover {
 }
 
 .mt-author-box .social-network a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #000;
 }
 
@@ -10028,7 +10030,7 @@ a:hover {
 .mt-comments-section h2 {
 	font-size: 24px;
 	line-height: 26px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 	margin: 0 0 23px;
@@ -10039,7 +10041,7 @@ a:hover {
 
 .mt-comments-section h2:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 2px;
 	top: auto;
@@ -10051,8 +10053,8 @@ a:hover {
 }
 
 .mt-comments-section h2 a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 }
 
@@ -10112,8 +10114,8 @@ a:hover {
 }
 
 .mt-comments-section ul .txt h3 a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #000;
 }
 
@@ -10199,8 +10201,8 @@ a:hover {
 	font-weight: 400;
 	border: none;
 	outline: none;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	background: #f7f7f7;
 	color: #868686;
 }
@@ -10241,7 +10243,7 @@ a:hover {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: bold;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .post-blog .comment-nav li {
@@ -10258,8 +10260,8 @@ a:hover {
 }
 
 .post-blog .comment-nav a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #f4f4f4;
 }
 
@@ -10271,7 +10273,7 @@ a:hover {
 	font-size: 24px;
 	line-height: 26px;
 	font-weight: bold;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	position: absolute;
 	left: 45px;
@@ -10281,8 +10283,8 @@ a:hover {
 }
 
 .post-blog h2 a {
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #fff;
 }
 
@@ -10326,8 +10328,8 @@ a:hover {
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 400;
-	-webkit-transition: all .4s linear;
-	transition: all .4s linear;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 	color: #494949;
 }
 
@@ -10357,7 +10359,7 @@ a:hover {
 	line-height: 21px;
 	font-weight: 700;
 	letter-spacing: 1px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #757575;
 }
 
@@ -10422,7 +10424,7 @@ a:hover {
 }
 
 .mt-error-sec.error-section:after {
-	content: "";
+	content: '';
 	display: inline-block;
 	vertical-align: middle;
 	width: 0;
@@ -10500,7 +10502,7 @@ a:hover {
 }
 
 .mt-error-sec .montserrat {
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .mt-error-sec .error-code {
@@ -10560,7 +10562,7 @@ a:hover {
 	font-size: 24px;
 	line-height: 26px;
 	font-weight: 300;
-	font-family: "Source Sans Pro", "Arial", "Helvetica", sans-serif;
+	font-family: 'Source Sans Pro', 'Arial', 'Helvetica', sans-serif;
 	overflow: hidden;
 	margin: 0 0 75px;
 }
@@ -10598,7 +10600,7 @@ a:hover {
 	width: 216px;
 	font-weight: 700;
 	border: 2px solid #545454;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .mt-error-sec .btn-list .error-form ::-webkit-input-placeholder {
@@ -10662,7 +10664,7 @@ a:hover {
 
 .mt-error-sec .btn-back {
 	width: 174px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 18px;
@@ -10671,11 +10673,11 @@ a:hover {
 	display: block;
 	background: #545454;
 	color: #fff;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
-.mt-error-sec .btn-back:hover{
+.mt-error-sec .btn-back:hover {
 	background: #ff6060;
 }
 
@@ -10691,7 +10693,7 @@ a:hover {
 }
 
 .mt-error-sec .btn-back.btn-transparent:hover {
-	opacity: .7;
+	opacity: 0.7;
 }
 
 .mt-error-sec .error-form {
@@ -10758,7 +10760,7 @@ a:hover {
 	color: #f6f6f6;
 	text-transform: uppercase;
 	margin: 0;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	position: relative;
 }
@@ -10778,7 +10780,7 @@ a:hover {
 	line-height: 33px;
 	text-transform: uppercase;
 	margin: 0 0 18px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	color: #000;
 }
@@ -10823,13 +10825,13 @@ a:hover {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 20px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	border: none;
 	outline: none;
 	border-radius: 25px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	background: #ff8283;
 	color: #fff;
 }
@@ -10850,7 +10852,7 @@ a:hover {
 	bottom: 45px;
 	overflow: hidden;
 	position: absolute;
-	font-family: "Oxygen", sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 11px;
 	line-height: 13px;
 	padding: 0 0 0 40px;
@@ -10967,7 +10969,7 @@ a:hover {
 	text-transform: uppercase;
 	display: block;
 	margin: 0 0 18px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	letter-spacing: 1px;
 }
 
@@ -11186,7 +11188,7 @@ a:hover {
 
 .mt-contact-banner.mt-banner-22 .breadcrumbs ul {
 	color: #fff;
-	opacity: .5;
+	opacity: 0.5;
 }
 
 .mt-contact-banner.mt-banner-22 .breadcrumbs ul a {
@@ -11197,7 +11199,7 @@ a:hover {
 	font-size: 44px;
 	line-height: 46px;
 	font-weight: 700;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 15px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -11223,8 +11225,8 @@ a:hover {
 }
 
 .mt-contact-banner .breadcrumbs ul a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #383838;
 }
 
@@ -11278,7 +11280,7 @@ a:hover {
 	line-height: 33px;
 	font-weight: bold;
 	margin: 0 0 50px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #494949;
 }
@@ -11300,7 +11302,7 @@ a:hover {
 	display: block;
 	font-size: 13px;
 	line-height: 18px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 15px;
 	font-weight: 700;
 	color: #575757;
@@ -11319,7 +11321,7 @@ a:hover {
 	line-height: 33px;
 	font-weight: bold;
 	margin: 0 0 36px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #494949;
 }
@@ -11376,8 +11378,8 @@ a:hover {
 	border-radius: 100%;
 	text-align: center;
 	padding: 8px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	background: #494949;
 }
 
@@ -11387,17 +11389,17 @@ a:hover {
 
 .mt-team-sec .img-holder a:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(255, 255, 255, .7);
+	background: rgba(255, 255, 255, 0.7);
 	opacity: 0;
 	visibility: hidden;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	z-index: 0;
 }
 
@@ -11414,7 +11416,7 @@ a:hover {
 .mt-team-sec h4 {
 	font-size: 20px;
 	line-height: 22px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	margin: 0;
 	text-transform: uppercase;
@@ -11422,8 +11424,8 @@ a:hover {
 }
 
 .mt-team-sec h4 a {
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	color: #494949;
 }
 
@@ -11454,7 +11456,7 @@ a:hover {
 	line-height: 33px;
 	font-weight: bold;
 	margin: 0 0 36px;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #494949;
 }
@@ -11472,15 +11474,15 @@ a:hover {
 
 .mt-workspace-sec .work-slider li:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(255, 255, 255, .7);
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	background: rgba(255, 255, 255, 0.7);
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 	z-index: 0;
 }
 
@@ -11533,8 +11535,8 @@ a:hover {
 
 .mt-workspace-sec .work-slider .slick-prev.slick-arrow:before {
 	position: absolute;
-	content: "\f053";
-	font-family: "FontAwesome";
+	content: '\f053';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	line-height: 22px;
 	text-indent: 0;
@@ -11560,8 +11562,8 @@ a:hover {
 
 .mt-workspace-sec .work-slider .slick-next.slick-arrow:before {
 	position: absolute;
-	content: "\f054";
-	font-family: "FontAwesome";
+	content: '\f054';
+	font-family: 'FontAwesome';
 	font-size: 20px;
 	line-height: 22px;
 	text-indent: 0;
@@ -11588,8 +11590,8 @@ a:hover {
 	padding: 0;
 	margin: 0 10px 0 0;
 	background: #ececec;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .mt-workspace-sec .work-slider .slick-dots li.slick-active {
@@ -11630,7 +11632,7 @@ a:hover {
 
 .mt-process-sec .process-list li:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: -87px;
 	top: 50%;
@@ -11696,7 +11698,7 @@ a:hover {
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 600;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	display: block;
 	letter-spacing: 4px;
 	word-spacing: 1px;
@@ -11708,7 +11710,7 @@ a:hover {
 	font-size: 26px;
 	line-height: 28px;
 	font-weight: 700;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 0 3px;
 	letter-spacing: -1px;
 	text-transform: uppercase;
@@ -11723,14 +11725,14 @@ a:hover {
 	color: #a0a0a0;
 	margin: 0 0 12px;
 	letter-spacing: 4px;
-	font: 700 14px/20px "Source Sans Pro", sans-serif;
+	font: 700 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-heading .heading {
 	color: #3a3a3a;
 	margin: 0 0 2px;
 	letter-spacing: 0;
-	font: 700 26px/30px "Montserrat", sans-serif;
+	font: 700 26px/30px 'Montserrat', sans-serif;
 }
 
 .mt-heading p {
@@ -11747,14 +11749,14 @@ a:hover {
 	letter-spacing: 4px;
 	padding: 0 0 0 12px;
 	border-left: 9px solid #eee;
-	font: 700 14px/20px "Source Sans Pro", sans-serif;
+	font: 700 14px/20px 'Source Sans Pro', sans-serif;
 }
 
 .mt-heading2 .head {
 	color: #3a3a3a;
 	margin: 0 0 2px;
 	letter-spacing: 0;
-	font: 700 26px/30px "Montserrat", sans-serif;
+	font: 700 26px/30px 'Montserrat', sans-serif;
 }
 
 .mt-heading2 p {
@@ -11773,14 +11775,14 @@ a:hover {
 	color: #3a3a3a;
 	margin: 0 0 7px;
 	text-transform: uppercase;
-	font: 700 26px/30px "Montserrat", sans-serif;
+	font: 700 26px/30px 'Montserrat', sans-serif;
 }
 
 .mt-patners .heading span {
 	color: #a0a0a0;
 	padding: 0 0 0 2px;
 	letter-spacing: 3px;
-	font: 600 14px/20px "Source Sans Pro", sans-serif;
+	font: 600 14px/20px 'Source Sans Pro', sans-serif;
 	display: inline-block;
 	vertical-align: bottom;
 }
@@ -11831,29 +11833,29 @@ a:hover {
 	padding-top: 0 !important;
 }
 
-.faq-section{
+.faq-section {
 	overflow: hidden;
 }
 
-.faq-section .panel-collapse{
-  overflow: hidden;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+.faq-section .panel-collapse {
+	overflow: hidden;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-.faq-section .panel-collapse{
+.faq-section .panel-collapse {
 	height: 0;
 }
 
-.faq-section .panel-collapse.in{
+.faq-section .panel-collapse.in {
 	height: auto;
 }
 
-.faq-section .panel-body{
-	padding:  5%;
+.faq-section .panel-body {
+	padding: 5%;
 }
 
-.faq-section .panel-title{
+.faq-section .panel-title {
 	cursor: pointer;
 	margin: 0;
 	font-size: 24px;
@@ -11864,10 +11866,10 @@ a:hover {
 	color: #fff;
 	border-radius: 3px;
 	-webkit-transition: all 0.3s ease;
-	      transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-.faq-section .panel-title a{
+.faq-section .panel-title a {
 	color: inherit;
 	display: block;
 	padding: 20px 4%;
@@ -11875,49 +11877,49 @@ a:hover {
 	background: #ff6060;
 	border-radius: 3px;
 	-webkit-transition: all 0.3s ease;
-	      transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-.faq-section .panel-title a.collapsed:hover{
-	color:#fff;
+.faq-section .panel-title a.collapsed:hover {
+	color: #fff;
 	padding: 20px 4%;
 	background: #ff6060;
 }
 
-.faq-section .panel-title a.collapsed{
+.faq-section .panel-title a.collapsed {
 	padding: 20px 3%;
 	color: #444549;
 	background: #f8f8f8;
 }
 
-.faq-section .panel-title a.collapsed:after{
+.faq-section .panel-title a.collapsed:after {
 	color: #444549;
 }
 
-.faq-section .panel-title a.collapsed:hover:after{
+.faq-section .panel-title a.collapsed:hover:after {
 	color: #fff;
 }
 
-.faq-section .panel-title a:after{
-	top:0;
+.faq-section .panel-title a:after {
+	top: 0;
 	right: 3%;
-	content:'\f105';
-	display:block;
-	font-size:24px;
-	line-height:60px;
-	color:#fff;
-	font-family:'FontAwesome';
-	position:absolute;
+	content: '\f105';
+	display: block;
+	font-size: 24px;
+	line-height: 60px;
+	color: #fff;
+	font-family: 'FontAwesome';
+	position: absolute;
 	-webkit-transition: all 0.3s ease;
-	      transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .faq-section .panel-title a.collapsed:hover:after,
-.faq-section .panel-title.active a:after{
-	content:'\f107';
+.faq-section .panel-title.active a:after {
+	content: '\f107';
 }
 
-.faq-section .panel.panel-default{
+.faq-section .panel.panel-default {
 	margin: 0 0 10px;
 }
 
@@ -11946,36 +11948,36 @@ a:hover {
 	line-height: 62px;
 }
 
-.mt-socialicons li.mt-facebook a{
-	background:#3b5998;
+.mt-socialicons li.mt-facebook a {
+	background: #3b5998;
 }
 
-.mt-socialicons li.mt-instagram a{
-	background:#375989;
+.mt-socialicons li.mt-instagram a {
+	background: #375989;
 }
 
-.mt-socialicons li.mt-twitter a{
-	background:#55acee;
+.mt-socialicons li.mt-twitter a {
+	background: #55acee;
 }
 
-.mt-socialicons li.mt-linkedin a{
-	background:#007bb5;
+.mt-socialicons li.mt-linkedin a {
+	background: #007bb5;
 }
 
-.mt-socialicons li.mt-dribbble a{
-	background:#dd4b39;
+.mt-socialicons li.mt-dribbble a {
+	background: #dd4b39;
 }
 
-.mt-socialicons li.mt-pinterest a{
-	background:#cb2027;
+.mt-socialicons li.mt-pinterest a {
+	background: #cb2027;
 }
 
-.mt-socialicons li.mt-youtube a{
-	background:#bb0000;
+.mt-socialicons li.mt-youtube a {
+	background: #bb0000;
 }
 
-.mt-socialicons li.mt-vimeo a{
-	background:#f7b42c;
+.mt-socialicons li.mt-vimeo a {
+	background: #f7b42c;
 }
 
 /*------------------------------------------------------------------
@@ -12009,7 +12011,7 @@ a:hover {
 	line-height: 24px;
 	text-transform: uppercase;
 	color: #494949;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	margin: 0 0 32px;
 }
@@ -12028,7 +12030,7 @@ a:hover {
 	color: #8c8c8c;
 	padding: 0 0 2px;
 	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .shop-widget .category-list li {
@@ -12059,8 +12061,8 @@ a:hover {
 
 .shop-widget .category-list a {
 	color: #8c8c8c;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .shop-widget .category-list a:hover {
@@ -12083,7 +12085,7 @@ a:hover {
 
 .shop-widget .price-range .range-slider:before {
 	position: absolute;
-	content: "";
+	content: '';
 	z-index: -1;
 	left: 32px;
 	top: 0;
@@ -12128,8 +12130,8 @@ a:hover {
 	font-weight: 400;
 	padding: 1px 7px 3px 10px;
 	border-radius: 3px;
-	-webkit-transition: all .25s linear;
-	transition: all .25s linear;
+	-webkit-transition: all 0.25s linear;
+	transition: all 0.25s linear;
 }
 
 .shop-widget .filter-btn:hover {
@@ -12155,8 +12157,8 @@ a:hover {
 	margin: 2px 0 0;
 }
 
-.nice-form [type="radio"],
-.nice-form [type="checkbox"] {
+.nice-form [type='radio'],
+.nice-form [type='checkbox'] {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -12187,12 +12189,12 @@ a:hover {
 	border-radius: 2px;
 }
 
-.nice-form [type=radio] + .fake-input {
+.nice-form [type='radio'] + .fake-input {
 	border-radius: 100%;
 }
 
-.nice-form [type="checkbox"] + .fake-input:before {
-	content: "";
+.nice-form [type='checkbox'] + .fake-input:before {
+	content: '';
 	width: 10px;
 	height: 6px;
 	position: absolute;
@@ -12207,8 +12209,8 @@ a:hover {
 	margin: -5px 0 0 -2px;
 }
 
-.nice-form [type="radio"] + .fake-input:before {
-	content: "";
+.nice-form [type='radio'] + .fake-input:before {
+	content: '';
 	position: absolute;
 	top: 3px;
 	right: 3px;
@@ -12219,13 +12221,13 @@ a:hover {
 	opacity: 0;
 }
 
-.nice-form [type="radio"]:checked + .fake-input:before,
-.nice-form [type="checkbox"]:checked + .fake-input:before {
+.nice-form [type='radio']:checked + .fake-input:before,
+.nice-form [type='checkbox']:checked + .fake-input:before {
 	opacity: 1;
 }
 
-.nice-form [type="radio"]:checked ~ .fake-label,
-.nice-form [type="checkbox"]:checked ~ .fake-label {
+.nice-form [type='radio']:checked ~ .fake-label,
+.nice-form [type='checkbox']:checked ~ .fake-label {
 	font-weight: 300;
 	color: #494949;
 	font-size: 13px;
@@ -12234,7 +12236,7 @@ a:hover {
 
 .nice-form input:disabled + .fake-input,
 .nice-form input:disabled ~ .fake-label {
-	opacity: .5;
+	opacity: 0.5;
 }
 
 /*------------------------------------------------------------------
@@ -12368,8 +12370,8 @@ a:hover {
 	color: #fff;
 	font-size: 20px;
 	background: none;
-	-webkit-transition: all .3s ease;
-	transition: all .3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .coming-soon .footer-social a:hover {
@@ -12377,14 +12379,14 @@ a:hover {
 }
 
 .coming-soon .footer-social a:hover {
-	opacity: .2;
+	opacity: 0.2;
 }
 
 .coming-soon .error-form {
 	width: 360px;
 	display: block;
 	text-align: left;
-	margin: 0 auto  30px;
+	margin: 0 auto 30px;
 	border: 1px solid #fff;
 }
 
@@ -12470,65 +12472,66 @@ a:hover {
 
 @font-face {
 	font-family: fontello;
-	src: url("../fonts/fontello.eot");
-	src: url("../fonts/fontello.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype"), url("../fonts/fontello.svgfontello") format("svg");
+	src: url('../fonts/fontello.eot');
+	src: url('../fonts/fontello.eot?#iefix') format('embedded-opentype'), url('../fonts/fontello.woff') format('woff'),
+		url('../fonts/fontello.ttf') format('truetype'), url('../fonts/fontello.svgfontello') format('svg');
 	font-weight: 400;
 	font-style: normal;
 }
 
-.icomoon[class^="icon-"]:before,
-.icomoon[class*=" icon-"]:before {
-	font-family: "fontello";
+.icomoon[class^='icon-']:before,
+.icomoon[class*=' icon-']:before {
+	font-family: 'fontello';
 	font-style: normal;
 	font-weight: normal;
 	speak: none;
 	display: inline-block;
 	text-decoration: inherit;
 	width: 1em;
-	margin-right: .2em;
+	margin-right: 0.2em;
 	text-align: center;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1em;
-	margin-left: .2em;
+	margin-left: 0.2em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-down-open-mini:before {
-	content: "\e800";
+	content: '\e800';
 }
 
 .icon-left-open-mini:before {
-	content: "\e801";
+	content: '\e801';
 }
 
 .icon-right-open-mini:before {
-	content: "\e802";
+	content: '\e802';
 }
 
 .icon-up-open-mini:before {
-	content: "\e803";
+	content: '\e803';
 }
 
 .icon-shop:before {
-	content: "\e804";
+	content: '\e804';
 }
 
 .icon-euro:before {
-	content: "\e805";
+	content: '\e805';
 }
 
 .icon-heart-empty:before {
-	content: "\e806";
+	content: '\e806';
 }
 
 .icon-exchange:before {
-	content: "\e807";
+	content: '\e807';
 }
 
 .icon-eye:before {
-	content: "\e808";
+	content: '\e808';
 }
 
 /*------------------------------------------------------------------
@@ -12536,7 +12539,7 @@ a:hover {
 -------------------------------------------------------------------*/
 
 #wrapper {
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 img {
@@ -12574,26 +12577,26 @@ a:focus {
 	text-align: center;
 	border-radius: 5px;
 	background: #252525;
-	-webkit-transition: all .6s ease;
-	transition: all .6s ease;
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
 	-webkit-transform: translateY(40px);
 	transform: translateY(40px);
 	-ms-transform: translateY(40px);
-	-webkit-transition: all .6s ease;
+	-webkit-transition: all 0.6s ease;
 	-webkit-transform: translateY(40px);
 }
 
 #back-top.active {
 	opacity: 1;
-	transition: all .6s ease;
-	-webkit-transition: all .6s ease;
+	transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
 	-ms-transform: translateY(-20px); /* IE 9 */
 	-webkit-transform: translateY(-20px); /* Safari */
 	transform: translateY(-20px);
 }
 
 #back-top:hover {
-	opacity: .9;
+	opacity: 0.9;
 }
 
 .loader-container {
@@ -12623,4 +12626,3 @@ a:focus {
 .changer-active #style-changer {
 	margin: 0;
 }
-

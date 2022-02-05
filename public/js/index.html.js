@@ -10,7 +10,6 @@ axios
  */
 function printCategories(categories) {
 	categories.forEach((category) => {
-		console.log(category);
 		const categoryHtml = `<!-- mt product2 start here -->
         <div class="mt-product2 large bg-grey">
             <!-- box start here -->
@@ -18,7 +17,7 @@ function printCategories(categories) {
                 <img alt="image description" src="http://placehold.it/275x290" />
                 <ul class="links">
                     <li>
-                        <a href="#"><i class="icon-heart"></i></a>
+                        <a href="#" class="category" id="category-${category.categoryid}"><i class="icon-heart"></i></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-eye"></i></a>
@@ -36,3 +35,7 @@ function printCategories(categories) {
 		$j('#category-holder').append(categoryHtml);
 	});
 }
+
+$j(document).on('click', '.category', function () {
+	console.log($j(this).attr('id').substring(9));
+});

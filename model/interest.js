@@ -9,38 +9,38 @@
 //----------------------------------------
 // Imports
 //----------------------------------------
-const db = require("./databaseConfig.js");
+const db = require('./databaseConfig.js');
 
 //----------------------------------------
 // Main Code Implementations
 //----------------------------------------
 let Interest = {
-	add: function (uid, int, callback) {
+	addInterest: function (uid, int, callback) {
 		var conn = db.getConnection();
 		conn.connect(function (err) {
 			if (err) {
 				return callback(err, null);
 			} else {
-				var sql = "SELECT userid FROM user WHERE userid = ?"; 
+				var sql = 'SELECT userid FROM user WHERE userid = ?';
 				conn.query(sql, [uid], function (error, result) {
 					if (error) {
 						conn.end();
 						return callback(error, null);
-					} else { 
-						if(result.length == 0) return callback(null, null); // no such user
-						console.log("Connection established!");
-						let catArr = int.split(","); // Returns array of all categoryid as an array.
+					} else {
+						if (result.length == 0) return callback(null, null); // no such user
+						console.log('Connection established!');
+						let catArr = int.split(','); // Returns array of all categoryid as an array.
 						// // Handles duplicate values from request body
 						// let dltQueryStr = "";
 						let dltQueryVal = [uid];
-						const dltQuery = "DELETE FROM interest WHERE fk_user_id = ?;\n";
+						const dltQuery = 'DELETE FROM interest WHERE fk_user_id = ?;\n';
 						// for (let i = 0; i < catArr.length; i++) {
 						//     dltQueryStr += dltQuery;
 						//     dltQueryVal.push(uid, parseInt(catArr[i],10));
 						// };
 						//----------------------------------------------
 						// Duplicate queries to match request body
-						let queryStr = "";
+						let queryStr = '';
 						let queryVal = [];
 						const query = `INSERT INTO interest (fk_user_id, fk_category_id) VALUES (?, ?);\n`;
 						for (let i = 0; i < catArr.length; i++) {
@@ -58,6 +58,63 @@ let Interest = {
 								return callback(null, result);
 							}
 						});
+					}
+				});
+			}
+		});
+	},
+	delete: function (userId, categoryId, callback) {
+		var conn = db.getConnection();
+		conn.connect(function (err) {
+			if (err) {
+				return callback(err, null);
+			} else {
+				const sql = 'DELETE FROM interest WHERE fk_user_id = ? AND fk_category_id = ?;';
+				conn.query(sql, [userId, categoryId], (error, result) => {
+					conn.end();
+					if (error) {
+						return callback(error, null);
+					} else {
+						return callback(null, result);
+					}
+				});
+			}
+		});
+	},
+	add: function (userId, categoryId, callback) {
+		var conn = db.getConnection();
+		conn.connect(function (err) {
+			if (err) {
+				return callback(err, null);
+			} else {
+				const sql = `INSERT INTO
+								interest (fk_user_id, fk_category_id)
+							VALUES
+								(?, ?)`;
+				conn.query(sql, [userId, categoryId], (error, result) => {
+					conn.end();
+					if (error) {
+						return callback(error, null);
+					} else {
+						return callback(null, result);
+					}
+				});
+			}
+		});
+	},
+	getByUID: function (userId, callback) {
+		var conn = db.getConnection();
+		conn.connect(function (err) {
+			if (err) {
+				return callback(err, null);
+			} else {
+				const sql = `SELECT * FROM interest WHERE fk_user_id = ?`;
+				conn.query(sql, [userId], (error, result) => {
+					conn.end();
+					if (error) {
+						return callback(error, null);
+					} else {
+						return callback(null, result);
 					}
 				});
 			}

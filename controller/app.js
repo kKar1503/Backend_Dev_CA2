@@ -411,6 +411,56 @@ app.delete('/product/:id', authenticateToken, function (req, res) {
 		}
 	});
 });
+
+// Find the product by category ID [Done]
+// http://localhost:3000/product/category/3
+app.get('/product/category/:id', function (req, res) {
+	let cateID;
+	if (!isNaN(req.params.id)) {
+		cateID = parseInt(req.params.id);
+	} else {
+		errLog(req, null, 'Input product id is NaN!');
+		res.status(400).send('Invalid input');
+		return;
+	}
+	Product.findByCateID(cateID, function (error, result) {
+		if (error) {
+			errLog(req, error, 'Cannot find product by id!');
+			res.status(500).send();
+		} else {
+			if (result == null) {
+				console.log("Categoryid doesn't exist");
+				res.status(404).send("Categoryid doesn't exist"); // Productid doesn't exist
+			} else {
+				actLog(req, result, 'Product is found!');
+
+				res.status(200).send(result);
+			}
+		}
+	});
+});
+
+// Find the product by brand [Done]
+// http://localhost:3000/product/brand/Apple
+app.get('/product/brand/:name', function (req, res) {
+	let brandName = req.params.name;
+
+	Product.findByBrand(brandName, function (error, result) {
+		if (error) {
+			errLog(req, error, 'Cannot find product by brand!');
+			res.status(500).send();
+		} else {
+			if (result == null) {
+				console.log('No product in this brand');
+				res.status(404).send('No product in this brand'); // Productid doesn't exist
+			} else {
+				actLog(req, result, 'Products for this brand are found!');
+
+				res.status(200).send(result);
+			}
+		}
+	});
+});
 // End of Product Endpoints
 //----------------------------------------
 

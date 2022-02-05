@@ -12,3 +12,7 @@ uploads
 
 # Ignore charts folder
 charts
+
+# Ignore test
+test.html
+loginTest.html

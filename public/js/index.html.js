@@ -18,7 +18,7 @@ function printCategories(categories) {
                 <img alt="image description" src="http://placehold.it/275x290" />
                 <ul class="links">
                     <li>
-                        <a href="#"><i class="icon-heart"></i></a>
+                        <a href="#"><i id= "category-${category.categoryid}" class="icon-heart"></i></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-eye"></i></a>

@@ -411,6 +411,94 @@ app.delete('/product/:id', authenticateToken, function (req, res) {
 		}
 	});
 });
+
+// Find the product by category ID [Done]
+// http://localhost:3000/product/category/3
+app.get('/product/category/:id', function (req, res) {
+	let cateID;
+	if (!isNaN(req.params.id)) {
+		cateID = parseInt(req.params.id);
+	} else {
+		errLog(req, null, 'Input product id is NaN!');
+		res.status(400).send('Invalid input');
+		return;
+	}
+	Product.findByCateID(cateID, function (error, result) {
+		if (error) {
+			errLog(req, error, 'Cannot find product by id!');
+			res.status(500).send();
+		} else {
+			if (result == null) {
+				console.log("Categoryid doesn't exist");
+				res.status(404).send("Categoryid doesn't exist"); // Productid doesn't exist
+			} else {
+				actLog(req, result, 'Product is found!');
+
+				res.status(200).send(result);
+			}
+		}
+	});
+});
+
+// Find the product by brand [Done]
+// http://localhost:3000/product/brand/Apple
+app.get('/product/brand/:name', function (req, res) {
+	let brandName = req.params.name;
+
+	Product.findByBrand(brandName, function (error, result) {
+		if (error) {
+			errLog(req, error, 'Cannot find product by brand!');
+			res.status(500).send();
+		} else {
+			if (result == null) {
+				console.log('No product in this brand');
+				res.status(404).send('No product in this brand'); // Productid doesn't exist
+			} else {
+				actLog(req, result, 'Products for this brand are found!');
+
+				res.status(200).send(result);
+			}
+		}
+	});
+});
+
+// Find all products [Done]
+// http://localhost:3000/products
+app.get('/product', function (req, res) {
+	Product.getProducts(function (err, result) {
+		if (!err) {
+			if (result.length == 0) {
+				actLog(req, result, 'Product database is empty');
+				res.status(404).send('No products found!'); // User database doesn't have any data
+			} else {
+				actLog(req, result, 'Products found!');
+				res.status(200).send(result);
+			}
+		} else {
+			errLog(req, err);
+			res.status(500).end();
+		}
+	});
+});
+
+// Find distinct brand [Done]
+// http://localhost:3000/products/distinctBrand
+app.get('/products/distinctBrand', function (req, res) {
+	Product.getProducts(function (err, result) {
+		if (!err) {
+			if (result.length == 0) {
+				actLog(req, result, 'Product database is empty');
+				res.status(404).send('No products found!'); // User database doesn't have any data
+			} else {
+				actLog(req, result, 'Products found!');
+				res.status(200).send(result);
+			}
+		} else {
+			errLog(req, err);
+			res.status(500).end();
+		}
+	});
+});
 // End of Product Endpoints
 //----------------------------------------
 

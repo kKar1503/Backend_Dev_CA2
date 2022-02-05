@@ -9,7 +9,7 @@
 //----------------------------------------
 // Imports
 //----------------------------------------
-const db = require("./databaseConfig.js");
+const db = require('./databaseConfig.js');
 
 //----------------------------------------
 // Main Code Implementations
@@ -95,6 +95,98 @@ let Product = {
 						return callback(error, null);
 					}
 					return callback(null, result);
+				});
+			}
+		});
+	},
+
+	findByCateID: function (cateID, callback) {
+		var dbConn = db.getConnection();
+		dbConn.connect(function (err) {
+			if (err) {
+				return callback(err, null); // db connection err
+			} else {
+				const sql = `
+                SELECT 
+                    name, description, brand, price
+                FROM 
+                    product
+                WHERE categoryid = ?
+              `;
+				dbConn.query(sql, cateID, (error, result) => {
+					dbConn.end();
+					if (error) {
+						return callback(error, null);
+					}
+					return callback(null, result);
+				});
+			}
+		});
+	},
+
+	findByBrand: function (brandName, callback) {
+		var dbConn = db.getConnection();
+		dbConn.connect(function (err) {
+			if (err) {
+				return callback(err, null); // db connection err
+			} else {
+				const sql = `
+                SELECT 
+                    name,
+                    description,
+                    price
+                FROM 
+                    product
+                WHERE brand = ? 
+              `;
+				dbConn.query(sql, brandName, (error, result) => {
+					dbConn.end();
+					if (error) {
+						return callback(error, null);
+					}
+					return callback(null, result);
+				});
+			}
+		});
+	},
+
+	getProducts: function (callback) {
+		var conn = db.getConnection();
+		conn.connect(function (err) {
+			if (err) {
+				console.log(err);
+				return callback(err, null);
+			} else {
+				console.log('Connection established!');
+				var sql = 'SELECT DISTINCT brand FROM product';
+				conn.query(sql, function (err, result) {
+					conn.end();
+					if (err) {
+						return callback(err, null);
+					} else {
+						return callback(null, result);
+					}
+				});
+			}
+		});
+	},
+
+	getDisProBrand: function (callback) {
+		var conn = db.getConnection();
+		conn.connect(function (err) {
+			if (err) {
+				console.log(err);
+				return callback(err, null);
+			} else {
+				console.log('Connection established!');
+				var sql = 'SELECT * FROM product';
+				conn.query(sql, function (err, result) {
+					conn.end();
+					if (err) {
+						return callback(err, null);
+					} else {
+						return callback(null, result);
+					}
 				});
 			}
 		});

@@ -10,6 +10,7 @@ axios
  */
 function printCategories(categories) {
 	categories.forEach((category) => {
+		console.log(category);
 		const categoryHtml = `<!-- mt product2 start here -->
         <div class="mt-product2 large bg-grey">
             <!-- box start here -->
@@ -27,12 +28,11 @@ function printCategories(categories) {
             <!-- box end here -->
             <!-- txt end here -->
             <div class="txt">
-                <strong class="title">Bombi Chair</strong>
+                <strong class="title">${category.category}</strong>
             </div>
             <!-- txt end here -->
         </div>
         <!-- mt product2 end here -->`;
-		console.log('here');
-		$('#mt-productscrollbar > .mt-holder').append(categoryHtml);
+		$j('#category-holder').append(categoryHtml);
 	});
 }

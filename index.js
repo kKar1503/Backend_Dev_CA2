@@ -6,9 +6,10 @@ app.get('/', (req, res) => {
 	res.sendFile('/public/index.html', { root: __dirname });
 });
 
-// app.get('/users/:id', (req, res) => {
-// 	res.sendFile('/public/loginpage.html', { root: __dirname });
-// });
+// Find all the products
+app.get('/product', (req, res) => {
+	res.sendFile('/public/product-list-view.html', { root: __dirname });
+});
 
 // app.get('/users/', (req, res) => {
 // 	res.sendFile('/public/loginpage.html', { root: __dirname });

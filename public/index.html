@@ -66,6 +66,12 @@
 											<span class="bar"></span>
 										</a>
 									</li>
+									<li>
+										<select name="cars" id="searchChoice" style="width: 120px;">
+											<option value="brand" style="height: 50px;">Brand</option>
+											<option value="product">Product</option>
+										</select>
+									</li>
 									<li><a href="#" class="icon-magnifier"></a></li>
 									<li class="drop">
 										<a href="#" class="icon-heart cart-opener"><span style="margin-bottom: -3px;" class="num">3</span></a>
@@ -197,7 +203,7 @@
 				<span class="mt-side-over"></span>
 			</header><!-- mt header end here -->
             <!-- mt side menu start here -->
-            <div class="mt-side-menu">
+            <div id = 'sideMenu' class="mt-side-menu">
                 <!-- mt holder start here -->
                 <div class="mt-holder">
                 <a href="#" class="side-close"><span></span><span></span></a>
@@ -243,7 +249,7 @@
 				<div class="mt-holder">
 					<a href="#" class="search-close"><span></span><span></span></a>
 					<div class="mt-frame">
-						<form action="#">
+						<form id='search' action="#">
 							<fieldset>
 								<input type="text" placeholder="Search...">
 								<span class="icon-microphone"></span>
@@ -257,99 +263,25 @@
 			<div class="mt-mainslider2">
 				<!-- banner-slider start here -->
 				<div class="banner-slider">
-					<!-- holder start here -->
-					<div class="holder">
-						<img class="img" src="http://placehold.it/1460x680" alt="image description">
-						<!-- caption start here -->
-						<div class="caption">
-							<div class="c1">
-								<div class="c2">
-									<div class="text right">
-										<span class="title">FURNITURE DESIGNS IDEAS</span>
-										<h1>COMFORT</h1>
-										<h2>WOOD CHAIRS</h2>
-										<div class="txt">
-											<p>Consectetur adipisicing elit. Beatae accusamus, <br> optio, repellendus inventore</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div><!-- caption start here -->
-					</div><!-- holder end here -->
-					<!-- holder start here -->
-					<div class="holder">
-						<img class="img" src="http://placehold.it/1460x680" alt="image description">
-						<!-- caption start here -->
-						<div class="caption add">
-							<div class="c1">
-								<div class="c2">
-									<div class="text">
-										<span class="sub-title">FURNITURE DESIGNS IDEAS</span>
-										<h1>WOODEN</h1>
-										<h2>COLLECTION</h2>
-										<div class="txt">
-											<p>Consectetur adipisicing elit. Beatae accusamus, <br> optio, repellendus inventore</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div><!-- caption end here -->
-					</div><!-- holder end here -->
-					<!-- holder start here -->
-					<div class="holder">
-						<img class="img" src="http://placehold.it/1460x680" alt="image description">
-						<!-- caption start here -->
-						<div class="caption add2">
-							<div class="c1">
-								<div class="c2">
-									<div class="text">
-										<span class="title">FURNITURE DESIGNS IDEAS</span>
-										<h1>Upholstered fabric</h1>
-										<h2>Counter stool</h2>
-										<span class="price">$ 79.<sub>00</sub></span>
-									</div>
-								</div>
-							</div>
-						</div><!-- caption end here -->
-					</div><!-- holder end here -->
 				</div><!-- banner-slider start here -->
 			</div><!-- mt-mainslider2 end here -->
+
+
+
 			<!-- mt main start here -->
 			<main id="mt-main">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- banner frame start here -->
-							<div class="banner-frame">
-								<!-- banner 15 start here -->
-								<div class="banner-15 right wow fadeInLeft" data-wow-delay="0.4s">
-									<img src="http://placehold.it/590x250" alt="image description">
-									<div class="holder">
-										<h2>Chairs <strong>ZIO DINING CHAIR</strong></h2>
-										<a class="btn-shop" href="product-detail.html">
-											<span>SHOP NOW</span>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div>
-								</div><!-- banner 15 end here -->
-								<!-- banner 15 start here -->
-								<div class="banner-15 right wow fadeInRight" data-wow-delay="0.4s">
-									<img src="http://placehold.it/590x250" alt="image description">
-									<div class="holder">
-										<h2>Accessories / Lighting <strong>TOTEM FLOOR LAMP</strong></h2>
-										<a class="btn-shop" href="product-detail.html">
-											<span>SHOP NOW</span>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div>
-								</div><!-- banner 15 end here -->
+							<div id = 'banner-cate' class="banner-frame">
 							</div><!-- banner frame end here -->
 							<!-- mt productsc start here -->
 							<div class="mt-productsc wow fadeInUp" data-wow-delay="0.4s">
 								<div class="row">
 									<div class="col-xs-12 mt-heading text-uppercase text-center">
 										<h2 class="heading">BEST SELLEr</h2>
-										<p>FURNITURE DEsIGNS IDEAS</p>
+										<p>AMAZING IT PRODUCTS</p>
 									</div>
 								</div>
 								<!-- mt productscrollbar start here -->
@@ -502,247 +434,6 @@
 									</div><!-- mt holder end here -->
 								</div><!-- mt productscrollbar end here -->
 							</div><!-- mt productsc end here -->
-							<div class="banner-frame nospace wow fadeInUp" data-wow-delay="0.4s">
-								<!-- banner 9 start here -->
-								<div class="banner-9">
-									<img alt="image description" src="http://placehold.it/400x210">
-									<div class="holder">
-										<h2><span>Wall Decor</span><strong>CLOCKs</strong></h2>
-										<a href="product-detail.html" class="btn-shop">
-											<span>VIEW</span>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div>
-								</div><!-- banner 9 end here -->
-								<!-- banner 10 start here -->
-								<div class="banner-10">
-									<img alt="image description" src="http://placehold.it/400x210">
-									<div class="holder">
-										<h2><span>Coffee Tables</span><strong>S.O.S. BLOCKS</strong></h2>
-										<a href="product-detail.html" class="btn-shop">
-											<span>VIEW</span>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div>
-								</div><!-- banner 10 end here -->
-								<!-- banner 11 start here -->
-								<div class="banner-11">
-									<img alt="image description" src="http://placehold.it/400x210">
-									<div class="holder">
-										<h2><span>Floor Lamps</span><strong>ROCKING LAMP</strong></h2>
-										<a href="product-detail.html" class="btn-shop">
-											<span>VIEW</span>
-											<i class="fa fa-angle-right"></i>
-										</a>
-									</div>
-								</div><!-- banner 11 end here -->
-							</div>
-							<div class="mt-smallproducts wow fadeInUp" data-wow-delay="0.4s">
-								<div class="row">
-									<div class="col-xs-12 col-sm-6 col-md-3 mt-paddingbottomsm">
-										<h3 class="heading">Hot Sale</h3>
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Egon Wooden Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Oyo Cantilever Chair</a></strong>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Kurve Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 mt-paddingbottomsm">
-										<h3 class="heading">Featured Products</h3>
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Bombi Chair</a></strong>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$33,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Oyo Cantilever Chair</a></strong>
-												</div>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Puff Chair</a></strong>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3 mt-paddingbottomxs">
-										<h3 class="heading">Sale Products</h3>
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Marvelous Wooden Chair</a></strong>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Oyo Cantilever Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Kurve Chair</a></strong>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-									</div>
-									<div class="col-xs-12 col-sm-6 col-md-3">
-										<h3 class="heading">Top Rated Products</h3>
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Egon Wooden Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Oyo Cantilever Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-										<!-- mt product4 start here -->
-										<div class="mt-product4 mt-paddingbottom20">
-											<div class="img">
-												<a href="product-detail.html"><img src="http://placehold.it/80x80" alt="image description"></a>
-											</div>
-											<div class="text">
-												<div class="frame">
-													<strong><a href="product-detail.html">Kurve Chair</a></strong>
-													<ul class="mt-stars">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-o"></i></li>
-													</ul>
-												</div>
-												<del class="off">$75,00</del>
-												<span class="price">$55,00</span>
-											</div>
-										</div><!-- mt product4 end here -->
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -824,6 +515,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+		let token = null;
+		if(token != null) {
+			document.getElementById("sideMenu").innerHTML = `
+			
+			`
+		}
+
         const baseUrl = "http://localhost:3000"; // the base url is for db side, so after 
                                                  // gather the input value from front, send request 
                                                  // with the input value to db and get res
@@ -845,9 +543,32 @@
             // Axios is a promise-based HTTP Client, which send req to db and get res, then represent the res successful or not on html
             axios.post(`${baseUrl}/login`, requestBody)
                 .then((response) => {
-                    const token = response.data.accessToken; // this one come from the db controller.js
+                    token = response.data.accessToken; // this one come from the db controller.js
                     localStorage.setItem("token", token);
-                    window.location.href = "/";
+					document.getElementById("sideMenu").innerHTML = `
+				<!-- mt holder start here -->
+                <div class="mt-holder">
+                <a href="#" class="side-close"><span></span><span></span></a>
+                <strong class="mt-side-title">Thank you for login!</strong>
+                <!-- mt side widget start here -->
+                <div class="card">
+                    <img src="http://localhost:8081/image/pic.jpg" id="profilepic" alt="Profile" style="width:100%">
+                    <p class="username"> <label>Username: </label>
+                        <input type="text" id="username"> </br></p>
+                    <p class="role"><label>Job role: </label>
+                        <input type="text" id="role"> </br></p>
+                    <p class="email"><label>Email: </label>
+                        <input type="text" id="email"> </p>
+                    <p><span id="msg"></span></p>
+                    <a href="#"><i class="fa fa-dribbble"></i></a> 
+                    <a href="#"><i class="fa fa-twitter"></i></a> 
+                    <a href="#"><i class="fa fa-linkedin"></i></a> 
+                    <a href="#"><i class="fa fa-facebook"></i></a> 
+                    <p><input type="button" id="Update" value="Update Profile" /></p>
+                    <p><input type="button" id="Logout" value="Log Out" /></p>
+                  </div>
+                </div>
+                <!-- mt holder end here -->`
                 })
                 .catch((error) => {
                     console.log('error' + error.message);
@@ -858,7 +579,62 @@
                     }
 					window.location.assign("http://localhost:3001/404.html");
                 });
-        });
+		});
+
+		// for catgoeries retrieve
+		axios.get(`${baseUrl}/category`)
+                .then((response) => {
+                    const catgoeries= response.data;
+                    catgoeries.forEach((category) => {
+						if(category.categoryid <= 2) {
+							const catgoryHTML = `
+							<!-- holder start here -->
+							<div class="holder" style="margin-bottom: 50px;">
+								<img class="img" src="http://placehold.it/1460x680" alt="image description">
+								<!-- caption start here -->
+								<div class="caption">
+									<div class="c1">
+										<div class="c2">
+											<div class="text right">
+												<span class="title">FURNITURE DESIGNS IDEAS</span>
+												<h1>PREMIUM</h1>
+												<h2>${category.category}</h2>
+												<div class="txt">
+													<p>${category.description}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- caption start here -->
+							</div><!-- holder end here -->
+							`;
+							$(".banner-slider").append(catgoryHTML);
+						}
+						else {
+							const catgoryHTML = `
+							<!-- banner 15 start here -->
+								<div class="banner-15 right wow fadeInLeft" data-wow-delay="0.4s" style="margin-bottom: 25px;">
+									<img src="http://placehold.it/590x250" alt="image description">
+									<div class="holder">
+										<h2>${category.category}</h2>
+										<a class="btn-shop" href="product-detail.html">
+											<span>SHOP NOW</span>
+											<i class="fa fa-angle-right"></i>
+										</a>
+									</div>
+								</div><!-- banner 15 end here -->
+								`;
+								$("#banner-cate").append(catgoryHTML);
+						}
+
+                    });
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+
+		// to get specific product
     </script>
 </body>
 </html>

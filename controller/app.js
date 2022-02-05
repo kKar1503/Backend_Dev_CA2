@@ -461,6 +461,44 @@ app.get('/product/brand/:name', function (req, res) {
 		}
 	});
 });
+
+// Find all products [Done]
+// http://localhost:3000/products
+app.get('/product', function (req, res) {
+	Product.getProducts(function (err, result) {
+		if (!err) {
+			if (result.length == 0) {
+				actLog(req, result, 'Product database is empty');
+				res.status(404).send('No products found!'); // User database doesn't have any data
+			} else {
+				actLog(req, result, 'Products found!');
+				res.status(200).send(result);
+			}
+		} else {
+			errLog(req, err);
+			res.status(500).end();
+		}
+	});
+});
+
+// Find distinct brand [Done]
+// http://localhost:3000/products/distinctBrand
+app.get('/products/distinctBrand', function (req, res) {
+	Product.getProducts(function (err, result) {
+		if (!err) {
+			if (result.length == 0) {
+				actLog(req, result, 'Product database is empty');
+				res.status(404).send('No products found!'); // User database doesn't have any data
+			} else {
+				actLog(req, result, 'Products found!');
+				res.status(200).send(result);
+			}
+		} else {
+			errLog(req, err);
+			res.status(500).end();
+		}
+	});
+});
 // End of Product Endpoints
 //----------------------------------------
 

@@ -37,5 +37,5 @@ function printCategories(categories) {
 }
 
 $j(document).on('click', '.category', function () {
-	console.log($j(this).attr('id').substring(9));
+	localStorage.setItem('productCategory', parseInt($j(this).attr('id').substring(9)));
 });

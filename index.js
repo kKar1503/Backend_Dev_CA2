@@ -12,13 +12,8 @@ app.get('/product', (req, res) => {
 });
 
 // Find all the products
-app.get('/productDetail', (req, res) => {
+app.get('/product/:productid', (req, res) => {
 	res.sendFile('/public/product-detail.html', { root: __dirname });
-});
-
-app.get('/product/:filename', (req, res) => {
-	let filename = req.params.filename;
-	res.sendFile(`/uploads/${filename}`, { root: __dirname });
 });
 
 // app.get('/users/', (req, res) => {

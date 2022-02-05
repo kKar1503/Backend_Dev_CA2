@@ -21,7 +21,7 @@
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'Laptops','Light and high performance laptops for school'),(2,'Phones','Awesome performance phones for everything and more'),(3,'Mouses','Durable rechargeable battery mouses allow you to study for hours.'),(4,'Hard drives','Versatile and dependable hard drives'),(5,'Tablet','Outstanding visuals and advanced pen performance tablets'),(6,'Headphones','High quality wireless audio headphones');
+INSERT INTO `category` VALUES (1,'Laptops','Light and high performance laptops for school',NULL),(2,'Phones','Awesome performance phones for everything and more',NULL),(3,'Mouses','Durable rechargeable battery mouses allow you to study for hours.',NULL),(4,'Hard drives','Versatile and dependable hard drives',NULL),(5,'Tablet','Outstanding visuals and advanced pen performance tablets',NULL),(6,'Headphones','High quality wireless audio headphones',NULL);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 

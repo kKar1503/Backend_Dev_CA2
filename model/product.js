@@ -158,7 +158,7 @@ let Product = {
 				return callback(err, null);
 			} else {
 				console.log('Connection established!');
-				var sql = 'SELECT DISTINCT brand FROM product';
+				var sql = 'SELECT * FROM product';
 				conn.query(sql, function (err, result) {
 					conn.end();
 					if (err) {
@@ -179,7 +179,7 @@ let Product = {
 				return callback(err, null);
 			} else {
 				console.log('Connection established!');
-				var sql = 'SELECT * FROM product';
+				var sql = 'SELECT DISTINCT brand FROM product';
 				conn.query(sql, function (err, result) {
 					conn.end();
 					if (err) {

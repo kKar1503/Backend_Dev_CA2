@@ -11,6 +11,16 @@ app.get('/product', (req, res) => {
 	res.sendFile('/public/product-list-view.html', { root: __dirname });
 });
 
+// Find all the products
+app.get('/productDetail', (req, res) => {
+	res.sendFile('/public/product-detail.html', { root: __dirname });
+});
+
+app.get('/product/:filename', (req, res) => {
+	let filename = req.params.filename;
+	res.sendFile(`/uploads/${filename}`, { root: __dirname });
+});
+
 // app.get('/users/', (req, res) => {
 // 	res.sendFile('/public/loginpage.html', { root: __dirname });
 // });

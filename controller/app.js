@@ -484,7 +484,7 @@ app.get('/product', function (req, res) {
 // Find distinct brand [Done]
 // http://localhost:3000/products/distinctBrand
 app.get('/products/distinctBrand', function (req, res) {
-	Product.getProducts(function (err, result) {
+	Product.getDisProBrand(function (err, result) {
 		if (!err) {
 			if (result.length == 0) {
 				actLog(req, result, 'Product database is empty');

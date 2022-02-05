@@ -4,8 +4,25 @@ axios
 	.then((categories) => printCategories(categories.data))
 	.catch((err) => console.error(err));
 
+// Render initial number on interest icon
+renderInterestIcon();
+
+// Event Listener on category click
+$j(document).on('click', '.category', async function () {
+	const categoryId = parseInt($j(this).attr('id').substring(9));
+	if ($j(this).find('i.fa-heart-o').length) {
+		await axios.post(`http://localhost:3000/interest/3/${categoryId}`);
+		$j(this).find('.fa-heart-o').toggleClass('fa-heart-o fa-heart');
+	} else {
+		console.log('object');
+		await axios.delete(`http://localhost:3000/interest/3/${categoryId}`);
+		$j(this).find('.fa-heart').toggleClass('fa-heart fa-heart-o');
+	}
+	renderInterestIcon();
+});
+
 /**
- *
+ * Function to render all categories on page
  * @param {Array} categories
  */
 function printCategories(categories) {
@@ -42,16 +59,12 @@ function printCategories(categories) {
 	});
 }
 
-$j(document).on('click', '.category', function () {
-	const categoryId = parseInt($j(this).attr('id').substring(9));
-	// axios
-	// 	.post(`http://localhost:3000/interest/3/${categoryId}`)
-	// 	.then(() => console.log('done'))
-	// 	.catch((err) => console.error(err));
-	$j(this).find('.fa-heart-o').toggleClass('fa-heart-o fa-heart');
-
-	// paramObj = new Object();
-	// paramObj.category = parseInt($j(this).attr('id').substring(9));
-	// paramObj.brand =
-	// window.location.href = `/product?${$.param(paramObj)}`;
-});
+/**
+ *  Function to re-render number on interest icon
+ */
+function renderInterestIcon() {
+	axios
+		.get('http://localhost:3000/interest/3')
+		.then((interests) => $j('#interest-num').text(interests.data.length))
+		.catch((err) => console.error(err));
+}

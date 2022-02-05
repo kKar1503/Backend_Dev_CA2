@@ -159,6 +159,12 @@ showBrandFilter();
 showProductList();
 
 // Event listeners
-document
-	.getElementById('specProduct')
-	.addEventListener('click', directToDetails(index));
+document.getElementById('specProduct').addEventListener('click', function () {
+	localStorage.setItem('selectedID', parseInt(this.attr('id').substring(9)));
+
+	window.location.href = '/product-detail.html';
+});
+
+// $j(document).on('click', '#specProduct', function () {
+// 	localStorage.setItem('selectedID', parseInt($j(this).attr('id')));
+// });

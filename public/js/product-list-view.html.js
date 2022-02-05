@@ -145,3 +145,7 @@ showBrandFilter();
 showProductList();
 // // Event listeners
 // document.getElementById('categories').innerHTML(getCates());
+
+// const params = new URLSearchParams(document.location.search);
+// const category = params.get('category');
+// console.log(category);

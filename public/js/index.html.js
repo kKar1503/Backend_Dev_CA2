@@ -38,4 +38,8 @@ function printCategories(categories) {
 
 $j(document).on('click', '.category', function () {
 	localStorage.setItem('productCategory', parseInt($j(this).attr('id').substring(9)));
+	paramObj = new Object();
+	paramObj.category = parseInt($j(this).attr('id').substring(9));
+	// paramObj.brand =
+	window.location.href = `/product?${$.param(paramObj)}`;
 });

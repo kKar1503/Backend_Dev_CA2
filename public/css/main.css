@@ -6042,6 +6042,7 @@ a:hover {
 	height: 41px;
 	font-size: 16px;
 	line-height: 38px;
+	cursor: pointer;
 }
 
 .mt-product2 .links a:hover {

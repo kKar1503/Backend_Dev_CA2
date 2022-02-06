@@ -62,7 +62,7 @@ app.post('/login', function (req, res) {
 	});
 });
 
-// Generate Refresh Token [Done]
+// Generate new Access Token [Done]
 // http://localhost:4000/token
 
 app.post('/token', function (req, res) {

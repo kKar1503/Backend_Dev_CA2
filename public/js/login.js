@@ -17,8 +17,14 @@ $j(document).on('click', '#btn-login', function (e) {
 			$j('#logged-in').show();
 		})
 		.catch((err) => {
-			console.error(err);
 			alert('Somethig went wrong, please try again!');
+			if (err.response.status === 401) {
+				window.location.href = './401-unauthorized';
+			} else if (err.response.status === 403) {
+				window.location.href = './403-forbidden';
+			} else {
+				window.location.href = './500-server-error';
+			}
 		});
 });
 
@@ -47,8 +53,8 @@ $j(document).on('click', '#btn-signup', function (e) {
 				alert('New account is created!');
 			})
 			.catch((err) => {
-				console.error(err);
 				alert('Somethig went wrong, please try again!');
+				window.location.href = './500-server-error';
 			});
 	}
 });
@@ -126,7 +132,7 @@ function regenerateAccessToken() {
 		.post('http://localhost:4000/token', { token: refreshToken })
 		.then((token) => localStorage.setItem('accessToken', token))
 		.catch((err) => {
-			console.error(err);
+			console.error(err.response.status);
 			alert('Something went wrong, please try again later!');
 		});
 }

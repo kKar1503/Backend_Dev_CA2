@@ -106,11 +106,7 @@ function showProductList() {
 		.then((res) => {
 			let products = res.data;
 			// one page contain 7 products
-			for (
-				let i = 0 + 7 * (pageNum - 1);
-				i < 7 * pageNum && i < products.length;
-				i++
-			) {
+			for (let i = 0 + 7 * (pageNum - 1); i < 7 * pageNum && i < products.length; i++) {
 				let productHTML = `
 						<!-- product post start here -->
 						<div class="product-post">
@@ -176,11 +172,11 @@ function searchByProduct(productName) {
 			console.log(err);
 			console.log(err.response.status === 404);
 			if (err.response.status == 404) {
-				window.location.href = `/404-not-found`;
+				window.location.href = `/404`;
 			}
 			// console.err(err);
 			else {
-				window.location.href = `/500-server-error`;
+				window.location.href = `/500`;
 			}
 		}); // res.data just get the data
 }
@@ -254,10 +250,7 @@ getProByBrand();
 // console.log(category);
 
 $j(document).on('click', '.img-holder', function () {
-	localStorage.setItem(
-		'productID',
-		parseInt($j(this).attr('id').substring(11))
-	);
+	localStorage.setItem('productID', parseInt($j(this).attr('id').substring(11)));
 	paramObj = new Object();
 	paramObj.productid = parseInt($j(this).attr('id').substring(12));
 	// paramObj.brand =

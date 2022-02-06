@@ -22,22 +22,22 @@ app.get('/about', (req, res) => {
 });
 
 // About-us page
-app.get('/401-unauthorized', (req, res) => {
+app.get('/401', (req, res) => {
 	res.sendFile('/public/401.html', { root: __dirname });
 });
 
 // About-us page
-app.get('/403-forbidden', (req, res) => {
+app.get('/403', (req, res) => {
 	res.sendFile('/public/403.html', { root: __dirname });
 });
 
 // About-us page
-app.get('/404-not-found', (req, res) => {
+app.get('/404', (req, res) => {
 	res.sendFile('/public/404.html', { root: __dirname });
 });
 
 // About-us page
-app.get('/500-server-error', (req, res) => {
+app.get('/500', (req, res) => {
 	res.sendFile('/public/500.html', { root: __dirname });
 });
 

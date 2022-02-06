@@ -405,7 +405,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-xs-12 text-center">
-									<h1>CONTACT</h1>
+									<h1>Admin</h1>
 									<nav class="breadcrumbs">
 										<ul class="list-unstyled">
 											<li>
@@ -433,6 +433,22 @@
 									<!-- Contact Form of the Page -->
 									<form action="#" class="contact-form">
 										<fieldset>
+											<label style="font-weight: 300" for="img"
+												>Select product image:</label
+											>
+											<input type="file" id="img" name="img" accept="image/*" />
+											<select
+												class="brands"
+												id="brand"
+												style="
+													font-size: 18px;
+													width: 200px;
+													margin-top: 10px;
+													margin-bottom: 10px;
+													border-radius: 30px;
+													border-width: 1px;
+												"
+											></select>
 											<input
 												type="text"
 												class="form-control"
@@ -453,16 +469,11 @@
 												class="form-control"
 												placeholder="Product Price"
 											/>
-											<select class="brands" id="brand" style="width: 300px">
-												<option value="volvo">Volvo</option>
-												<option value="saab">Saab</option>
-												<option value="opel">Opel</option>
-												<option value="audi">Audi</option>
-											</select>
 											<textarea
 												class="form-control"
 												placeholder="Product Description"
 											></textarea>
+
 											<button class="btn-type3" type="submit">
 												Add Product
 											</button>
@@ -605,5 +616,14 @@
 			type="text/javascript"
 			src="https://maps.googleapis.com/maps/api/js"
 		></script>
+
+		<!-- include jQuery for Axios -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+			integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="js/contact-us.html.js"></script>
 	</body>
 </html>

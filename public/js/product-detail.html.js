@@ -68,6 +68,7 @@ function showProductDetail() {
 			$j('#productDetail').append(proDetailHTML);
 		})
 		.catch((err) => {
+			console.log(err);
 			// console.log(err.response.status === 404);
 			if (err.response.status == 404) {
 				window.location.href = `/404-not-found`;
@@ -90,7 +91,10 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
+			let totalRating = reviews.reduce(
+				(sum, reviews) => sum + reviews.rating,
+				0
+			);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {
@@ -192,54 +196,11 @@ showProductDetail();
 showAvgRating();
 showBottomReview();
 
-<<<<<<< HEAD
-$j('#productReview').submit((event) => {
-	let d = new Date();
-	let date =
-		d.getDate().toString() +
-		(d.getMonth() + 1).toString() +
-		d.getFullYear().toString();
-	let t =
-		('0' + d.getHours()).slice(-2) +
-		('0' + d.getMinutes()).slice(-2) +
-		('0' + d.getSeconds()).slice(-2) +
-		('00' + d.getMilliseconds()).slice(-3);
-	let created_at = date + ' ' + t;
-	console.log(created_at);
-	// # is id, . is class
-	//  The submit event occurs when a form is submitted.
-	//  This event can only be used on <form> elements.
-
-	console.log('submiting');
-	// prevent page reload
-	event.preventDefault();
-	const review = $j('#review').val();
-	console.log(review);
-	saveReview(2, productid, 3);
-	// userid, rating, review, productid;
-});
-
-function saveReview(userid, rating, review) {
-	axios
-		.post(
-			// the backend api we want to hit
-			`http://localhost:3000/product/${productID}/review`,
-			{
-				userid: userid,
-				rating: rating,
-				review: review,
-				productid: productID,
-			}
-		)
-		.then((res) => {
-			console.log(res);
-			alert('Your review is sent successfully!');
-		})
-		.catch((err) => console.error(err)); // res.data just get the data
-}
-=======
+let totalStars;
+// for add rating
 $j(document).on('click', '.clickable-stars', function () {
-	const totalStars = parseInt($j(this).attr('id').substring(5));
+	totalStars = parseInt($j(this).attr('id').substring(5));
+	// console.log(totalStars);
 	for (i = 1; i <= 5; i++) {
 		if (i <= totalStars) {
 			console.log(`i is less than totalStars`);
@@ -256,4 +217,37 @@ $j(document).on('click', '.clickable-stars', function () {
 		}
 	}
 });
->>>>>>> f251452951b4ee08b8078bb32229d4e1ccfd879e
+
+$j('#productReview').submit((event) => {
+	// # is id, . is class
+	//  The submit event occurs when a form is submitted.
+	//  This event can only be used on <form> elements.
+
+	console.log('submiting');
+	// prevent page reload
+	event.preventDefault();
+	const review = $j('#review').val();
+	console.log(review);
+	addReview(userid, totalStars, review);
+	showBottomReview();
+});
+
+function addReview(userid, totalStars, review) {
+	axios
+		.post(
+			// the backend api we want to hit
+			`http://localhost:3000/product/${productID}/review`,
+			{
+				userid: 1, // must match the postman json body
+				rating: totalStars,
+				review: review,
+				productID: productID,
+			}
+		)
+		.then((res) => {
+			alert('Your Comment added successfully!');
+		})
+		.catch((err) => {
+			console.error(err);
+		}); // res.data just get the data
+}

@@ -116,19 +116,9 @@ function showProductList() {
 									<p>${product.description}</p>
 								</div><!-- align left end here -->
 								<!-- align right start here -->
-								<div class="align-right">
-									<ul class="list-unstyled rating-list">
-										<li class="active"><a href="#"><i class="fa fa-star"></i></a></li>
-										<li class="active"><a href="#"><i class="fa fa-star"></i></a></li>
-										<li class="active"><a href="#"><i class="fa fa-star"></i></a></li>
-										<li><a href="#"><i class="fa fa-star-o"></i></a></li>
-										<li>Reviews (12)</li>
-									</ul>
+								<div id='avgRating' class="align-right">
+									
 									<a href="#" class="btn-cart">ADD TO CART</a>
-									<ul class="list-unstyled nav">
-										<li><a href="#"><i class="fa fa-heart"></i> ADD TO WISHLIST</a></li>
-										<li><a href="#"><i class="fa fa-exchange"></i> COMPARE</a></li>
-									</ul>
 								</div><!-- align right end here -->
 							</div><!-- txt holder end here -->
 						</div><!-- product post end here -->

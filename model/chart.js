@@ -9,11 +9,11 @@
 //----------------------------------------
 // Imports
 //----------------------------------------
-const db = require("./databaseConfig.js");
-const fs = require("fs");
-const { ChartJSNodeCanvas } = require("chartjs-node-canvas");
-var randomColor = require("randomcolor"); // import the script
-const res = require("express/lib/response");
+const db = require('./databaseConfig.js');
+const fs = require('fs');
+const { ChartJSNodeCanvas } = require('chartjs-node-canvas');
+var randomColor = require('randomcolor'); // import the script
+const res = require('express/lib/response');
 const width = 800; //px
 const height = 400; //px
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
@@ -30,9 +30,9 @@ let Chart = {
 			if (err) {
 				return callback(err, null); // connection err
 			} else {
-				console.log("Connection established!");
+				console.log('Connection established!');
 
-				var interestSQL = "SELECT fk_category_id FROM interest"; // sql to change to a join table query with category table to get category name
+				var interestSQL = 'SELECT fk_category_id FROM interest'; // sql to change to a join table query with category table to get category name
 				conn.query(interestSQL, function (err, result) {
 					if (err) {
 						conn.end();
@@ -57,7 +57,8 @@ let Chart = {
 						// create and initialize labels array
 						let labels = [];
 
-						var categorySQL = "SELECT category FROM category ORDER BY categoryid"; // sql to change to a join table query with category table to get category name
+						var categorySQL =
+							'SELECT category FROM category ORDER BY categoryid'; // sql to change to a join table query with category table to get category name
 						conn.query(categorySQL, function (err, result) {
 							conn.end();
 							if (err) {
@@ -65,14 +66,14 @@ let Chart = {
 							} else {
 								console.log(result);
 								for (let i = 0; i < result.length; i++) {
-									if(!countCate[i]) countCate[i] = 0; // countCate[i] = undefined --> int to 0
-									labels.push(result[i].category + " (" + countCate[i] + ")");
+									if (!countCate[i]) countCate[i] = 0; // countCate[i] = undefined --> int to 0
+									labels.push(result[i].category + ' (' + countCate[i] + ')');
 								}
 								let colors = [];
 								colors = randomColor({
 									count: labels.length,
-									format: "rgb",
-									hue: "blue",
+									format: 'rgb',
+									hue: 'blue',
 								});
 
 								let filename;
@@ -81,13 +82,13 @@ let Chart = {
 								//----------------------------------------
 								(async () => {
 									let configuration = {
-										type: "pie",
+										type: 'pie',
 										data: {
 											labels: [],
 
 											datasets: [
 												{
-													label: "Pie_chart",
+													label: 'Pie_chart',
 													data: [],
 													backgroundColor: [],
 													hoverOffset: 4,
@@ -101,8 +102,13 @@ let Chart = {
 									configuration.data.labels = labels;
 									configuration.data.datasets[0].backgroundColor = colors;
 
-									let imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
-									filename = new Date().toISOString().replace(/:/g, "-") + " - " + "pieChart.PNG";
+									let imageBuffer = await chartJSNodeCanvas.renderToBuffer(
+										configuration
+									);
+									filename =
+										new Date().toISOString().replace(/:/g, '-') +
+										' - ' +
+										'pieChart.PNG';
 
 									// Write image to file
 									fs.writeFileSync(`./charts/${filename}`, imageBuffer);
@@ -122,21 +128,22 @@ let Chart = {
 			if (err) {
 				return callback(err, null);
 			} else {
-				var categorySQL = "SELECT categoryid FROM category WHERE categoryid = ?"; // sql to change to a join table query with category table to get category name
+				var categorySQL =
+					'SELECT categoryid FROM category WHERE categoryid = ?'; // sql to change to a join table query with category table to get category name
 				conn.query(categorySQL, [productCateID], function (error, result) {
 					if (error) {
 						conn.end();
 						return callback(error, null);
-					} else { 
-						if(result.length == 0) return callback(null, null);
-						const sql = "SELECT name, price FROM product WHERE categoryid = ?";
+					} else {
+						if (result.length == 0) return callback(null, null);
+						const sql = 'SELECT name, price FROM product WHERE categoryid = ?';
 						conn.query(sql, [productCateID], (error, result) => {
 							conn.end();
 							if (error) {
 								return callback(error, null);
 							} else {
 								console.log(result);
-								if(result.length == 0) return callback(null, result);
+								if (result.length == 0) return callback(null, result);
 								// else
 								let prices = [];
 								for (let i = 0; i < result.length; i++) {
@@ -151,27 +158,29 @@ let Chart = {
 								let backgroundColors = [];
 								backgroundColors = randomColor({
 									count: labels.length,
-									format: "rgb",
-									hue: "blue",
+									format: 'rgb',
+									hue: 'blue',
 								});
 
 								let borderColors = [];
 								borderColors = randomColor({
 									count: labels.length,
-									format: "rgb",
-									hue: "green",
+									format: 'rgb',
+									hue: 'green',
 								});
 								//----------------------------------------
 								// Configuration and set up for pie chart (interest category)
 								//----------------------------------------
 								(async () => {
 									let configuration = {
-										type: "bar",
+										type: 'bar',
 										data: {
 											labels: [],
 											datasets: [
 												{
-													label: "Price Comparison bar chart for category " + productCateID,
+													label:
+														'Price Comparison bar chart for category ' +
+														productCateID,
 													data: [],
 													backgroundColor: [],
 													borderColor: [],
@@ -191,11 +200,17 @@ let Chart = {
 									// build the configuration
 									configuration.data.datasets[0].data = prices;
 									configuration.data.labels = labels;
-									configuration.data.datasets[0].backgroundColor = backgroundColors;
+									configuration.data.datasets[0].backgroundColor =
+										backgroundColors;
 									configuration.data.datasets[0].borderColor = borderColors;
 
-									let imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
-									filename = new Date().toISOString().replace(/:/g, "-") + " - " + "barChart.PNG";
+									let imageBuffer = await chartJSNodeCanvas.renderToBuffer(
+										configuration
+									);
+									filename =
+										new Date().toISOString().replace(/:/g, '-') +
+										' - ' +
+										'barChart.PNG';
 
 									// Write image to file
 									fs.writeFileSync(`./charts/${filename}`, imageBuffer);
@@ -233,13 +248,37 @@ let Chart = {
 		});
 	},
 
+	updateProDbByName: function (productName, callback) {
+		var dbConn = db.getConnection();
+		dbConn.connect(function (err) {
+			if (err) {
+				return callback(err, null);
+			} else {
+				const sql = `
+							UPDATE 
+								product 
+							SET 
+								click_times = click_times + 1
+							WHERE
+								name = ?;`;
+				dbConn.query(sql, [productName], (error, result) => {
+					dbConn.end();
+					if (error) {
+						return callback(error, null);
+					}
+					return callback(null, result);
+				});
+			}
+		});
+	},
+
 	clickTimesChart: function (callback) {
 		var conn = db.getConnection();
 		conn.connect(function (err) {
 			if (err) {
 				return callback(err, null);
 			} else {
-				const sql = "SELECT click_times, name FROM product";
+				const sql = 'SELECT click_times, name FROM product';
 				conn.query(sql, (error, result) => {
 					conn.end();
 					if (error) {
@@ -258,15 +297,15 @@ let Chart = {
 						let backgroundColors = [];
 						backgroundColors = randomColor({
 							count: labels.length,
-							format: "rgb",
-							hue: "blue",
+							format: 'rgb',
+							hue: 'blue',
 						});
 
 						let borderColors = [];
 						borderColors = randomColor({
 							count: labels.length,
-							format: "rgb",
-							hue: "green",
+							format: 'rgb',
+							hue: 'green',
 						});
 
 						//----------------------------------------
@@ -274,12 +313,12 @@ let Chart = {
 						//----------------------------------------
 						(async () => {
 							let configuration = {
-								type: "bar",
+								type: 'bar',
 								data: {
 									labels: [],
 									datasets: [
 										{
-											label: "Product click times chart",
+											label: 'Product click times chart',
 											data: [],
 											backgroundColor: [],
 											borderColor: [],
@@ -302,8 +341,13 @@ let Chart = {
 							configuration.data.datasets[0].backgroundColor = backgroundColors;
 							configuration.data.datasets[0].borderColor = borderColors;
 
-							let imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
-							filename = new Date().toISOString().replace(/:/g, "-") + " - " + "barChart.PNG";
+							let imageBuffer = await chartJSNodeCanvas.renderToBuffer(
+								configuration
+							);
+							filename =
+								new Date().toISOString().replace(/:/g, '-') +
+								' - ' +
+								'barChart.PNG';
 
 							// Write image to file
 							fs.writeFileSync(`./charts/${filename}`, imageBuffer);

@@ -116,10 +116,7 @@ function showProductList() {
 									<p>${product.description}</p>
 								</div><!-- align left end here -->
 								<!-- align right start here -->
-								<div id='avgRating' class="align-right">
-
 									<a href="#" class="btn-cart">ADD TO CART</a>
-								</div><!-- align right end here -->
 							</div><!-- txt holder end here -->
 						</div><!-- product post end here -->
 							`;
@@ -128,6 +125,53 @@ function showProductList() {
 			});
 		})
 		.catch((err) => console.error(err)); // res.data just get the data
+}
+
+function searchByProduct(productName) {
+	axios
+		.get(
+			// the backend api we want to hit
+			`http://localhost:3000/product/name/${productName}`
+		)
+		.then((res) => {
+			let product = res.data;
+
+			console.log(product);
+			let productHTML = `
+					<!-- product post start here -->
+					<div class="product-post">
+						<!-- img holder start here -->
+						<div href="#" id='specProduct-${product.productid}' class="img-holder">
+							<img src="http://localhost:3000/product/image/${product.productid}" alt="image description" style='width: auto; height:200px'>
+						</div><!-- img holder end here -->
+						<!-- txt holder start here -->
+						<div class="txt-holder">
+							<!-- align left start here -->
+							<div class="align-left">
+								<strong class="title"><a href="http://localhost:3001/product/detail?productid=${product.productid}">${productName}</a></strong>
+								<span class="price"><i class="fa fa-dollar"></i> ${product.price}</span>
+								<p>${product.description}</p>
+							</div><!-- align left end here -->
+							<!-- align right start here -->
+								<a href="#" class="btn-cart">ADD TO CART</a>
+						</div><!-- txt holder end here -->
+					</div><!-- product post end here -->
+						`;
+			// $j('#productList').append(productHTML);
+			// $j{'productHTML'}.replaceAll('#productList');
+			$('#productList').replaceWith(productHTML);
+		})
+		.catch((err) => {
+			console.log(err);
+			console.log(err.response.status === 404);
+			if (err.response.status == 404) {
+				window.location.href = `/404-not-found`;
+			}
+			// console.err(err);
+			else {
+				window.location.href = `/500-server-error`;
+			}
+		}); // res.data just get the data
 }
 
 // call func to get all the categories
@@ -157,3 +201,16 @@ $j(document).on('click', '.img-holder', function () {
 // 	// paramObj.brand =
 // 	window.location.href = `/product?${$.param(paramObj)}`;
 // });
+
+$j('#searchProduct').submit((event) => {
+	// # is id, . is class
+	//  The submit event occurs when a form is submitted.
+	//  This event can only be used on <form> elements.
+
+	console.log('submiting');
+	// prevent page reload
+	event.preventDefault();
+	const productName = $j('#productName').val();
+	console.log(productName);
+	searchByProduct(productName);
+});

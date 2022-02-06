@@ -1,11 +1,7 @@
-// Get all categories using axios
-axios
-	.get('http://localhost:3000/category')
-	.then((categories) => printCategories(categories.data))
+// Render categories
+queryCategories()
+	.then((categories) => renderCategories(categories))
 	.catch((err) => console.error(err));
-
-// Render initial number on interest icon
-renderInterestIcon();
 
 // Event Listener on category click
 $j(document).on('click', '.category', async function () {
@@ -14,10 +10,10 @@ $j(document).on('click', '.category', async function () {
 		await axios.post(`http://localhost:3000/interest/3/${categoryId}`);
 		$j(this).find('.fa-heart-o').toggleClass('fa-heart-o fa-heart');
 	} else {
-		console.log('object');
 		await axios.delete(`http://localhost:3000/interest/3/${categoryId}`);
 		$j(this).find('.fa-heart').toggleClass('fa-heart fa-heart-o');
 	}
+	renderInterest();
 	renderInterestIcon();
 });
 
@@ -25,12 +21,11 @@ $j(document).on('click', '.category', async function () {
  * Function to render all categories on page
  * @param {Array} categories
  */
-function printCategories(categories) {
+function renderCategories(categories) {
 	categories.forEach(async (category) => {
 		let categoryId = category.categoryid;
 		let categories = await axios.get('http://localhost:3000/interest/3');
 		let hasCategory = categories.data.some((category) => category.fk_category_id == categoryId);
-		console.log(hasCategory);
 		const categoryHtml = `<!-- mt product2 start here -->
         <div class="mt-product2 large bg-grey">
             <!-- box start here -->
@@ -38,7 +33,7 @@ function printCategories(categories) {
                 <img alt="image description" src="http://placehold.it/275x290" />
                 <ul class="links">
                     <li>
-                        <a class="category" id="category-${categoryId}"><i class="fa ${hasCategory ? 'fa-heart' : 'fa-heart-o'}" id="hi-${
+                        <a class="category" id="category-${categoryId}"><i class="fa ${hasCategory ? 'fa-heart' : 'fa-heart-o'}" id="heart-${
 			category.categoryid
 		}"></i></a>
                     </li>
@@ -57,14 +52,4 @@ function printCategories(categories) {
         <!-- mt product2 end here -->`;
 		$j('#category-holder').append(categoryHtml);
 	});
-}
-
-/**
- *  Function to re-render number on interest icon
- */
-function renderInterestIcon() {
-	axios
-		.get('http://localhost:3000/interest/3')
-		.then((interests) => $j('#interest-num').text(interests.data.length))
-		.catch((err) => console.error(err));
 }

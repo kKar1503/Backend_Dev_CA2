@@ -2332,6 +2332,7 @@ a:hover {
 	position: absolute;
 	-webkit-transition: all 0.4s linear;
 	transition: all 0.4s linear;
+	cursor: pointer;
 }
 
 .mt-side-widget .cart-row .close:hover {
@@ -2372,8 +2373,8 @@ a:hover {
 }
 
 .mt-side-widget .price {
-	color: #010101;
-	font: 600 15px/20px 'Source Sans Pro', sans-serif;
+	color: #3f3f3f;
+	font: 600 10px/15px 'Source Sans Pro', sans-serif;
 }
 
 .mt-side-widget .price a {

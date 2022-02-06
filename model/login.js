@@ -9,7 +9,7 @@
 //----------------------------------------
 // Imports
 //----------------------------------------
-const db = require("./databaseConfig.js");
+const db = require('./databaseConfig.js');
 
 //----------------------------------------
 // Main Code Implementations
@@ -21,7 +21,7 @@ let Login = {
 			if (err) {
 				return callback(err, null);
 			} else {
-				const sql = `SELECT password, type FROM user WHERE username = ?`;
+				const sql = `SELECT userid, password, type FROM user WHERE username = ?`;
 				dbConn.query(sql, loginData.user, (err, result) => {
 					dbConn.end();
 					if (err) {

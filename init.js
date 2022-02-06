@@ -6,19 +6,20 @@
 // Filename:        init.js
 //----------------------------------------
 
-const fs = require("fs"); // Import File System Module
+const fs = require('fs'); // Import File System Module
 
-if (!fs.existsSync("./charts")) {
-	fs.mkdirSync("./charts");
+if (!fs.existsSync('./charts')) {
+	fs.mkdirSync('./charts');
 }
-if (!fs.existsSync("./uploads")) {
-	fs.mkdirSync("./uploads");
+if (!fs.existsSync('./uploads')) {
+	fs.mkdirSync('./uploads');
 }
-const token = require("crypto").randomBytes(64).toString("Hex"); // Creates a new token on init
+const token = require('crypto').randomBytes(64).toString('Hex'); // Creates a new token on init
+const refresh = require('crypto').randomBytes(64).toString('Hex'); // Creates a new refresh token on init
 
-if (!fs.existsSync(".env")) {
+if (!fs.existsSync('.env')) {
 	fs.writeFileSync(
-		".env",
-		`DB_HOST = localhost\nDB_USER = root\nDB_PORT = 3306\nDB_PASS = \nSECRET_KEY = ${token}\nTOKEN_EXPIRY = 15s`
+		'.env',
+		`DB_HOST = localhost\nDB_USER = root\nDB_PORT = 3306\nDB_PASS = \nSECRET_KEY = ${token}\nREFRESH_TOKEN_SECRET = ${refresh}\nTOKEN_EXPIRY = 15s`
 	);
 }

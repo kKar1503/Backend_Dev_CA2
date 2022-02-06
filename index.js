@@ -41,6 +41,11 @@ app.get('/500', (req, res) => {
 	res.sendFile('/public/500.html', { root: __dirname });
 });
 
+// About-us page
+app.get('/admin', (req, res) => {
+	res.sendFile('/public/admin.html', { root: __dirname });
+});
+
 // app.get('/users/', (req, res) => {
 // 	res.sendFile('/public/loginpage.html', { root: __dirname });
 // });

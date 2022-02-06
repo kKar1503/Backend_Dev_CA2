@@ -22,7 +22,7 @@ function showProductDetail() {
                 <div class="product-slider">
                     <div class="slide">
                         <img src="http://localhost:3000/product/image/${productID}" alt="image descrption"
-                            style="margin-top: 55px;">
+                            style="width:auto; max-height: 300px; margin-top: 55px;">
                     </div>
                 </div>
                 <!-- Product Slider of the Page end -->
@@ -43,7 +43,7 @@ function showProductDetail() {
                 </div>
                 <!-- Rank Rating of the Page end -->
                 <div class="text-holder">
-                    <span class="price">$ ${product.price} <span style='margin-left:100px'>${product.brand}</span></span>
+                    <span class="price">$ ${product.price} <span style='margin-left:50px'>${product.brand}</span><span style='margin-left:50px'>${product.categoryname}</span></span>
                 </div>
                 <!-- Product Form of the Page -->
                 <form action="#" class="product-form" style="margin-bottom: 40px">
@@ -182,7 +182,7 @@ function showBottomReview() {
                         <p>
                         ${review.review}
                         </p>
-                    </div>;
+                    </div>
                     `;
 
 				$j('#reviewsDetail').before(proReviewBottom);
@@ -194,3 +194,48 @@ function showBottomReview() {
 showProductDetail();
 showAvgRating();
 showBottomReview();
+
+$j('#productReview').submit((event) => {
+	let d = new Date();
+	let date =
+		d.getDate().toString() +
+		(d.getMonth() + 1).toString() +
+		d.getFullYear().toString();
+	let t =
+		('0' + d.getHours()).slice(-2) +
+		('0' + d.getMinutes()).slice(-2) +
+		('0' + d.getSeconds()).slice(-2) +
+		('00' + d.getMilliseconds()).slice(-3);
+	let created_at = date + ' ' + t;
+	console.log(created_at);
+	// # is id, . is class
+	//  The submit event occurs when a form is submitted.
+	//  This event can only be used on <form> elements.
+
+	console.log('submiting');
+	// prevent page reload
+	event.preventDefault();
+	const review = $j('#review').val();
+	console.log(review);
+	saveReview(2, productid, 3);
+	// userid, rating, review, productid;
+});
+
+function saveReview(userid, rating, review) {
+	axios
+		.post(
+			// the backend api we want to hit
+			`http://localhost:3000/product/${productID}/review`,
+			{
+				userid: userid,
+				rating: rating,
+				review: review,
+				productid: productID,
+			}
+		)
+		.then((res) => {
+			console.log(res);
+			alert('Your review is sent successfully!');
+		})
+		.catch((err) => console.error(err)); // res.data just get the data
+}

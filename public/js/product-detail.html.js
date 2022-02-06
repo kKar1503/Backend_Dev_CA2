@@ -91,10 +91,7 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce(
-				(sum, reviews) => sum + reviews.rating,
-				0
-			);
+			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {
@@ -218,7 +215,7 @@ $j(document).on('click', '.clickable-stars', function () {
 	}
 });
 
-$j('#productReview').submit((event) => {
+$j('#button-submit').click((event) => {
 	// # is id, . is class
 	//  The submit event occurs when a form is submitted.
 	//  This event can only be used on <form> elements.

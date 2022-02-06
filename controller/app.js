@@ -96,7 +96,7 @@ const storage = multer.diskStorage({
 	},
 	filename: function (req, file, callback) {
 		let d = new Date();
-		let date = d.getDate().toString() + d.getMonth().toString() + d.getFullYear().toString();
+		let date = d.getDate().toString() + (d.getMonth() + 1).toString() + d.getFullYear().toString();
 		let t =
 			('0' + d.getHours()).slice(-2) +
 			('0' + d.getMinutes()).slice(-2) +

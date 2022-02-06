@@ -1,5 +1,5 @@
 // Regenerate Access Token upon entering page
-regenerateAccessToken();
+verifyIfLoggedIn();
 
 // Event Listener on Login Button
 $j(document).on('click', '#btn-login', function (e) {
@@ -18,13 +18,7 @@ $j(document).on('click', '#btn-login', function (e) {
 		})
 		.catch((err) => {
 			alert('Somethig went wrong, please try again!');
-			if (err.response.status === 401) {
-				window.location.href = './401-unauthorized';
-			} else if (err.response.status === 403) {
-				window.location.href = './403-forbidden';
-			} else {
-				window.location.href = './500-server-error';
-			}
+			window.location.href = `./${err.response.status}`;
 		});
 });
 
@@ -54,11 +48,12 @@ $j(document).on('click', '#btn-signup', function (e) {
 			})
 			.catch((err) => {
 				alert('Somethig went wrong, please try again!');
-				window.location.href = './500-server-error';
+				window.location.href = `./${err.response.status}`;
 			});
 	}
 });
 
+// Event listener for log out button
 $j(document).on('click', '#btn-logout', function (e) {
 	e.preventDefault();
 	localStorage.removeItem('refreshToken');
@@ -127,12 +122,26 @@ function validateEmail(email) {
 }
 
 function regenerateAccessToken() {
+	if (!localStorage.getItem('accessToken')) {
+	}
 	const refreshToken = localStorage.getItem('refreshToken');
 	axios
 		.post('http://localhost:4000/token', { token: refreshToken })
-		.then((token) => localStorage.setItem('accessToken', token))
+		.then((token) => {
+			localStorage.setItem('accessToken', token.data.accessToken);
+		})
 		.catch((err) => {
 			console.error(err.response.status);
-			alert('Something went wrong, please try again later!');
 		});
+}
+
+function verifyIfLoggedIn() {
+	if (!localStorage.getItem('accessToken')) {
+		// No Access Token
+		console.log('User is not logged in.');
+	} else {
+		regenerateAccessToken();
+		$j('#not-logged-in').hide();
+		$j('#logged-in').show();
+	}
 }

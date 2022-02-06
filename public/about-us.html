@@ -95,74 +95,6 @@
 											<!-- mt drop end here -->
 											<span class="mt-mdropover"></span>
 										</li>
-										<li class="drop">
-											<a href="#" class="cart-opener">
-												<span class="icon-handbag"></span>
-												<span class="num">3</span>
-											</a>
-											<!-- mt drop start here -->
-											<div class="mt-drop">
-												<!-- mt drop sub start here -->
-												<div class="mt-drop-sub">
-													<!-- mt side widget start here -->
-													<div class="mt-side-widget">
-														<!-- cart row start here -->
-														<div class="cart-row">
-															<a href="#" class="img"
-																><img src="http://placehold.it/80x80" alt="image" class="img-responsive"
-															/></a>
-															<div class="mt-h">
-																<span class="mt-h-title"><a href="#">Marvelous Modern 3 Seater</a></span>
-																<span class="price"><i class="fa fa-eur" aria-hidden="true"></i> 599,00</span>
-																<span class="mt-h-title">Qty: 1</span>
-															</div>
-															<a href="#" class="close fa fa-times"></a>
-														</div>
-														<!-- cart row end here -->
-														<!-- cart row start here -->
-														<div class="cart-row">
-															<a href="#" class="img"
-																><img src="http://placehold.it/80x80" alt="image" class="img-responsive"
-															/></a>
-															<div class="mt-h">
-																<span class="mt-h-title"><a href="#">Marvelous Modern 3 Seater</a></span>
-																<span class="price"><i class="fa fa-eur" aria-hidden="true"></i> 599,00</span>
-																<span class="mt-h-title">Qty: 1</span>
-															</div>
-															<a href="#" class="close fa fa-times"></a>
-														</div>
-														<!-- cart row end here -->
-														<!-- cart row start here -->
-														<div class="cart-row">
-															<a href="#" class="img"
-																><img src="http://placehold.it/80x80" alt="image" class="img-responsive"
-															/></a>
-															<div class="mt-h">
-																<span class="mt-h-title"><a href="#">Marvelous Modern 3 Seater</a></span>
-																<span class="price"><i class="fa fa-eur" aria-hidden="true"></i> 599,00</span>
-																<span class="mt-h-title">Qty: 1</span>
-															</div>
-															<a href="#" class="close fa fa-times"></a>
-														</div>
-														<!-- cart row end here -->
-														<!-- cart row total start here -->
-														<div class="cart-row-total">
-															<span class="mt-total">Sub Total</span>
-															<span class="mt-total-txt"><i class="fa fa-eur" aria-hidden="true"></i> 799,00</span>
-														</div>
-														<!-- cart row total end here -->
-														<div class="cart-btn-row">
-															<a href="order-shopping-cart.html" class="btn-type2">VIEW CART</a>
-															<a href="order-checkout.html" class="btn-type3">CHECKOUT</a>
-														</div>
-													</div>
-													<!-- mt side widget end here -->
-												</div>
-												<!-- mt drop sub end here -->
-											</div>
-											<!-- mt drop end here -->
-											<span class="mt-mdropover"></span>
-										</li>
 										<li>
 											<a href="#" class="icon-user side-opener">
 												<span class="bar"></span>
@@ -178,7 +110,7 @@
 											<li><a href="/">HOME</a></li>
 											<li><a href="/product">PRODUCTS</a></li>
 											<li><a href="/about">About</a></li>
-											<li><a href="contact-us.html">Contact</a></li>
+											<li><a href="/admin">Admin</a></li>
 										</ul>
 									</nav>
 									<!-- mt icon list end here -->
@@ -193,7 +125,7 @@
 				<!-- mt side menu start here -->
 				<div class="mt-side-menu">
 					<!-- mt holder start here -->
-					<div class="mt-holder">
+					<div id="not-logged-in" class="mt-holder">
 						<a href="#" class="side-close"><span></span><span></span></a>
 						<strong class="mt-side-title">MY ACCOUNT</strong>
 						<!-- mt side widget start here -->
@@ -202,16 +134,16 @@
 								<span class="mt-side-subtitle">SIGN IN</span>
 								<p>Welcome back! Sign in to Your Account</p>
 							</header>
-							<form action="#">
+							<form id="login-form">
 								<fieldset>
-									<input type="text" placeholder="Username or email address" class="input" />
-									<input type="password" placeholder="Password" class="input" />
+									<input id="username" type="text" placeholder="Username" class="input" />
+									<input id="password" type="password" placeholder="Password" class="input" />
 									<div class="box">
 										<span class="left"
 											><input class="checkbox" type="checkbox" id="check1" /><label for="check1">Remember Me</label></span
 										>
 									</div>
-									<button type="submit" class="btn-type1">Login</button>
+									<button type="button" id="btn-login" class="btn-type1">Login</button>
 								</fieldset>
 							</form>
 						</div>
@@ -223,16 +155,34 @@
 								<span class="mt-side-subtitle">CREATE NEW ACCOUNT</span>
 								<p>Create your very own account</p>
 							</header>
-							<form action="#">
+							<form>
 								<fieldset>
-									<input type="text" placeholder="Username or email address" class="input" />
-									<button type="submit" class="btn-type1">Register</button>
+									<input id="suUsername" type="text" placeholder="Username" class="input" />
+									<input id="suEmail" type="email" placeholder="Email" class="input" />
+									<input id="suContact" type="tel" placeholder="Contact" class="input" />
+									<input id="suPassword" type="password" placeholder="Password" class="input" />
+									<input id="suPassword2" type="password" placeholder="Confirm Password" class="input" />
+									<button type="button" id="btn-signup" class="btn-type1">Register</button>
 								</fieldset>
 							</form>
 						</div>
 						<!-- mt side widget end here -->
 					</div>
 					<!-- mt holder end here -->
+					<div id="logged-in" class="mt-holder" style="display: none">
+						<a href="#" class="side-close"><span></span><span></span></a>
+						<strong class="mt-side-title">MY ACCOUNT</strong>
+						<!-- mt side widget start here -->
+						<div class="mt-side-widget">
+							<header>
+								<span class="mt-side-subtitle">Welcome back!</span>
+								<br />
+								<br />
+								<p>Feel free to use the website to make your purchases!</p>
+							</header>
+							<button type="button" id="btn-logout" class="btn-type1">Logout</button>
+						</div>
+					</div>
 				</div>
 				<!-- mt side menu end here -->
 				<!-- mt search popup start here -->
@@ -319,7 +269,7 @@
 									<!-- F Widget About of the Page -->
 									<div class="f-widget-about">
 										<div class="logo">
-											<a href="index.html"><img src="images/logo.png" alt="Schon" /></a>
+											<a href="index.html"><img src="images/logo.png" alt="SP IT! Logo" /></a>
 										</div>
 										<p>
 											This is the CA2 Project for DIT Year 1 Semester 2 Backend Development Module. This project is tasked to
@@ -412,5 +362,6 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<script src="js/interestRender.js"></script>
+		<script src="js/login.js"></script>
 	</body>
 </html>

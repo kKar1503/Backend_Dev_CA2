@@ -10,7 +10,8 @@
 //     });
 // })
 
-let d = new Date();
-let date = d.getDate().toString() + (d.getMonth() + 1).toString() + d.getFullYear().toString();
-let t = ('0' + d.getHours()).slice(-2) + ('0' + d.getMinutes()).slice(-2) + ('0' + d.getSeconds()).slice(-2) + ('00' + d.getMilliseconds()).slice(-3);
-console.log(`${date}-${t}_Phones.jpg`);
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var pageNo = 3;
+for (i = 0 + 4 * (pageNo - 1); i < 4 * pageNo && i < array.length; i++) {
+	console.log(array[i]);
+}

@@ -61,7 +61,8 @@ let Product = {
                     p.categoryid,
                     category AS categoryname,
                     brand,
-                    price
+                    price,
+					image_file_name AS image
                 FROM 
                     product AS p, category AS c
                 WHERE productid = ? AND p.categoryid = c.categoryid

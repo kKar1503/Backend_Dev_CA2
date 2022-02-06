@@ -51,9 +51,7 @@ function actLog(req, result, note = '') {
 		timeZone: 'Asia/Singapore',
 	});
 	logger.log(
-		`[Request from: ${req.ip}]\n[Timestamp: ${timestamp}]\nRequest Type: ${
-			req.method
-		}\nRequest Made: ${JSON.stringify(
+		`[Request from: ${req.ip}]\n[Timestamp: ${timestamp}]\nRequest Type: ${req.method}\nRequest Made: ${JSON.stringify(
 			req.body
 		)}\nOutput: ${note}\n${JSON.stringify(result)}\n`
 	);
@@ -82,9 +80,7 @@ function errLog(req, err, note = '') {
 		err = 'Duplicated entry.';
 	}
 	logger.error(
-		`[Request from: ${req.ip}]\n[Timestamp: ${timestamp}]\nRequest Type: ${
-			req.method
-		}\nRequest Made: ${JSON.stringify(
+		`[Request from: ${req.ip}]\n[Timestamp: ${timestamp}]\nRequest Type: ${req.method}\nRequest Made: ${JSON.stringify(
 			req.body
 		)}\nOutput: ${note}\n${JSON.stringify(err)}\n`
 	);
@@ -99,18 +95,13 @@ const storage = multer.diskStorage({
 	},
 	filename: function (req, file, callback) {
 		let d = new Date();
-		let date =
-			d.getDate().toString() +
-			(d.getMonth() + 1).toString() +
-			d.getFullYear().toString();
+		let date = d.getDate().toString() + (d.getMonth() + 1).toString() + d.getFullYear().toString();
 		let t =
 			('0' + d.getHours()).slice(-2) +
 			('0' + d.getMinutes()).slice(-2) +
 			('0' + d.getSeconds()).slice(-2) +
 			('00' + d.getMilliseconds()).slice(-3);
-		let extension = file.originalname.substring(
-			file.originalname.lastIndexOf('.') + 1
-		);
+		let extension = file.originalname.substring(file.originalname.lastIndexOf('.') + 1);
 		callback(null, `${date}-${t}_Product_${req.params.productID}.${extension}`);
 	},
 });
@@ -120,10 +111,7 @@ const fileFilter = (req, file, callback) => {
 		// Limit to JPG/PNG
 		callback(null, true);
 	} else {
-		callback(
-			new Error('Filetype Mismatched (Only accepts JPEG/JPG/PNG)'),
-			false
-		);
+		callback(new Error('Filetype Mismatched (Only accepts JPEG/JPG/PNG)'), false);
 	}
 };
 const upload = multer({
@@ -336,11 +324,7 @@ app.post('/product', authenticateToken, function (req, res) {
 			}
 		} else {
 			actLog(req, result, 'New product added');
-			res
-				.status(201)
-				.send(
-					`ID of the newly created listing: \n{\n"productid": ${result.insertId}\n}`
-				);
+			res.status(201).send(`ID of the newly created listing: \n{\n"productid": ${result.insertId}\n}`);
 		}
 	});
 });
@@ -544,7 +528,7 @@ app.get('/product/name/:name', function (req, res) {
 
 // Add New review [Done]
 // http://localhost:3000/product/:id/review
-app.post('/product/:id/review', function (req, res) {
+app.post('/product/:id/review', authenticateToken, function (req, res) {
 	let productID;
 	if (!isNaN(req.params.id)) {
 		productID = parseInt(req.params.id);
@@ -554,16 +538,12 @@ app.post('/product/:id/review', function (req, res) {
 		return;
 	}
 	let data = {
-		userid: req.body.userid, // must match the postman json body
+		userid: req.userid,
 		rating: req.body.rating,
 		review: req.body.review,
 		productID: productID,
 	};
-	if (
-		isNaN(data.rating) ||
-		parseInt(data.rating) > 5 ||
-		parseInt(data.rating) < 1
-	) {
+	if (isNaN(data.rating) || parseInt(data.rating) > 5 || parseInt(data.rating) < 1) {
 		errLog(req, null, 'Input for rating is invalid!');
 		res.status(500).send();
 		return;
@@ -747,9 +727,7 @@ app.get('/product/image/:productID', (req, res) => {
 			res.status(404).send(`No image in database for ${result}`);
 		} else if (err.message == 'ImageNotFound') {
 			errLog(req, err, 'Image GET Image is deleted/moved');
-			res
-				.status(404)
-				.send(`Image (${result}) could have been deleted OR moved`);
+			res.status(404).send(`Image (${result}) could have been deleted OR moved`);
 		} else {
 			errLog(req, err, 'Image GET Request failed');
 			res.status(500).end();
@@ -783,9 +761,7 @@ app.put('/product/image/:productID', authenticateToken, (req, res) => {
 			if (err instanceof multer.MulterError) {
 				errLog(req, err, 'Multer Error');
 				if (err.message == 'File too large') {
-					res
-						.status(406)
-						.send(`Upload Error: ${err.message} (Only accepts up to 1MB)`); // File too large
+					res.status(406).send(`Upload Error: ${err.message} (Only accepts up to 1MB)`); // File too large
 				} else {
 					res.status(406).send(`Upload Error: ${err.message}`); // Multer Error
 				}
@@ -793,45 +769,30 @@ app.put('/product/image/:productID', authenticateToken, (req, res) => {
 				errLog(req, err, 'Non-Multer Error from Multer');
 				res.status(406).send(`Upload Error: ${err.message}`); // Filetype Mismatched
 			} else {
-				Image.update(
-					req.file.filename,
-					productID,
-					overwrite,
-					function (err, result) {
-						if (!err) {
-							actLog(req.file, result, 'Image updated');
-							res.status(200).send('Image updated.'); // Image Updated
-						} else if (err.message == 'InvalidProductID') {
-							errLog(req.file, err, 'Image PUT Request for invalid Product ID');
-							if (fs.existsSync(`./uploads/${req.file.filename}`)) {
-								fs.unlinkSync(`./uploads/${req.file.filename}`);
-							}
-							res
-								.status(500)
-								.send(`No such product with ID = ${productID} in Database`);
-						} else if (err.message == 'ExistingFile') {
-							errLog(
-								req.file,
-								err,
-								'Existing Image in Database during Image PUT Request'
-							);
-							if (fs.existsSync(`./uploads/${req.file.filename}`)) {
-								fs.unlinkSync(`./uploads/${req.file.filename}`);
-							}
-							res
-								.status(422)
-								.send(
-									`Existing Image in Database for ${result.name}.\nTo overwrite system file, add query "overwrite=1"`
-								);
-						} else {
-							errLog(req.file, err, 'Image update failed');
-							if (fs.existsSync(`./uploads/${req.file.filename}`)) {
-								fs.unlinkSync(`./uploads/${req.file.filename}`);
-							}
-							res.status(500).send(); // Image update failed
+				Image.update(req.file.filename, productID, overwrite, function (err, result) {
+					if (!err) {
+						actLog(req.file, result, 'Image updated');
+						res.status(200).send('Image updated.'); // Image Updated
+					} else if (err.message == 'InvalidProductID') {
+						errLog(req.file, err, 'Image PUT Request for invalid Product ID');
+						if (fs.existsSync(`./uploads/${req.file.filename}`)) {
+							fs.unlinkSync(`./uploads/${req.file.filename}`);
 						}
+						res.status(500).send(`No such product with ID = ${productID} in Database`);
+					} else if (err.message == 'ExistingFile') {
+						errLog(req.file, err, 'Existing Image in Database during Image PUT Request');
+						if (fs.existsSync(`./uploads/${req.file.filename}`)) {
+							fs.unlinkSync(`./uploads/${req.file.filename}`);
+						}
+						res.status(422).send(`Existing Image in Database for ${result.name}.\nTo overwrite system file, add query "overwrite=1"`);
+					} else {
+						errLog(req.file, err, 'Image update failed');
+						if (fs.existsSync(`./uploads/${req.file.filename}`)) {
+							fs.unlinkSync(`./uploads/${req.file.filename}`);
+						}
+						res.status(500).send(); // Image update failed
 					}
-				);
+				});
 			}
 		}
 	});
@@ -966,6 +927,8 @@ function authenticateToken(req, res, next) {
 	jwt.verify(token, process.env.SECRET_KEY, (err, loginData) => {
 		if (err) return res.status(403).send();
 		req.username = loginData.user;
+		req.userid = loginData.userid;
+		req.usertype = loginData.type;
 		next();
 	});
 }

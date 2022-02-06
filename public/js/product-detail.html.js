@@ -36,9 +36,6 @@ function showProductDetail() {
                 <h2>${product.name}</h2>
                 <!-- Rank Rating of the Page -->
                 <div id = 'avgRating' class="rank-rating">
-                    
-
-
 
                 </div>
                 <!-- Rank Rating of the Page end -->
@@ -80,6 +77,7 @@ function showAvgRating() {
 			let ratingHTML = ``;
 			let reviews = res.data;
 			let numReview = res.data.length;
+
 			let totalRating = reviews.reduce(
 				(sum, reviews) => sum + reviews.rating,
 				0
@@ -89,11 +87,12 @@ function showAvgRating() {
 			for (let i = 1; i <= 5; i++) {
 				if (avgRating >= i) {
 					ratingHTML += `
-            <li><a href="#"><i class="fa fa-star"></i></a></li>`;
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>`;
 				} else {
 					ratingHTML += `<li><a href="#"><i class="fa fa-star-o"></i></a></li>`;
 				}
 			}
+
 			// console.log(ratingHTML);
 			// this is use db port
 			let avgReview = `
@@ -104,8 +103,35 @@ function showAvgRating() {
                 `;
 
 			$j('#avgRating').append(avgReview);
+			$j('#numReviews').append(
+				`<a href="#tab3" class="active">
+					REVIEWS (${numReview})
+				</a>`
+			);
 		})
-		.catch((err) => console.error(err)); // res.data just get the data
+		.catch((err) => {
+			console.log(err);
+			if ((err.status = 404)) {
+				let ratingHTML = ``;
+				for (let i = 1; i <= 5; i++) {
+					ratingHTML += `<li><a href="#"><i class="fa fa-star-o"></i></a></li>`;
+				}
+				let numReview = 0;
+				let avgReview = `
+                <span class="total-price">Reviews (${numReview})</span>
+                <ul class="list-unstyled rating-list">
+                    ${ratingHTML}
+                </ul>
+                `;
+
+				$j('#avgRating').append(avgReview);
+				$j('#numReviews').append(
+					`<a href="#tab3" class="active">
+                        REVIEWS (${numReview})
+                    </a>`
+				);
+			}
+		}); // res.data just get the data
 }
 
 function showBottomReview() {
@@ -125,7 +151,7 @@ function showBottomReview() {
 				for (let i = 1; i <= 5; i++) {
 					if (rating >= i) {
 						ratingHTML += `
-                    <li><i class="fa fa-star"></i></li>`;
+                        <li><i class="fa fa-star"></i></li>`;
 					} else {
 						ratingHTML += `<li><i class="fa fa-star-o"></i></li>`;
 					}
@@ -133,19 +159,19 @@ function showBottomReview() {
 				console.log(ratingHTML);
 				// this is use db port
 				let proReviewBottom = `
-            <div class="mt-box">
-                <div class="mt-hold">
-                    <ul class="mt-star">
-                        ${ratingHTML}
-                    </ul>
-                    <span class="name">${review.username}</span>
-                    <time datetime="2016-01-01">${review.created_at}</time>
-                </div>
-                <p>
-                   ${review.review}
-                </p>
-            </div>;
-							`;
+                    <div class="mt-box">
+                        <div class="mt-hold">
+                            <ul class="mt-star">
+                                ${ratingHTML}
+                            </ul>
+                            <span class="name">${review.username}</span>
+                            <time datetime="2016-01-01">${review.created_at}</time>
+                        </div>
+                        <p>
+                        ${review.review}
+                        </p>
+                    </div>;
+                    `;
 
 				$j('#reviewsDetail').append(proReviewBottom);
 			});

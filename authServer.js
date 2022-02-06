@@ -16,6 +16,7 @@ const bodyParser = require('body-parser');
 const port = 4000;
 const hostname = 'localhost';
 const Login = require('./model/login.js');
+const e = require('express');
 
 app.use(express.json());
 
@@ -57,7 +58,13 @@ app.post('/login', function (req, res) {
 			userData.userid = result[0].userid;
 			let accessToken = generateAccessToken(userData);
 			let refreshToken = generateRefreshToken(userData);
-			res.json({ accessToken: accessToken, refreshToken: refreshToken });
+			Login.addRefreshToken(refreshToken, userData.userid, function (err, result) {
+				if (err) {
+					res.status(500).send('Internal Server Error!');
+				} else {
+					res.status(201).json({ accessToken: accessToken });
+				}
+			});
 		}
 	});
 });

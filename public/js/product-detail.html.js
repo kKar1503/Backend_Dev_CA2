@@ -90,10 +90,7 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce(
-				(sum, reviews) => sum + reviews.rating,
-				0
-			);
+			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {
@@ -195,6 +192,7 @@ showProductDetail();
 showAvgRating();
 showBottomReview();
 
+<<<<<<< HEAD
 $j('#productReview').submit((event) => {
 	let d = new Date();
 	let date =
@@ -239,3 +237,23 @@ function saveReview(userid, rating, review) {
 		})
 		.catch((err) => console.error(err)); // res.data just get the data
 }
+=======
+$j(document).on('click', '.clickable-stars', function () {
+	const totalStars = parseInt($j(this).attr('id').substring(5));
+	for (i = 1; i <= 5; i++) {
+		if (i <= totalStars) {
+			console.log(`i is less than totalStars`);
+			if ($j(`#star-${i}`).hasClass('fa-star-o')) {
+				$j(`#star-${i}`).toggleClass('fa-star-o fa-star');
+				console.log(`star-${i} has fa-star-o`);
+			}
+		} else {
+			console.log(`i is more than totalStars`);
+			if ($j(`#star-${i}`).hasClass('fa-star')) {
+				$j(`#star-${i}`).toggleClass('fa-star fa-star-o');
+				console.log(`star-${i} has fa-star`);
+			}
+		}
+	}
+});
+>>>>>>> f251452951b4ee08b8078bb32229d4e1ccfd879e

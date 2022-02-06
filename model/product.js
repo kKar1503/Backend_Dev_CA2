@@ -27,13 +27,23 @@ let Product = {
                 VALUES
                 (?, ?, ?, ?, ?);
               `;
-				dbConn.query(sql, [post.name, post.description, post.categoryid, post.brand, post.price], (error, result) => {
-					dbConn.end();
-					if (error) {
-						return callback(error, null); // query error
+				dbConn.query(
+					sql,
+					[
+						post.name,
+						post.description,
+						post.categoryid,
+						post.brand,
+						post.price,
+					],
+					(error, result) => {
+						dbConn.end();
+						if (error) {
+							return callback(error, null); // query error
+						}
+						return callback(null, result);
 					}
-					return callback(null, result);
-				});
+				);
 			}
 		});
 	},
@@ -178,6 +188,36 @@ let Product = {
 					} else {
 						return callback(null, result);
 					}
+				});
+			}
+		});
+	},
+
+	findByName: function (productName, callback) {
+		var dbConn = db.getConnection();
+		dbConn.connect(function (err) {
+			if (err) {
+				return callback(err, null); // db connection err
+			} else {
+				const sql = `
+                SELECT
+                    productid,
+                    p.description,
+                    p.categoryid,
+                    category AS categoryname,
+                    brand,
+                    price,
+					p.image_file_name AS image
+                FROM
+                    product AS p, category AS c
+                WHERE name = ? AND p.categoryid = c.categoryid
+              `;
+				dbConn.query(sql, productName, (error, result) => {
+					dbConn.end();
+					if (error) {
+						return callback(error, null);
+					}
+					return callback(null, result[0]);
 				});
 			}
 		});

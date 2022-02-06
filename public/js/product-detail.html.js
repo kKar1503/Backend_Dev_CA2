@@ -74,7 +74,7 @@ function showProductDetail() {
 			}
 			// console.err(err);
 			else {
-				window.location.href = `/500-error`;
+				window.location.href = `/500-server-error`;
 			}
 		}); // res.data just get the data
 }

@@ -61,14 +61,7 @@ app.post('/login', function (req, res) {
 			let accessToken = generateAccessToken(userData);
 			if (remember) {
 				let refreshToken = generateRefreshToken(userData);
-				Login.addRefreshToken(refreshToken, userData.userid, function (err, result) {
-					if (err) {
-						console.log(err);
-						res.status(500).send('Internal Server Error!');
-					} else {
-						res.status(201).json({ accessToken: accessToken });
-					}
-				});
+				res.status(200).json({ accessToken: accessToken, refreshToken: refreshToken });
 			} else {
 				res.status(200).json({ accessToken: accessToken });
 			}
@@ -80,35 +73,9 @@ app.post('/login', function (req, res) {
 // http://localhost:4000/token
 
 app.post('/token', function (req, res) {
-	const userid = req.body.userid;
-	Login.getRefreshToken(userid, function (err, result) {
-		if (err) {
-			console.log('1');
-			console.log(err);
-			res.sendStatus(500);
-		} else if (result.refresh_token == null) {
-			console.log('2');
-			console.log(result);
-			res.sendStatus(401);
-		} else {
-			console.log('3');
-			console.log(result);
-			jwt.verify(result.refresh_token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
-				if (err) return res.sendStatus(403);
-				const accessToken = generateAccessToken({ userid: user.userid, user: user.user, type: user.type });
-				res.json({ accessToken: accessToken });
-			});
-		}
-	});
-});
-
-// DELETE Refresh Token [Done]
-// http://localhost:4000/token
-
-app.delete('/logout', function (req, res) {
 	const refreshToken = req.body.token;
 	if (refreshToken == null) return res.sendStatus(401);
-	jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+	jwt.verify(result.refresh_token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
 		if (err) return res.sendStatus(403);
 		const accessToken = generateAccessToken({ userid: user.userid, user: user.user, type: user.type });
 		res.json({ accessToken: accessToken });

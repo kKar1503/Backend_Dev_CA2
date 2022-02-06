@@ -165,7 +165,7 @@
 											<span class="mt-mdropover"></span>
 										</li>
 										<li>
-											<a href="#" class="icon-user side-opener">
+											<a class="icon-user side-opener" style="cursor: pointer">
 												<span class="bar"></span>
 												<span class="bar small"></span>
 												<span class="bar"></span>
@@ -195,7 +195,7 @@
 				<!-- mt side menu start here -->
 				<div class="mt-side-menu">
 					<!-- mt holder start here -->
-					<div class="mt-holder">
+					<div id="not-logged-in" class="mt-holder">
 						<a href="#" class="side-close"><span></span><span></span></a>
 						<strong class="mt-side-title">MY ACCOUNT</strong>
 						<!-- mt side widget start here -->
@@ -206,7 +206,7 @@
 							</header>
 							<form id="login-form">
 								<fieldset>
-									<input id="username" type="text" placeholder="Username or email address" class="input" />
+									<input id="username" type="text" placeholder="Username" class="input" />
 									<input id="password" type="password" placeholder="Password" class="input" />
 									<div class="box">
 										<span class="left"
@@ -227,14 +227,34 @@
 							</header>
 							<form>
 								<fieldset>
-									<input type="text" placeholder="Username or email address" class="input" />
-									<button class="btn-type1">Register</button>
+									<input id="suUsername" type="text" placeholder="Username" class="input" />
+									<input id="suEmail" type="email" placeholder="Email" class="input" />
+									<input id="suContact" type="tel" placeholder="Contact" class="input" />
+									<input id="suPassword" type="password" placeholder="Password" class="input" />
+									<input id="suPassword2" type="password" placeholder="Confirm Password" class="input" />
+									<button type="button" id="btn-signup" class="btn-type1">Register</button>
 								</fieldset>
 							</form>
 						</div>
 						<!-- mt side widget end here -->
 					</div>
 					<!-- mt holder end here -->
+					<div id="logged-in" class="mt-holder" style="display: none">
+						<a href="#" class="side-close"><span></span><span></span></a>
+						<strong class="mt-side-title">MY ACCOUNT</strong>
+						<!-- mt side widget start here -->
+						<div class="mt-side-widget">
+							<header>
+								<span class="mt-side-subtitle">Welcome back!</span>
+								<br />
+								<p id="logged-in-name-field"></p>
+								<br />
+								<br />
+								<p>Feel free to use the website to make your purchases!</p>
+							</header>
+							<button type="button" id="btn-logout" class="btn-type1">Logout</button>
+						</div>
+					</div>
 				</div>
 				<!-- mt side menu end here -->
 				<!-- mt-mainslider2 start here -->

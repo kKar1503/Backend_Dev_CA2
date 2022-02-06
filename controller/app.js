@@ -158,6 +158,7 @@ app.post('/users', async function (req, res) {
 			if (err.errno == 1062) {
 				res.status(422).send(); // The new username OR new email provided already exists.
 			} else {
+				console.log(err);
 				res.status(500).send(); // internal error
 			}
 		} else {

@@ -11,6 +11,6 @@
 // })
 
 let d = new Date();
-let date = d.getDate().toString() + d.getMonth().toString() + d.getFullYear().toString();
+let date = d.getDate().toString() + (d.getMonth() + 1).toString() + d.getFullYear().toString();
 let t = ('0' + d.getHours()).slice(-2) + ('0' + d.getMinutes()).slice(-2) + ('0' + d.getSeconds()).slice(-2) + ('00' + d.getMilliseconds()).slice(-3);
-console.log(`${date}-${t}_Laptops.jpg`);
+console.log(`${date}-${t}_Phones.jpg`);

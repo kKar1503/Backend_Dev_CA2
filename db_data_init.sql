@@ -21,7 +21,7 @@
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'Laptops','Light and high performance laptops for school',NULL),(2,'Phones','Awesome performance phones for everything and more',NULL),(3,'Mouses','Durable rechargeable battery mouses allow you to study for hours.',NULL),(4,'Hard drives','Versatile and dependable hard drives',NULL),(5,'Tablet','Outstanding visuals and advanced pen performance tablets',NULL),(6,'Headphones','High quality wireless audio headphones',NULL);
+INSERT INTO `category` VALUES (1,'Laptops','Light and high performance laptops for school','622022-142500437_Laptops.jpg'),(2,'Phones','Awesome performance phones for everything and more','622022-142615834_Phones.jpg'),(3,'Mouses','Durable rechargeable battery mouses allow you to study for hours.','622022-142648127_Mice.jpg'),(4,'Hard drives','Versatile and dependable hard drives','622022-142803776_Storage.jpg'),(5,'Tablet','Outstanding visuals and advanced pen performance tablets','622022-143032208_Tablets.jpg'),(6,'Headphones','High quality wireless audio headphones','622022-143247141_Headphones.jpg');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 

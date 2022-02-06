@@ -7978,6 +7978,12 @@ a:hover {
 
 .product-comment .mt-star .fa-star-o {
 	color: #d6d6d6;
+	cursor: pointer;
+}
+
+.product-comment .mt-star .fa-star {
+	color: #e6c376;
+	cursor: pointer;
 }
 
 .product-comment .name {

@@ -1,15 +1,31 @@
-// Get all categories using axios
-axios
-	.get('http://localhost:3000/category')
-	.then((categories) => printCategories(categories.data))
+// Render categories
+queryCategories()
+	.then((categories) => renderCategories(categories))
 	.catch((err) => console.error(err));
 
+// Event Listener on category click
+$j(document).on('click', '.category', async function () {
+	const categoryId = parseInt($j(this).attr('id').substring(9));
+	if ($j(this).find('i.fa-heart-o').length) {
+		await axios.post(`http://localhost:3000/interest/3/${categoryId}`);
+		$j(this).find('.fa-heart-o').toggleClass('fa-heart-o fa-heart');
+	} else {
+		await axios.delete(`http://localhost:3000/interest/3/${categoryId}`);
+		$j(this).find('.fa-heart').toggleClass('fa-heart fa-heart-o');
+	}
+	renderInterest();
+	renderInterestIcon();
+});
+
 /**
- *
+ * Function to render all categories on page
  * @param {Array} categories
  */
-function printCategories(categories) {
-	categories.forEach((category) => {
+function renderCategories(categories) {
+	categories.forEach(async (category) => {
+		let categoryId = category.categoryid;
+		let categories = await axios.get('http://localhost:3000/interest/3');
+		let hasCategory = categories.data.some((category) => category.fk_category_id == categoryId);
 		const categoryHtml = `<!-- mt product2 start here -->
         <div class="mt-product2 large bg-grey">
             <!-- box start here -->
@@ -17,7 +33,9 @@ function printCategories(categories) {
                 <img alt="image description" src="http://placehold.it/275x290" />
                 <ul class="links">
                     <li>
-                        <a href="#" class="category" id="category-${category.categoryid}"><i class="icon-heart"></i></a>
+                        <a class="category" id="category-${categoryId}"><i class="fa ${hasCategory ? 'fa-heart' : 'fa-heart-o'}" id="heart-${
+			category.categoryid
+		}"></i></a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-eye"></i></a>
@@ -35,11 +53,3 @@ function printCategories(categories) {
 		$j('#category-holder').append(categoryHtml);
 	});
 }
-
-$j(document).on('click', '.category', function () {
-	localStorage.setItem('productCategory', parseInt($j(this).attr('id').substring(9)));
-	paramObj = new Object();
-	paramObj.category = parseInt($j(this).attr('id').substring(9));
-	// paramObj.brand =
-	window.location.href = `/product?${$.param(paramObj)}`;
-});

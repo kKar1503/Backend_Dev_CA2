@@ -16,7 +16,8 @@ const bodyParser = require('body-parser');
 const port = 4000;
 const hostname = 'localhost';
 const Login = require('./model/login.js');
-const e = require('express');
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 
@@ -43,6 +44,7 @@ app.post('/login', function (req, res) {
 		user: req.body.username,
 		pass: req.body.password,
 	};
+	let remember = req.body.remember;
 	Login.authenticate(userData, function (err, result) {
 		if (err) {
 			res.status(500).send('Internal Server Error!');
@@ -57,15 +59,19 @@ app.post('/login', function (req, res) {
 			userData.type = result[0].type;
 			userData.userid = result[0].userid;
 			let accessToken = generateAccessToken(userData);
-			let refreshToken = generateRefreshToken(userData);
-			Login.addRefreshToken(refreshToken, userData.userid, function (err, result) {
-				if (err) {
-					console.log(err);
-					res.status(500).send('Internal Server Error!');
-				} else {
-					res.status(201).json({ accessToken: accessToken });
-				}
-			});
+			if (remember) {
+				let refreshToken = generateRefreshToken(userData);
+				Login.addRefreshToken(refreshToken, userData.userid, function (err, result) {
+					if (err) {
+						console.log(err);
+						res.status(500).send('Internal Server Error!');
+					} else {
+						res.status(201).json({ accessToken: accessToken });
+					}
+				});
+			} else {
+				res.status(200).json({ accessToken: accessToken });
+			}
 		}
 	});
 });

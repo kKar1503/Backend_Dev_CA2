@@ -22,7 +22,7 @@ function showProductDetail() {
                 <div class="product-slider">
                     <div class="slide">
                         <img src="http://localhost:3000/product/image/${productID}" alt="image descrption"
-                            style="margin-top: 55px;">
+                            style="width:auto; max-height: 300px; margin-top: 55px;">
                     </div>
                 </div>
                 <!-- Product Slider of the Page end -->
@@ -43,7 +43,7 @@ function showProductDetail() {
                 </div>
                 <!-- Rank Rating of the Page end -->
                 <div class="text-holder">
-                    <span class="price">$ ${product.price} <span style='margin-left:100px'>${product.brand}</span></span>
+                    <span class="price">$ ${product.price} <span style='margin-left:50px'>${product.brand}</span><span style='margin-left:50px'>${product.categoryname}</span></span>
                 </div>
                 <!-- Product Form of the Page -->
                 <form action="#" class="product-form" style="margin-bottom: 40px">
@@ -68,6 +68,7 @@ function showProductDetail() {
 			$j('#productDetail').append(proDetailHTML);
 		})
 		.catch((err) => {
+			console.log(err);
 			// console.log(err.response.status === 404);
 			if (err.response.status == 404) {
 				window.location.href = `/404-not-found`;
@@ -90,7 +91,10 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
+			let totalRating = reviews.reduce(
+				(sum, reviews) => sum + reviews.rating,
+				0
+			);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {
@@ -179,7 +183,7 @@ function showBottomReview() {
                         <p>
                         ${review.review}
                         </p>
-                    </div>;
+                    </div>
                     `;
 
 				$j('#reviewsDetail').before(proReviewBottom);
@@ -192,8 +196,11 @@ showProductDetail();
 showAvgRating();
 showBottomReview();
 
+let totalStars;
+// for add rating
 $j(document).on('click', '.clickable-stars', function () {
-	const totalStars = parseInt($j(this).attr('id').substring(5));
+	totalStars = parseInt($j(this).attr('id').substring(5));
+	// console.log(totalStars);
 	for (i = 1; i <= 5; i++) {
 		if (i <= totalStars) {
 			console.log(`i is less than totalStars`);
@@ -210,3 +217,37 @@ $j(document).on('click', '.clickable-stars', function () {
 		}
 	}
 });
+
+$j('#productReview').submit((event) => {
+	// # is id, . is class
+	//  The submit event occurs when a form is submitted.
+	//  This event can only be used on <form> elements.
+
+	console.log('submiting');
+	// prevent page reload
+	event.preventDefault();
+	const review = $j('#review').val();
+	console.log(review);
+	addReview(userid, totalStars, review);
+	showBottomReview();
+});
+
+function addReview(userid, totalStars, review) {
+	axios
+		.post(
+			// the backend api we want to hit
+			`http://localhost:3000/product/${productID}/review`,
+			{
+				userid: 1, // must match the postman json body
+				rating: totalStars,
+				review: review,
+				productID: productID,
+			}
+		)
+		.then((res) => {
+			alert('Your Comment added successfully!');
+		})
+		.catch((err) => {
+			console.error(err);
+		}); // res.data just get the data
+}

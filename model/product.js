@@ -133,6 +133,7 @@ let Product = {
 			} else {
 				const sql = `
                 SELECT
+				productid,
                     name,
                     description,
                     price

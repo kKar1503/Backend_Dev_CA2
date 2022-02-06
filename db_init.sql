@@ -112,7 +112,7 @@ CREATE TABLE `user` (
   `type` varchar(45) NOT NULL,
   `profile_pic_url` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `refresh_token` varchar(100) DEFAULT NULL,
+  `refresh_token` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`),

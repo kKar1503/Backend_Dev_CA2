@@ -1,0 +1,17 @@
+@media (min-width: 1920px) {
+	.error-image {
+		background-image: url(/images/Error@1920.png);
+	}
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
+	.error-image {
+		background-image: url(/images/Error@1280.png);
+	}
+}
+
+@media (max-width: 1280px) {
+	.error-image {
+		background-color: white;
+	}
+}

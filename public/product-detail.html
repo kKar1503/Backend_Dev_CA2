@@ -23,11 +23,6 @@
 		<link rel="stylesheet" href="../css/main.css" />
 		<!-- include the site stylesheet -->
 		<link rel="stylesheet" href="../css/responsive.css" />
-		<!-- include the icons from font-awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		/>
 	</head>
 
 	<body>
@@ -344,8 +339,10 @@
 							<div class="row">
 								<div class="col-xs-12">
 									<ul class="mt-tabs text-center text-uppercase">
-										<li><a href="#tab1" class="">DESCRIPTION</a></li>
-										<li id="numReviews"></li>
+										<li><a href="#tab1">DESCRIPTION</a></li>
+										<li>
+											<a href="#tab2" class="active"><p id="numReviews"></p></a>
+										</li>
 									</ul>
 									<div class="tab-content">
 										<div id="tab1">
@@ -374,8 +371,12 @@
 										</div>
 										<div id="tab2">
 											<div class="product-comment">
-												<div id="reviewsDetail"></div>
-												<form action="#" class="p-commentform">
+												<!-- here got mt-box -->
+												<form
+													id="reviewsDetail"
+													action="#"
+													class="p-commentform"
+												>
 													<fieldset>
 														<h2>Add Comment</h2>
 														<div class="mt-row">

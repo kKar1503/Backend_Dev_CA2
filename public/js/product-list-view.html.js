@@ -105,7 +105,7 @@ function showProductList() {
 						<div class="product-post">
 							<!-- img holder start here -->
 							<div href="#" id='specProduct-${product.productid}' class="img-holder">
-								<img src="http://localhost:3000/product/image/${product.productid}" alt="image description">
+								<img src="http://localhost:3000/product/image/${product.productid}" alt="image description" style='width: auto; height:200px'>
 							</div><!-- img holder end here -->
 							<!-- txt holder start here -->
 							<div class="txt-holder">
@@ -140,7 +140,10 @@ showProductList();
 // console.log(category);
 
 $j(document).on('click', '.img-holder', function () {
-	localStorage.setItem('productID', parseInt($j(this).attr('id').substring(11)));
+	localStorage.setItem(
+		'productID',
+		parseInt($j(this).attr('id').substring(11))
+	);
 	paramObj = new Object();
 	paramObj.productid = parseInt($j(this).attr('id').substring(12));
 	// paramObj.brand =

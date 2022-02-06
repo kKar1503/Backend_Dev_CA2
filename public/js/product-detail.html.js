@@ -1,6 +1,6 @@
 const params = new URLSearchParams(document.location.search);
 if (params.get('productid') == null) {
-	window.location.href = `/404-not-found`;
+	window.location.href = `/404`;
 }
 const productID = params.get('productid');
 console.log(productID);
@@ -71,11 +71,11 @@ function showProductDetail() {
 			console.log(err);
 			// console.log(err.response.status === 404);
 			if (err.response.status == 404) {
-				window.location.href = `/404-not-found`;
+				window.location.href = `/404`;
 			}
 			// console.err(err);
 			else {
-				window.location.href = `/500-server-error`;
+				window.location.href = `/500`;
 			}
 		}); // res.data just get the data
 }

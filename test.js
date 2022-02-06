@@ -10,8 +10,13 @@
 //     });
 // })
 
-var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var pageNo = 3;
-for (i = 0 + 4 * (pageNo - 1); i < 4 * pageNo && i < array.length; i++) {
-	console.log(array[i]);
-}
+// var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var pageNo = 3;
+// for (i = 0 + 4 * (pageNo - 1); i < 4 * pageNo && i < array.length; i++) {
+// 	console.log(array[i]);
+// }
+
+var var1 = undefined;
+var var2 = 'hello';
+var var3 = 'world';
+console.log(var1 + var3 + var2);

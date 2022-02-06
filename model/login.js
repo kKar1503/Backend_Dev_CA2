@@ -32,67 +32,6 @@ let Login = {
 			}
 		});
 	},
-	addRefreshToken: function (refreshToken, uid, callback) {
-		var dbConn = db.getConnection();
-		dbConn.connect(function (err) {
-			if (err) {
-				return callback(err, null);
-			} else {
-				const sql = `UPDATE
-								user
-							SET
-								refresh_token = ?
-							WHERE
-								userid = ?`;
-				dbConn.query(sql, [refreshToken, uid], (err, result) => {
-					dbConn.end();
-					if (err) {
-						return callback(err, null);
-					}
-					return callback(null, result);
-				});
-			}
-		});
-	},
-	getRefreshToken: function (uid, callback) {
-		var dbConn = db.getConnection();
-		dbConn.connect(function (err) {
-			if (err) {
-				return callback(err, null);
-			} else {
-				const sql = `SELECT refresh_token FROM user WHERE userid = ?`;
-				dbConn.query(sql, uid, (err, result) => {
-					dbConn.end();
-					if (err) {
-						return callback(err, null);
-					}
-					return callback(null, result[0]);
-				});
-			}
-		});
-	},
-	deleteRefreshToken: function (uid, callback) {
-		var dbConn = db.getConnection();
-		dbConn.connect(function (err) {
-			if (err) {
-				return callback(err, null);
-			} else {
-				const sql = `UPDATE
-								user
-							SET
-								refresh_token = null
-							WHERE
-								userid = ?`;
-				dbConn.query(sql, uid, (err, result) => {
-					dbConn.end();
-					if (err) {
-						return callback(err, null);
-					}
-					return callback(null, result);
-				});
-			}
-		});
-	},
 };
 
 //----------------------------------------

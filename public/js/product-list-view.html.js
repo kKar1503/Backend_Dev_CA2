@@ -117,7 +117,7 @@ function showProductList() {
 								</div><!-- align left end here -->
 								<!-- align right start here -->
 								<div id='avgRating' class="align-right">
-									
+
 									<a href="#" class="btn-cart">ADD TO CART</a>
 								</div><!-- align right end here -->
 							</div><!-- txt holder end here -->
@@ -140,10 +140,7 @@ showProductList();
 // console.log(category);
 
 $j(document).on('click', '.img-holder', function () {
-	localStorage.setItem(
-		'productID',
-		parseInt($j(this).attr('id').substring(11))
-	);
+	localStorage.setItem('productID', parseInt($j(this).attr('id').substring(11)));
 	paramObj = new Object();
 	paramObj.productid = parseInt($j(this).attr('id').substring(12));
 	// paramObj.brand =

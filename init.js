@@ -20,6 +20,6 @@ const refresh = require('crypto').randomBytes(64).toString('Hex'); // Creates a 
 if (!fs.existsSync('.env')) {
 	fs.writeFileSync(
 		'.env',
-		`DB_HOST = localhost\nDB_USER = root\nDB_PORT = 3306\nDB_PASS = \nSECRET_KEY = ${token}\nREFRESH_TOKEN_SECRET = ${refresh}\nTOKEN_EXPIRY = 15s`
+		`DB_HOST = localhost\nDB_USER = root\nDB_PORT = 3306\nDB_PASS = \nSECRET_KEY = ${token}\nREFRESH_TOKEN_SECRET = ${refresh}\nTOKEN_EXPIRY = 15s\nREFRESH_EXPIRY = 1m`
 	);
 }

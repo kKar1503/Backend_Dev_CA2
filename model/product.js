@@ -27,23 +27,13 @@ let Product = {
                 VALUES
                 (?, ?, ?, ?, ?);
               `;
-				dbConn.query(
-					sql,
-					[
-						post.name,
-						post.description,
-						post.categoryid,
-						post.brand,
-						post.price,
-					],
-					(error, result) => {
-						dbConn.end();
-						if (error) {
-							return callback(error, null); // query error
-						}
-						return callback(null, result);
+				dbConn.query(sql, [post.name, post.description, post.categoryid, post.brand, post.price], (error, result) => {
+					dbConn.end();
+					if (error) {
+						return callback(error, null); // query error
 					}
-				);
+					return callback(null, result);
+				});
 			}
 		});
 	},
@@ -55,15 +45,15 @@ let Product = {
 				return callback(err, null); // db connection err
 			} else {
 				const sql = `
-                SELECT 
+                SELECT
                     name,
                     p.description,
                     p.categoryid,
                     category AS categoryname,
                     brand,
                     price,
-					image_file_name AS image
-                FROM 
+					p.image_file_name AS image
+                FROM
                     product AS p, category AS c
                 WHERE productid = ? AND p.categoryid = c.categoryid
               `;
@@ -108,9 +98,9 @@ let Product = {
 				return callback(err, null); // db connection err
 			} else {
 				const sql = `
-                SELECT 
+                SELECT
                     name, description, brand, price
-                FROM 
+                FROM
                     product
                 WHERE categoryid = ?
               `;
@@ -132,13 +122,13 @@ let Product = {
 				return callback(err, null); // db connection err
 			} else {
 				const sql = `
-                SELECT 
+                SELECT
                     name,
                     description,
                     price
-                FROM 
+                FROM
                     product
-                WHERE brand = ? 
+                WHERE brand = ?
               `;
 				dbConn.query(sql, brandName, (error, result) => {
 					dbConn.end();

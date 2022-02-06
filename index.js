@@ -22,6 +22,16 @@ app.get('/about', (req, res) => {
 });
 
 // About-us page
+app.get('/401-unauthorized', (req, res) => {
+	res.sendFile('/public/401.html', { root: __dirname });
+});
+
+// About-us page
+app.get('/403-forbidden', (req, res) => {
+	res.sendFile('/public/403.html', { root: __dirname });
+});
+
+// About-us page
 app.get('/404-not-found', (req, res) => {
 	res.sendFile('/public/404.html', { root: __dirname });
 });

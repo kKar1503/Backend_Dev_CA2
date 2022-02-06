@@ -1,3 +1,6 @@
+// Regenerate Access Token upon entering page
+regenerateAccessToken();
+
 // Event Listener on Login Button
 $j(document).on('click', '#btn-login', function (e) {
 	e.preventDefault();
@@ -8,6 +11,7 @@ $j(document).on('click', '#btn-login', function (e) {
 			console.log(res);
 			localStorage.setItem('accessToken', res.data.accessToken);
 			localStorage.setItem('refreshToken', res.data.refreshToken);
+			clearSigninInfo();
 			$j('#not-logged-in').hide();
 			$j('#logged-in-name-field').text(username);
 			$j('#logged-in').show();
@@ -96,6 +100,15 @@ function clearSignupInfo() {
 }
 
 /**
+ *  Function to clear signup information
+ */
+function clearSigninInfo() {
+	$j('#username').val('');
+	$j('#password').val('');
+	$j('#check1').prop('checked', false);
+}
+
+/**
  *
  * @param {string} email
  * @returns {boolean}
@@ -105,4 +118,15 @@ function validateEmail(email) {
 		/^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
 
 	return re.test(email);
+}
+
+function regenerateAccessToken() {
+	const refreshToken = localStorage.getItem('refreshToken');
+	axios
+		.post('http://localhost:4000/token', { token: refreshToken })
+		.then((token) => localStorage.setItem('accessToken', token))
+		.catch((err) => {
+			console.error(err);
+			alert('Something went wrong, please try again later!');
+		});
 }

@@ -66,7 +66,7 @@ let Login = {
 					if (err) {
 						return callback(err, null);
 					}
-					return callback(null, result);
+					return callback(null, result[0]);
 				});
 			}
 		});

@@ -80,14 +80,14 @@ app.post('/token', function (req, res) {
 			console.log('1');
 			console.log(err);
 			res.sendStatus(500);
-		} else if (result.length == 0) {
+		} else if (result.refresh_token == null) {
 			console.log('2');
 			console.log(result);
 			res.sendStatus(401);
 		} else {
 			console.log('3');
 			console.log(result);
-			jwt.verify(result[0].refresh_token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+			jwt.verify(result.refresh_token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
 				if (err) return res.sendStatus(403);
 				const accessToken = generateAccessToken({ userid: user.userid, user: user.user, type: user.type });
 				res.json({ accessToken: accessToken });
@@ -135,7 +135,7 @@ function generateAccessToken(user) {
  *  @returns {string} Refresh Token
  */
 function generateRefreshToken(user) {
-	return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
+	return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '1m' });
 }
 
 app.listen(port, hostname, () => {

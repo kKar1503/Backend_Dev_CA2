@@ -67,7 +67,16 @@ function showProductDetail() {
 
 			$j('#productDetail').append(proDetailHTML);
 		})
-		.catch((err) => console.error(err)); // res.data just get the data
+		.catch((err) => {
+			// console.log(err.response.status === 404);
+			if (err.response.status == 404) {
+				window.location.href = `/404-not-found`;
+			}
+			// console.err(err);
+			else {
+				window.location.href = `/500-error`;
+			}
+		}); // res.data just get the data
 }
 
 function showAvgRating() {
@@ -81,7 +90,10 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
+			let totalRating = reviews.reduce(
+				(sum, reviews) => sum + reviews.rating,
+				0
+			);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {
@@ -104,9 +116,9 @@ function showAvgRating() {
 
 			$j('#avgRating').append(avgReview);
 			$j('#numReviews').append(
-				`<a href="#tab2" class=''>
+				`
 					REVIEWS (${numReview})
-				</a>`
+				`
 			);
 		})
 		.catch((err) => {
@@ -125,7 +137,7 @@ function showAvgRating() {
                 `;
 
 				$j('#avgRating').append(avgReview);
-				$j('#numReviews').append(
+				$j('.numReviews').append(
 					`<a href="#tab2">
                         REVIEWS (${numReview})
                     </a>`
@@ -173,7 +185,7 @@ function showBottomReview() {
                     </div>;
                     `;
 
-				$j('#reviewsDetail').append(proReviewBottom);
+				$j('#reviewsDetail').before(proReviewBottom);
 			});
 		})
 		.catch((err) => console.error(err)); // res.data just get the data

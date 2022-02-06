@@ -62,7 +62,7 @@ app.post('/login', function (req, res) {
 	});
 });
 
-// Refresh Token [Done]
+// Generate Refresh Token [Done]
 // http://localhost:4000/token
 
 app.post('/token', function (req, res) {
@@ -75,9 +75,27 @@ app.post('/token', function (req, res) {
 	});
 });
 
+// DELETE Refresh Token [Done]
+// http://localhost:4000/token
+
+app.delete('/logout', function (req, res) {
+	const refreshToken = req.body.token;
+	if (refreshToken == null) return res.sendStatus(401);
+	jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+		if (err) return res.sendStatus(403);
+		const accessToken = generateAccessToken({ userid: user.userid, user: user.user, type: user.type });
+		res.json({ accessToken: accessToken });
+	});
+});
+
 // End of Login/API Key Endpoints
 //----------------------------------------
 
+/**
+ *
+ *  @param {object} user User Object
+ *  @returns {string} Access Token
+ */
 function generateAccessToken(user) {
 	let accessToken;
 	if (user.type === 'SuperAdmin') {
@@ -90,6 +108,11 @@ function generateAccessToken(user) {
 	return accessToken;
 }
 
+/**
+ *
+ *  @param {object} user User Object
+ *  @returns {string} Refresh Token
+ */
 function generateRefreshToken(user) {
 	return jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
 }

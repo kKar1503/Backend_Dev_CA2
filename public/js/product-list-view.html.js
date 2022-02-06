@@ -110,8 +110,8 @@ function showProductList() {
 							<!-- txt holder start here -->
 							<div class="txt-holder">
 								<!-- align left start here -->
-								<div class="align-left">
-									<strong class="title"><a href="product-detail.html">${product.name}</a></strong>
+								<div class="align-left"> 
+									<strong class="title"><a href="http://localhost:3000/product/image/${product.productid}">${product.name}</a></strong>
 									<span class="price"><i class="fa fa-dollar"></i> ${product.price}</span>
 									<p>${product.description}</p>
 								</div><!-- align left end here -->

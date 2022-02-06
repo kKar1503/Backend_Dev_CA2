@@ -12,7 +12,7 @@ app.get('/product', (req, res) => {
 });
 
 // Specific product detail
-app.get('/product/detail', (req, res) => {
+app.get('/product/:productId', (req, res) => {
 	res.sendFile('/public/product-detail.html', { root: __dirname });
 });
 

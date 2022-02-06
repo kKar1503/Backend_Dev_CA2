@@ -104,7 +104,7 @@ function showAvgRating() {
 
 			$j('#avgRating').append(avgReview);
 			$j('#numReviews').append(
-				`<a href="#tab3" class="active">
+				`<a href="#tab2" class=''>
 					REVIEWS (${numReview})
 				</a>`
 			);

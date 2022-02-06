@@ -26,6 +26,11 @@ app.get('/404-not-found', (req, res) => {
 	res.sendFile('/public/404.html', { root: __dirname });
 });
 
+// About-us page
+app.get('/500-server-error', (req, res) => {
+	res.sendFile('/public/500.html', { root: __dirname });
+});
+
 // app.get('/users/', (req, res) => {
 // 	res.sendFile('/public/loginpage.html', { root: __dirname });
 // });

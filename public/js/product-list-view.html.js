@@ -1,3 +1,10 @@
+const params = new URLSearchParams(document.location.search);
+if (params.get('pageNum') == null) {
+	window.location.href = `./product?pageNum=1`; //default go to page 1
+}
+const pageNum = params.get('pageNum');
+console.log(pageNum); // check which page
+
 // GET all categories
 function getCates() {
 	// axios({
@@ -98,22 +105,26 @@ function showProductList() {
 		)
 		.then((res) => {
 			let products = res.data;
-			products.forEach((product) => {
-				// this is use db port
+			// one page contain 7 products
+			for (
+				let i = 0 + 7 * (pageNum - 1);
+				i < 7 * pageNum && i < products.length;
+				i++
+			) {
 				let productHTML = `
 						<!-- product post start here -->
 						<div class="product-post">
 							<!-- img holder start here -->
-							<div href="#" id='specProduct-${product.productid}' class="img-holder">
-								<img src="http://localhost:3000/product/image/${product.productid}" alt="image description" style='width: auto; height:200px'>
+							<div href="#" id='specProduct-${products[i].productid}' class="img-holder">
+								<img src="http://localhost:3000/product/image/${products[i].productid}" alt="image description" style='width: auto; height:200px'>
 							</div><!-- img holder end here -->
 							<!-- txt holder start here -->
 							<div class="txt-holder">
 								<!-- align left start here -->
 								<div class="align-left">
-									<strong class="title"><a href="http://localhost:3001/product/detail?productid=${product.productid}">${product.name}</a></strong>
-									<span class="price"><i class="fa fa-dollar"></i> ${product.price}</span>
-									<p>${product.description}</p>
+									<strong class="title"><a href="http://localhost:3001/product/detail?productid=${products[i].productid}">${products[i].name}</a></strong>
+									<span class="price"><i class="fa fa-dollar"></i> ${products[i].price}</span>
+									<p>${products[i].description}</p>
 								</div><!-- align left end here -->
 								<!-- align right start here -->
 									<a href="#" class="btn-cart">ADD TO CART</a>
@@ -122,7 +133,7 @@ function showProductList() {
 							`;
 
 				$j('#productList').append(productHTML);
-			});
+			}
 		})
 		.catch((err) => console.error(err)); // res.data just get the data
 }
@@ -214,3 +225,6 @@ $j('#searchProduct').submit((event) => {
 	console.log(productName);
 	searchByProduct(productName);
 });
+
+// <strong class="title"><a href="http://localhost:3001/product/detail?productid=${product.productid}">${product.name}</a></strong>
+// /product/detail?${$.param(paramObj)}

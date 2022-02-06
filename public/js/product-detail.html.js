@@ -1,4 +1,7 @@
 const params = new URLSearchParams(document.location.search);
+if (params.get('productid') == null) {
+	window.location.href = `/404-not-found`;
+}
 const productID = params.get('productid');
 console.log(productID);
 
@@ -78,10 +81,7 @@ function showAvgRating() {
 			let reviews = res.data;
 			let numReview = res.data.length;
 
-			let totalRating = reviews.reduce(
-				(sum, reviews) => sum + reviews.rating,
-				0
-			);
+			let totalRating = reviews.reduce((sum, reviews) => sum + reviews.rating, 0);
 			// console.log(reviews);
 			let avgRating = Math.round(totalRating / numReview);
 			for (let i = 1; i <= 5; i++) {

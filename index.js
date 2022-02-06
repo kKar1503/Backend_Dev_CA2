@@ -12,13 +12,18 @@ app.get('/product', (req, res) => {
 });
 
 // Specific product detail
-app.get('/product/:productId', (req, res) => {
+app.get('/product/detail', (req, res) => {
 	res.sendFile('/public/product-detail.html', { root: __dirname });
 });
 
 // About-us page
 app.get('/about', (req, res) => {
 	res.sendFile('/public/about-us.html', { root: __dirname });
+});
+
+// About-us page
+app.get('/404-not-found', (req, res) => {
+	res.sendFile('/public/404.html', { root: __dirname });
 });
 
 // app.get('/users/', (req, res) => {

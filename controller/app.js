@@ -27,7 +27,6 @@ const Product = require('../model/product.js');
 const Review = require('../model/review.js');
 const Image = require('../model/image.js');
 const Chart = require('../model/chart.js');
-const Login = require('../model/login.js');
 
 //----------------------------------------
 // Creating a Log File System
@@ -953,43 +952,6 @@ app.delete('/charts', authenticateToken, function (req, res) {
 	});
 });
 // End of charts Endpoints
-//----------------------------------------
-
-//----------------------------------------
-// Start of Login/API Key Endpoints
-// GET Token [Done]
-// http://localhost:3000/login
-
-app.post('/login', function (req, res) {
-	let loginData = {
-		user: req.body.username,
-		pass: req.body.password,
-	};
-	Login.authenticate(loginData, function (err, result) {
-		if (err) {
-			res.status(500).send('Internal Server Error!');
-		} else if (result.length == 0) {
-			res.status(401).send('User does not exist!');
-		} else if (result[0].password != loginData.pass) {
-			res.status(401).send('Invalid Password!');
-		} else if (result[0].type == 'Customer') {
-			res.status(403).send('You are not allowed to access Admin API Keys.');
-		} else {
-			delete loginData.pass;
-			let accessToken;
-			if (result[0].type == 'SuperAdmin') {
-				accessToken = jwt.sign(loginData, process.env.SECRET_KEY);
-			} else {
-				accessToken = jwt.sign(loginData, process.env.SECRET_KEY, {
-					expiresIn: process.env.TOKEN_EXPIRY,
-				});
-			}
-			res.json({ accessToken: accessToken });
-		}
-	});
-});
-
-// End of Login/API Key Endpoints
 //----------------------------------------
 
 //----------------------------------------

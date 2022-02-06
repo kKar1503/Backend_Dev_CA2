@@ -225,11 +225,11 @@ $j('#button-submit').click((event) => {
 	event.preventDefault();
 	const review = $j('#review').val();
 	console.log(review);
-	addReview(userid, totalStars, review);
+	addReview(totalStars, review);
 	showBottomReview();
 });
 
-function addReview(userid, totalStars, review) {
+function addReview(totalStars, review) {
 	axios
 		.post(
 			// the backend api we want to hit

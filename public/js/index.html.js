@@ -24,13 +24,15 @@ $j(document).on('click', '.category', async function () {
 function renderCategories(categories) {
 	categories.forEach(async (category) => {
 		let categoryId = category.categoryid;
+		let categoryImg = category.image_file_name;
+		console.log(categoryImg);
 		let categories = await axios.get('http://localhost:3000/interest/3');
 		let hasCategory = categories.data.some((category) => category.fk_category_id == categoryId);
 		const categoryHtml = `<!-- mt product2 start here -->
         <div class="mt-product2 large bg-grey">
             <!-- box start here -->
             <div class="box">
-                <img alt="image description" src="http://placehold.it/275x290" />
+                <img alt="image description" src="../../uploads/${category.image_file_name}" />
                 <ul class="links">
                     <li>
                         <a class="category" id="category-${categoryId}"><i class="fa ${hasCategory ? 'fa-heart' : 'fa-heart-o'}" id="heart-${

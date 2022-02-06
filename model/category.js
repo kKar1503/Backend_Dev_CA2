@@ -9,7 +9,7 @@
 //----------------------------------------
 // Imports
 //----------------------------------------
-const db = require("./databaseConfig.js");
+const db = require('./databaseConfig.js');
 
 //----------------------------------------
 // Main Code Implementations
@@ -21,9 +21,8 @@ let Category = {
 			if (err) {
 				return callback(err, null);
 			} else {
-				console.log("Connection established!");
-				var sql =
-					"SELECT categoryid, category, description FROM category";
+				console.log('Connection established!');
+				var sql = 'SELECT * FROM category';
 				conn.query(sql, function (err, result) {
 					conn.end();
 					if (err) {
@@ -42,25 +41,21 @@ let Category = {
 			if (err) {
 				return callback(err, null);
 			} else {
-				console.log("Connection established!");
+				console.log('Connection established!');
 				const sql = `
                            INSERT INTO
                                 category(category, description)
                            VALUES
-                                (?, ?) 
+                                (?, ?)
                            `;
-				conn.query(
-					sql,
-					[cat.category, cat.description],
-					(error, result) => {
-						conn.end();
-						if (error) {
-							return callback(error, null);
-						} else {
-							return callback(null, result);
-						}
+				conn.query(sql, [cat.category, cat.description], (error, result) => {
+					conn.end();
+					if (error) {
+						return callback(error, null);
+					} else {
+						return callback(null, result);
 					}
-				);
+				});
 			}
 		});
 	},
